@@ -16,7 +16,7 @@ ColorRoofPalettes:
 	dw PewterRoof    ; ROUTE_3
 	dw PewterRoof    ; ROUTE_4
 	dw SaffronRoof   ; ROUTE_5
-	dw VermilionRoof ; ROUTE_6 (hardcoded to use SaffronRoof for top 2 rows)
+	dw VermilionRoof ; ROUTE_6
 	dw SaffronRoof   ; ROUTE_7
 	dw SaffronRoof   ; ROUTE_8
 	dw LavenderRoof  ; ROUTE_9
@@ -37,11 +37,12 @@ ColorRoofPalettes:
 	dw CeruleanRoof  ; ROUTE_24
 	dw CeruleanRoof  ; ROUTE_25
 
+; Terracotta tiles, shared with the houses along Route 1.
 PalletRoof:
 	RGB 27,31,27
-	RGB 31,31,31
-	RGB 24,24,24
-	RGB 7,7,7
+	RGB 31,18,10
+	RGB 24,9,5
+	RGB 7,5,5
 
 ViridianRoof:
 	RGB 27,31,27
@@ -51,8 +52,8 @@ ViridianRoof:
 
 PewterRoof:
 	RGB 27,31,27
-	RGB 24,25,26
-	RGB 20,17,19
+	RGB 22,26,29
+	RGB 13,18,23
 	RGB 7,7,7
 
 CeruleanRoof:

@@ -433,7 +433,7 @@ ColorObjectPalettes:
 	RGB 31,31,31, 31,23,15, 17,11,5, 3,3,4 ; brown
 	RGB 31,31,31, 31,23,19, 28,10,17, 3,3,4 ; pink
 	RGB 31,31,31, 31,28,3, 22,12,2, 3,3,4 ; Pikachu
-	RGB 31,31,31, 25,25,25, 13,14,16, 3,3,4 ; gray
+	RGB 31,31,31, 31,22,14, 29,30,31, 3,3,4 ; skin and white coats/paper
 	RGB 31,31,31, 31,22,14, 19,9,24, 3,3,4 ; purple
 
 ColorPortraitPalette:

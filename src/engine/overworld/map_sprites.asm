@@ -227,6 +227,23 @@ ReadSpriteSheetData:
 	and a
 	ret z
 
+	push af
+	ldh a, [hOnCGB]
+	and a
+	jr z, .native
+	pop af
+	cp SPRITE_SCIENTIST
+	jr z, .scientist
+	cp SPRITE_OAK
+	jr z, .oak
+	cp SPRITE_COOK
+	jr z, .cook
+	cp SPRITE_SEEL
+	jr z, .seel
+	jr .original
+.native
+	pop af
+.original
 	dec a
 	ld l, a
 	ld h, 0
@@ -246,6 +263,27 @@ ReadSpriteSheetData:
 	inc hl
 	scf
 	ret
+
+.scientist
+	ld de, ColorScientistSprite
+	jr .color
+.oak
+	ld de, ColorOakSprite
+	jr .color
+.cook
+	ld de, ColorCookSprite
+	jr .color
+.seel
+	ld de, ColorSeelSprite
+.color
+	; Standing and walking frames retain the native 12-tile layout.
+	ld b, BANK(ColorScientistSprite)
+	ld c, 12
+	scf
+	ret
+	assert BANK(ColorScientistSprite) == BANK(ColorOakSprite)
+	assert BANK(ColorScientistSprite) == BANK(ColorCookSprite)
+	assert BANK(ColorScientistSprite) == BANK(ColorSeelSprite)
 
 LoadMapSpritesImageBaseOffset:
 	ld a, $1
