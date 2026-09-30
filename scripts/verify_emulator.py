@@ -21,6 +21,9 @@ p = PyBoy('src/pokeyellow.gbc', window='null', sound_emulated=False,
           cgb=True, log_level='ERROR', ram_file=ram)
 p.set_emulation_speed(0)
 timing = Counter()
+graphics_end_modes = Counter()
+graphics_end_lines = Counter()
+graphics_active = False
 
 
 def address(name):
@@ -66,7 +69,30 @@ def sample(_):
         timing[p.memory[0xff44]] += 1
 
 
-p.hook_register(None, 'UpdateMovingBgTiles', sample, None)
+def begin_vblank(_):
+    global graphics_active
+    graphics_active = False
+
+
+def begin_graphics(_):
+    global graphics_active
+    graphics_active = bool(value('wColorActive') and p.memory[0xff40] & 0x80)
+
+
+def end_graphics(_):
+    if graphics_active:
+        graphics_end_modes[p.memory[0xff41] & 3] += 1
+        graphics_end_lines[p.memory[0xff44]] += 1
+
+
+def monitor_graphics():
+    p.hook_register(None, 'UpdateMovingBgTiles', sample, None)
+    p.hook_register(None, 'VBlank', begin_vblank, None)
+    p.hook_register(None, 'VBlank.graphics', begin_graphics, None)
+    p.hook_register(None, 'VBlank.afterGraphics', end_graphics, None)
+
+
+monitor_graphics()
 p.tick(1000)
 press('start', 1, 99)
 press('a', 1, 179)
@@ -148,6 +174,7 @@ save_bytes = ram.read()
 p = PyBoy('src/pokeyellow.gbc', window='null', sound_emulated=False,
           cgb=True, log_level='ERROR', ram_file=io.BytesIO(save_bytes))
 p.set_emulation_speed(0)
+monitor_graphics()
 p.tick(1000)
 press('start', 4, 240)
 press('a', 4, 240)
@@ -198,9 +225,11 @@ for i, (name, frame) in enumerate(frames):
     draw.text((x + 3, y + 291), name, fill='white')
 sheet.save(OUT / 'tilesets.png')
 p.stop(save=False)
-assert all(144 <= line <= 151 for line in timing), f'VBlank transfer overrun: {timing}'
+assert graphics_end_modes and set(graphics_end_modes) == {1}, f'Graphics ended outside VBlank: {graphics_end_modes}'
 report = {'opening_gameplay': 'passed', 'menu_restore': 'passed', 'save_reload': 'passed',
-          'vblank_end_scanlines': dict(sorted(timing.items())), 'map_matrix': maps,
+          'tile_copy_end_scanlines': dict(sorted(timing.items())),
+          'graphics_end_lcd_modes': dict(sorted(graphics_end_modes.items())),
+          'graphics_end_scanlines': dict(sorted(graphics_end_lines.items())), 'map_matrix': maps,
           'limitations': ['No full playthrough', 'No physical GBC or link-cable testing',
                           'Audio output not assessed by this headless test']}
 (OUT / 'report.json').write_text(json.dumps(report, indent=2) + '\n')

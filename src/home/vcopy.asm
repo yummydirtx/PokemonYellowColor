@@ -191,6 +191,15 @@ UpdateMovingBgTiles::
 	ldh a, [rLY]
 	cp $90 ; check if not in vblank period??? (maybe if vblank is too long)
 	ret c
+	; On CGB, paired background transfers share the budget with tile uploads.
+	; Defer water/flower animation when it would crowd out the OAM transfer.
+	ld a, [wColorActive]
+	and a
+	jr z, .animate
+	ldh a, [rLY]
+	cp 150
+	ret nc
+.animate
 
 	ldh a, [hMovingBGTilesCounter1]
 	inc a

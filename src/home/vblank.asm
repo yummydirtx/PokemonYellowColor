@@ -41,6 +41,20 @@ VBlank::
 	call VBlankCopy
 	call VBlankCopyDouble
 	call UpdateMovingBgTiles
+	; OAM DMA needs almost two scanlines. Font/sprite uploads can leave too
+	; little of VBlank; keep the previous OAM for one frame in that case.
+	ld a, [wColorActive]
+	and a
+	jr z, .oam
+	ldh a, [rLCDC]
+	bit B_LCDC_ENABLE, a
+	jr z, .oam
+	ldh a, [rLY]
+	cp 144
+	jr c, .afterGraphics
+	cp 152
+	jr nc, .afterGraphics
+.oam
 	call hDMARoutine
 .afterGraphics
 	ld a, BANK(PrepareOAMData)
