@@ -35,9 +35,10 @@ PrepareOAMData::
 	jr nz, .visible
 
 	call GetSpriteScreenXY
-	jr .nextSprite
+	jp .nextSprite
 
 .visible
+	call ColorSpritePalette
 	cp $a0 ; is the sprite unchanging like an item ball or boulder?
 	jr c, .usefacing
 
@@ -123,6 +124,16 @@ PrepareOAMData::
 	jr z, .spriteusesOBP0
 	or OAM_HIGH_PALS
 .spriteusesOBP0
+	ld b, a
+	ld a, [wColorActive]
+	and a
+	ld a, b
+	jr z, .nativePalette
+	and $f8
+	ld b, a
+	ld a, [wColorSpritePal]
+	or b
+.nativePalette
 	ld [de], a
 	inc hl
 	inc e
@@ -230,3 +241,25 @@ _IsTilePassable::
 	ret
 
 INCLUDE "data/tilesets/collision_tile_ids.asm"
+
+ColorSpritePalette:
+	push af
+	push bc
+	push hl
+	ldh a, [hSpriteOffset2]
+	ld l, a
+	ld h, HIGH(wSpriteStateData1)
+	ld a, [hl]
+	ld c, a
+	ld b, 0
+	ld hl, ColorSpritePaletteTable
+	add hl, bc
+	ld a, [hl]
+	ld [wColorSpritePal], a
+	pop hl
+	pop bc
+	pop af
+	ret
+
+ColorSpritePaletteTable:
+	db 6, 0, 1, 3, 1, 3, 4, 1, 4, 3, 1, 3, 6, 4, 3, 4, 6, 4, 6, 1, 6, 1, 3, 6, 6, 7, 6, 4, 4, 4, 0, 0, 6, 7, 1, 3, 1, 3, 1, 3, 7, 4, 4, 6, 6, 3, 1, 1, 7, 1, 0, 4, 3, 1, 0, 1, 4, 7, 3, 1, 1, 5, 1, 5, 2, 2, 4, 4, 4, 0, 7, 0, 3, 6, 6, 0, 6, 1, 3, 3, 3, 3, 3

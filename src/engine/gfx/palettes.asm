@@ -5,6 +5,18 @@ _RunPaletteCommand:
 	jr nz, .not_default
 	ld a, [wDefaultPaletteCommand]
 .not_default
+	ld [wColorCommand], a
+	push af
+	xor a
+	ld [wColorActive], a
+	pop af
+	cp SET_PAL_OVERWORLD
+	jr nz, .native
+	ldh a, [hOnCGB]
+	and a
+	jp nz, ColorLoadOverworld
+	ld a, SET_PAL_OVERWORLD
+.native
 	cp SET_PAL_PARTY_MENU_HP_BARS
 	jp z, UpdatePartyMenuBlkPacket
 	ld l, a
@@ -39,10 +51,10 @@ SetPal_Battle:
 	ld bc, wPartyMon2 - wPartyMon1
 	call AddNTimes
 .asm_71ef9
-	call DeterminePaletteID
+	call DeterminePaletteIDBack
 	ld b, a
 	ld hl, wEnemyMonSpecies2
-	call DeterminePaletteID
+	call DeterminePaletteIDFront
 	ld c, a
 	ld hl, wPalPacket + 1
 	ld a, [wPlayerHPBarColor]
@@ -202,10 +214,13 @@ SetPal_PokemonWholeScreen:
 	call CopyData
 	pop bc
 	ld a, c
-	and a
+	cp 1
 	ld a, PAL_BLACK
-	jr nz, .next
+	jr z, .next
+	ld a, c
+	cp 2
 	ld a, [wWholeScreenPaletteMonSpecies]
+	jr z, .next
 	call DeterminePaletteIDOutOfBattle
 .next
 	ld [wPalPacket + 1], a
@@ -294,23 +309,39 @@ BadgeBlkDataLengths:
 	db 6     ; Volcano Badge
 	db 6     ; Earth Badge
 
-DeterminePaletteID:
+DeterminePaletteIDFront:
 	ld a, [hl]
 DeterminePaletteIDOutOfBattle:
 	ld [wPokedexNum], a
 	and a ; is the mon index 0?
-	jr z, .skipDexNumConversion
+	ld a, [wTrainerClass]
+	ld hl, TrainerPalettes
+	jr z, GetPalID ; if so, this is a trainer
+GetMonPalID:
 	push bc
 	predef IndexToPokedex
 	pop bc
 	ld a, [wPokedexNum]
-.skipDexNumConversion
+	ld hl, MonsterPalettes
+GetPalID:
 	ld e, a
 	ld d, 0
-	ld hl, MonsterPalettes ; not just for Pokemon, Trainers use it too
 	add hl, de
 	ld a, [hl]
 	ret
+
+DeterminePaletteIDBack:
+	ld a, [hl]
+	ld [wPokedexNum], a
+	and a
+	jp nz, GetMonPalID
+	ld a, [wBattleType]
+	cp BATTLE_TYPE_PIKACHU
+	ld a, PAL_OAKB
+	ret z
+	ld a, PAL_HERO
+	ret
+
 
 YellowIntroPaletteAction::
 	ld a, e
@@ -669,6 +700,14 @@ CopyGfxToSuperNintendoVRAM:
 	call _UpdateCGBPal_BGP_CheckDMG
 	ld de, vChars1
 	ld a, [wCopyingSGBTileData]
+	cp 1
+	jr nz, .originalSGBSource
+	ld bc, NUM_SGB_PALS * PAL_SIZE
+	ld a, BANK(SuperPalettes)
+	call FarCopyData
+	jr .next
+.originalSGBSource
+	ld a, [wCopyingSGBTileData]
 	and a
 	jr z, .notCopyingTileData
 	call CopySGBBorderTiles
@@ -821,9 +860,12 @@ DMGPalToCGBPal::
 		ld b, a
 		and %11
 		call .GetColorAddress
-		ld a, [hli]
+		ld a, BANK(SuperPalettes)
+		call GetFarByte
+		inc hl
 		ld [wCGBPal + color_index * 2], a
-		ld a, [hl]
+		ld a, BANK(SuperPalettes)
+		call GetFarByte
 		ld [wCGBPal + color_index * 2 + 1], a
 
 		IF color_index < PAL_COLORS - 1
@@ -974,6 +1016,9 @@ _UpdateCGBPal_BGP_CheckDMG::
 ; fall through
 
 _UpdateCGBPal_BGP::
+	ld a, [wColorActive]
+	and a
+	jp nz, ColorUpdateBG
 	FOR index, NUM_ACTIVE_PALS
 		ld a, [wCGBBasePalPointers + index * 2]
 		ld e, a
@@ -989,6 +1034,9 @@ _UpdateCGBPal_BGP::
 	ret
 
 _UpdateCGBPal_OBP::
+	ld a, [wColorActive]
+	and a
+	jp nz, ColorUpdateOBJ
 	FOR index, NUM_ACTIVE_PALS
 		ld a, [wCGBBasePalPointers + index * 2]
 		ld e, a
@@ -1096,6 +1144,32 @@ INCLUDE "data/sgb/sgb_packets.asm"
 
 INCLUDE "data/pokemon/palettes.asm"
 
-INCLUDE "data/sgb/sgb_palettes.asm"
+
 
 INCLUDE "data/sgb/sgb_border.asm"
+
+SendPokeballPal::
+	ld a, PAL_REDBAR
+	jr SendCustomPacket
+
+SendOakPal::
+	ld a, PAL_OAK
+	jr SendCustomPacket
+
+SendPikaPal::
+	ld a, PAL_PIKACHU
+	jr SendCustomPacket
+
+SendPlayerPal::
+	ld a, PAL_HERO
+	jr SendCustomPacket
+
+SendRivalPal::
+	ld a, PAL_GARY1
+	jr SendCustomPacket
+
+SendCustomPacket:
+	ld [wWholeScreenPaletteMonSpecies], a
+	ld c, 2
+	ld b, SET_PAL_POKEMON_WHOLE_SCREEN
+	jp RunPaletteCommand

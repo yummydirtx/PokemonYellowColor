@@ -83,3 +83,5 @@ INCLUDE "home/bankswitch2.asm"
 INCLUDE "home/predef.asm"
 INCLUDE "home/hidden_events.asm"
 INCLUDE "home/predef_text.asm"
+
+INCLUDE "color/home.asm"

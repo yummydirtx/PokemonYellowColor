@@ -21,4 +21,4 @@
 	     REST,         SUBSTITUTE,   CUT,          SURF
 	; end
 
-	db 0 ; padding
+	db BANK(KabutopsPicFront) ; graphics bank

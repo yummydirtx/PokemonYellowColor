@@ -76,7 +76,15 @@ wTempoModifier:: db
 ; regularly set to $0, but nothing ever reads it
 wUnusedAudioCounter:: dw
 
-	ds 11
+wColorActive:: db
+wColorTilesHigh:: db
+wColorPaletteSet:: dw
+wColorAutoReady:: db
+wColorAutoDest:: dw
+wColorSpritePal:: db
+wColorPaletteIndex:: db
+wColorCommand:: db
+wColorCopyKind:: db
 
 
 SECTION "Sprite State Data", WRAM0
@@ -1721,7 +1729,7 @@ wMonHBackSprite:: dw
 wMonHMoves:: ds NUM_MOVES
 wMonHGrowthRate:: db
 wMonHLearnset:: flag_array NUM_TMS + NUM_HMS
-	ds 1
+wMonHPicBank:: db
 wMonHeaderEnd::
 
 ; saved at the start of a battle and then written back at the end of the battle

@@ -20,6 +20,7 @@ ChoosePlayerName:
 	jr z, .customName
 	call ClearScreen
 	call Delay3
+	farcall SendPlayerPal
 	ld de, RedPicFront
 	ld b, BANK(RedPicFront)
 	call IntroDisplayPicCenteredOrUpperRight
@@ -53,6 +54,7 @@ ChooseRivalName:
 	jr z, .customName
 	call ClearScreen
 	call Delay3
+	farcall SendRivalPal
 	ld de, Rival1Pic
 	ld b, BANK(Rival1Pic)
 	call IntroDisplayPicCenteredOrUpperRight

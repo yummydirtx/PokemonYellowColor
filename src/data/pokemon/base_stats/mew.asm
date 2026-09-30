@@ -27,4 +27,4 @@
 	     CUT,          FLY,          SURF,         STRENGTH,     FLASH
 	; end
 
-	db 0 ; padding
+	db BANK(MewPicFront) ; graphics bank

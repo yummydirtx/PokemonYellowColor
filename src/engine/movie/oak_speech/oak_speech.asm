@@ -72,6 +72,7 @@ OakSpeech:
 	ld a, [wStatusFlags6]
 	bit BIT_DEBUG_MODE, a
 	jp nz, .skipSpeech
+	farcall SendOakPal
 	ld de, ProfOakPic
 	lb bc, BANK(ProfOakPic), $00
 	call IntroDisplayPicCenteredOrUpperRight
@@ -80,6 +81,7 @@ OakSpeech:
 	call PrintText
 	call GBFadeOutToWhite
 	call ClearScreen
+	farcall SendPikaPal
 	ld a, STARTER_PIKACHU
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
@@ -91,6 +93,7 @@ OakSpeech:
 	call PrintText
 	call GBFadeOutToWhite
 	call ClearScreen
+	farcall SendPlayerPal
 	ld de, RedPicFront
 	lb bc, BANK(RedPicFront), $00
 	call IntroDisplayPicCenteredOrUpperRight
@@ -100,6 +103,7 @@ OakSpeech:
 	call ChoosePlayerName
 	call GBFadeOutToWhite
 	call ClearScreen
+	farcall SendRivalPal
 	ld de, Rival1Pic
 	lb bc, BANK(Rival1Pic), $00
 	call IntroDisplayPicCenteredOrUpperRight
@@ -110,6 +114,7 @@ OakSpeech:
 .skipSpeech
 	call GBFadeOutToWhite
 	call ClearScreen
+	farcall SendPlayerPal
 	ld de, RedPicFront
 	lb bc, BANK(RedPicFront), $00
 	call IntroDisplayPicCenteredOrUpperRight

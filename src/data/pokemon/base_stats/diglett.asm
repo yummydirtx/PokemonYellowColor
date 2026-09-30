@@ -19,4 +19,4 @@
 	     BIDE,         REST,         ROCK_SLIDE,   SUBSTITUTE,   CUT
 	; end
 
-	db 0 ; padding
+	db BANK(DiglettPicFront) ; graphics bank

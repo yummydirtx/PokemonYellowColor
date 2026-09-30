@@ -25,9 +25,7 @@ VBlank::
 	ldh [rWY], a
 .ok
 
-	call AutoBgMapTransfer
-	call VBlankCopyBgMap
-	call RedrawRowOrColumn
+	farcall ColorVBlankAll
 	call VBlankCopy
 	call VBlankCopyDouble
 	call UpdateMovingBgTiles
@@ -83,6 +81,7 @@ VBlank::
 
 
 DelayFrame::
+	call ColorPrepare
 ; Wait for the next vblank interrupt.
 ; As a bonus, this saves battery.
 

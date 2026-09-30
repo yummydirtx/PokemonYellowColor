@@ -19,4 +19,4 @@
 	     BIDE,         REST,         PSYWAVE,      SUBSTITUTE,   FLASH
 	; end
 
-	db 0 ; padding
+	db BANK(VenonatPicFront) ; graphics bank

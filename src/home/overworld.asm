@@ -2033,6 +2033,7 @@ CopyMapViewToVRAM::
 ; copy current map view to VRAM
 	ld de, vBGMap0
 CopyMapViewToVRAM2:
+	call ColorMapView
 	ld hl, wTileMap
 	ld b, SCREEN_HEIGHT
 .vramCopyLoop
