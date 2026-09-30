@@ -161,7 +161,7 @@ def main():
         verify_base(source)
         if args.output.exists():
             raise ValueError('Output already exists; choose a new filename')
-        output = create(source, data, b'Pokemon Yellow Color 0.1.1') if args.action == 'create' else apply(source, data)
+        output = create(source, data, b'Pokemon Yellow Color 0.1.2') if args.action == 'create' else apply(source, data)
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_bytes(output)
         print(f'{args.output}: {len(output):,} bytes; SHA-256 {hashlib.sha256(output).hexdigest()}')

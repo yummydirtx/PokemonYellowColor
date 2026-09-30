@@ -16,6 +16,7 @@ transferred using GBC DMA. Horizontal columns use unrolled CPU transfers.
 
 Bank 0x3b holds the palette/color engine; banks 0x40–0x42 hold expanded battle graphics
 and palette data. Banks 0x43–0x44 hold the CGB reaction portrait variants.
+Bank 0x45 holds CGB copies of scientist, Oak, cook, and Seel overworld sprites.
 The resulting cartridge is 2 MiB, MBC5 with 32 KiB battery RAM.
 Existing game and save data addresses remain unchanged; eleven unused bytes of
 fixed audio-page RAM hold renderer state. Additional scratch buffers use WRAM
@@ -36,6 +37,16 @@ the exterior field and small eye highlights retain white. Partial animation
 graphics are classified in the context of their complete base frame. Original
 PNGs and the original DMG/SGB graphics path remain available. The generated
 assembly is checked in so normal builds do not require image-processing tools.
+
+`scripts/build_overworld_sprites.py` separates skin from white clothing, hats,
+and Oak's silver hair using frame-specific indexed pixel masks. These variants
+are selected by the normal NPC sheet loader on CGB; native source sheets remain
+unchanged. Seel uses a white body with dark contours instead of skin/blue colors.
+
+The material pass replaces inherited grayscale defaults with cream masonry,
+wood, teal tile, sandstone, lavender stone, and blue-gray metal. Tile assignments
+separate equipment and window glass from walls/floors across shared tilesets.
+The palette table omits its unused padding; all 25 palette sets are range checked.
 
 Original code/assets retain their original ownership and attribution. This
 repository does not assert a new license over Pokémon or upstream assets.

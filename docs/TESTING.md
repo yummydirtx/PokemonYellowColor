@@ -1,4 +1,4 @@
-# Version 0.1.1 verification
+# Version 0.1.2 verification
 
 The final clean build was tested with RGBDS 1.0.3 and PyBoy 2.7.0 on 2026-09-30.
 The exact build and patch hashes are recorded in `dist/manifest.json`.
@@ -6,7 +6,7 @@ The exact build and patch hashes are recorded in `dist/manifest.json`.
 | Check | Result |
 | --- | --- |
 | Pinned pret baseline against the supplied dump | Exact byte-for-byte match |
-| RAM/save layout comparison | All 3,160 shared named RAM symbols retain their original addresses |
+| RAM/save layout comparison | All 3,180 shared named SRAM/WRAM/HRAM symbols retain their original addresses |
 | Clean assembly/link/header checks | Passed; 2 MiB, MBC5 + 32 KiB battery RAM, CGB-compatible header |
 | BPS unit tests | 3 passed: round trips, wrong/corrupt input rejection, external SourceCopy command |
 | Patch application with bundled implementation | Exact target match |
@@ -16,6 +16,9 @@ The exact build and patch hashes are recorded in `dist/manifest.json`.
 | Party/stats menu return | No visible palette attribute mismatches |
 | Save and fresh-emulator Continue | Game checksum accepted; map and party data restored |
 | Map entry matrix | 26 maps covering all 25 tilesets; zero visible palette attribute mismatches |
+| Asset color audit | 35 map entries across all 25 tilesets, tile and NPC atlases visually reviewed; zero palette attribute mismatches |
+| NPC graphics | All 82 types, 256 native/CGB standing and walking loader comparisons; original tiles preserved |
+| White uniforms | Skin and coat colors present in all 18 scientist/Oak/cook frames; original silhouettes and outlines preserved |
 | Pokémon sprite loaders | 151 front + 151 back sprites; decoded VRAM matches source graphics byte-for-byte |
 | Pikachu reaction portraits | All 29 reaction scripts and 61 graphic entries exercised; yellow fur and return to overworld palettes checked |
 | Portrait source regeneration | Checked-in CGB tile data matches the deterministic generator; original PNGs remain unchanged |
@@ -29,8 +32,9 @@ and pending graphics transfers are retained for the next safe frame.
 
 The map matrix uses test-only RAM warps. The sprite matrix calls actual ROM
 routines through a test-only RAM trampoline and compares their output with
-RGBDS-generated source tiles. The surfing fixture grants Surf only in emulator
-RAM. None of these fixtures is compiled into the distributed patch.
+RGBDS-generated source tiles. The asset audit also checks the original sprite branch and produces contact
+sheets containing only each sprite's real source frames. The surfing fixture
+grants Surf only in emulator RAM. None of these fixtures is compiled into the distributed patch.
 
 Machine-readable results are preserved in `docs/verification/`; screenshots
 are in `docs/screenshots/`. Re-running the scripts produces fresh results in

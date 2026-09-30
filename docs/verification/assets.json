@@ -1,0 +1,190 @@
+{
+  "rom_sha256": "48cbf21e1b4edefbb4c28d6d549e5a3d86915c523366b32bda69cc7207681e66",
+  "npc_types": 82,
+  "native_and_cgb_loader_checks": 256,
+  "skin_and_white_uniform_frames": 18,
+  "tile_atlases": 25,
+  "map_entries": 35,
+  "tilesets": 25,
+  "maps": [
+    {
+      "map": "PALLET_TOWN",
+      "tileset": "OVERWORLD",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "VIRIDIAN_CITY",
+      "tileset": "OVERWORLD",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "PEWTER_CITY",
+      "tileset": "OVERWORLD",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "CERULEAN_CITY",
+      "tileset": "OVERWORLD",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "LAVENDER_TOWN",
+      "tileset": "OVERWORLD",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "VERMILION_CITY",
+      "tileset": "OVERWORLD",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "CELADON_CITY",
+      "tileset": "OVERWORLD",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "FUCHSIA_CITY",
+      "tileset": "OVERWORLD",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "CINNABAR_ISLAND",
+      "tileset": "OVERWORLD",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "INDIGO_PLATEAU",
+      "tileset": "PLATEAU",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "SAFFRON_CITY",
+      "tileset": "OVERWORLD",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "OAKS_LAB",
+      "tileset": "DOJO",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "CINNABAR_LAB_FOSSIL_ROOM",
+      "tileset": "LAB",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "CINNABAR_LAB_METRONOME_ROOM",
+      "tileset": "LAB",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "SILPH_CO_2F",
+      "tileset": "FACILITY",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "SS_ANNE_KITCHEN",
+      "tileset": "SHIP",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "VIRIDIAN_POKECENTER",
+      "tileset": "POKECENTER",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "VIRIDIAN_MART",
+      "tileset": "MART",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "AGATHAS_ROOM",
+      "tileset": "CEMETERY",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "BIKE_SHOP",
+      "tileset": "CLUB",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "BILLS_HOUSE",
+      "tileset": "INTERIOR",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "BLUES_HOUSE",
+      "tileset": "HOUSE",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "BRUNOS_ROOM",
+      "tileset": "GYM",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "CELADON_CHIEF_HOUSE",
+      "tileset": "MANSION",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "CELADON_DINER",
+      "tileset": "LOBBY",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "CERULEAN_CAVE_1F",
+      "tileset": "CAVERN",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "COPYCATS_HOUSE_1F",
+      "tileset": "REDS_HOUSE_1",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "COPYCATS_HOUSE_2F",
+      "tileset": "REDS_HOUSE_2",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "MUSEUM_1F",
+      "tileset": "MUSEUM",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "ROUTE_11_GATE_1F",
+      "tileset": "GATE",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "SAFARI_ZONE_CENTER",
+      "tileset": "FOREST",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "SUMMER_BEACH_HOUSE",
+      "tileset": "BEACH_HOUSE",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "UNDERGROUND_PATH_NORTH_SOUTH",
+      "tileset": "UNDERGROUND",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "VERMILION_DOCK",
+      "tileset": "SHIP_PORT",
+      "palette_mismatches": 0
+    },
+    {
+      "map": "VIRIDIAN_FOREST_NORTH_GATE",
+      "tileset": "FOREST_GATE",
+      "palette_mismatches": 0
+    }
+  ],
+  "notes": [
+    "Map entries use RAM fixtures, not a complete playthrough.",
+    "NPC atlas shows source frames; stationary sheets omit walking frames."
+  ]
+}

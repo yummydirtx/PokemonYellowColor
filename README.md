@@ -1,7 +1,7 @@
 # Pokémon Yellow Color
 
 A playable Game Boy Color enhancement of English Pokémon Yellow, with per-tile
-overworld colors and Gen 2 battle graphics. **Version 0.1.1 is a preview build:**
+overworld colors and Gen 2 battle graphics. **Version 0.1.2 is a preview build:**
 the opening, all tilesets, sprite loaders, menus, saving, and surfing minigame
 have automated checks; a complete playthrough and physical hardware testing
 are still outstanding.
@@ -31,7 +31,10 @@ checksums are in [dist/manifest.json](dist/manifest.json).
 ## What changes
 
 - All 25 overworld tilesets have individual terrain and furniture colors.
-- Towns use distinct roof palettes; NPCs and the player have object palettes.
+- Towns use distinct roof palettes, cream masonry, blue windows, and natural
+  wood, stone, and metal colors in interiors. Pallet has terracotta roofs.
+- NPCs have skin and clothing colors. Scientists, Oak, and cooks have separate
+  white uniforms; their standing and walking frames use CGB-specific tiles.
 - All 151 Pokémon have Gen 2 front and detailed 6×6 back sprites with species
   palettes. Trainer graphics come from the same Gen 2 graphics integration.
 - Pikachu's follower and reaction portraits have yellow fur. All 61 portrait
@@ -43,6 +46,7 @@ checksums are in [dist/manifest.json](dist/manifest.json).
   minigame remain in place. No gameplay rebalance or extra Pokémon are added.
 
 ![Pallet Town](docs/screenshots/pallet.png)
+![Oak's lab](docs/screenshots/oaks_lab.png)
 ![Gen 2 Pikachu and Eevee in battle](docs/screenshots/battle.png)
 ![Yellow Pikachu reaction portrait](docs/screenshots/portrait.png)
 
@@ -71,6 +75,8 @@ python3 -m venv .venv
 .venv/bin/python scripts/verify_special_scenes.py
 .venv/bin/python scripts/build_portraits.py --check
 .venv/bin/python scripts/verify_portraits.py
+.venv/bin/python scripts/build_overworld_sprites.py --check
+.venv/bin/python scripts/verify_assets.py
 ```
 
 Run the scripts in that order, from the repository root, after building.
