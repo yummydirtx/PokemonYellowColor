@@ -493,6 +493,8 @@ ColorDMGPalToCGBPal:
 ; audio and input interrupts serviced. Waiting for mode 0/1 leaves mode 2 as a
 ; safety margin before the next mode 3, so no writes touch inaccessible VRAM.
 ColorRepaintMaps:
+	xor a
+	ldh [rVBK], a
 	ld hl, vBGMap0
 	ld a, [wColorTilesHigh]
 	ld d, a
@@ -502,8 +504,8 @@ ColorRepaintMaps:
 	ldh a, [rSTAT]
 	and 2
 	jr nz, .wait
-	xor a
-	ldh [rVBK], a
+	; The write completes within 68 dots of the STAT read. Even the last
+	; dot of HBlank leaves the following 80-dot OAM period available.
 	ld a, [hl]
 	ld e, a
 	ld a, [de]

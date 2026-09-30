@@ -24,12 +24,25 @@ VBlank::
 	ldh a, [hWY]
 	ldh [rWY], a
 .ok
+	; PCM playback and color-buffer preparation may defer an interrupt.
+	; Keep pending transfers queued until a complete VBlank is available.
+	ld a, [wColorActive]
+	and a
+	jr z, .graphics
+	ldh a, [rLCDC]
+	bit B_LCDC_ENABLE, a
+	jr z, .graphics
+	ldh a, [rLY]
+	cp 144
+	jr nz, .afterGraphics
+.graphics
 
 	farcall ColorVBlankAll
 	call VBlankCopy
 	call VBlankCopyDouble
 	call UpdateMovingBgTiles
 	call hDMARoutine
+.afterGraphics
 	ld a, BANK(PrepareOAMData)
 	ldh [hLoadedROMBank], a
 	ld [rROMB], a
