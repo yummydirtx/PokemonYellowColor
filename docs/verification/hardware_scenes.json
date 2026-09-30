@@ -1,0 +1,289 @@
+{
+  "rom_sha256": "bf1df666a9991d4836be6c2ee9780194b96606f9c576ffd5bd4ecc5608ea316a",
+  "maps": [
+    {
+      "map": "OAKS_LAB",
+      "tileset": "DOJO",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "PALLET_TOWN",
+      "tileset": "OVERWORLD",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "VIRIDIAN_POKECENTER",
+      "tileset": "POKECENTER",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "INDIGO_PLATEAU_LOBBY",
+      "tileset": "MART",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "TRADE_CENTER",
+      "tileset": "CLUB",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "COLOSSEUM",
+      "tileset": "CLUB",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "SUMMER_BEACH_HOUSE",
+      "tileset": "BEACH_HOUSE",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "AGATHAS_ROOM",
+      "tileset": "CEMETERY",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "BILLS_HOUSE",
+      "tileset": "INTERIOR",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "BLUES_HOUSE",
+      "tileset": "HOUSE",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "BRUNOS_ROOM",
+      "tileset": "GYM",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "CELADON_CHIEF_HOUSE",
+      "tileset": "MANSION",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "CELADON_DINER",
+      "tileset": "LOBBY",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "CERULEAN_BADGE_HOUSE",
+      "tileset": "SHIP",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "CERULEAN_CAVE_1F",
+      "tileset": "CAVERN",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "CINNABAR_GYM",
+      "tileset": "FACILITY",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "CINNABAR_LAB",
+      "tileset": "LAB",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "COPYCATS_HOUSE_1F",
+      "tileset": "REDS_HOUSE_1",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "COPYCATS_HOUSE_2F",
+      "tileset": "REDS_HOUSE_2",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "INDIGO_PLATEAU",
+      "tileset": "PLATEAU",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "MUSEUM_1F",
+      "tileset": "MUSEUM",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "ROUTE_11_GATE_1F",
+      "tileset": "GATE",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "SAFARI_ZONE_CENTER",
+      "tileset": "FOREST",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "UNDERGROUND_PATH_NORTH_SOUTH",
+      "tileset": "UNDERGROUND",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "VERMILION_DOCK",
+      "tileset": "SHIP_PORT",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    },
+    {
+      "map": "VIRIDIAN_FOREST_NORTH_GATE",
+      "tileset": "FOREST_GATE",
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0,
+      "attribute_mismatches": 0
+    }
+  ],
+  "dialogue": [
+    {
+      "speed": 1,
+      "held_button": null,
+      "completion_frame": 58,
+      "partial_stages": 11,
+      "graphics_end_lcd_modes": {
+        "1": 304
+      },
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0
+    },
+    {
+      "speed": 1,
+      "held_button": "a",
+      "completion_frame": 58,
+      "partial_stages": 11,
+      "graphics_end_lcd_modes": {
+        "1": 304
+      },
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0
+    },
+    {
+      "speed": 1,
+      "held_button": "b",
+      "completion_frame": 58,
+      "partial_stages": 11,
+      "graphics_end_lcd_modes": {
+        "1": 304
+      },
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0
+    },
+    {
+      "speed": 3,
+      "held_button": null,
+      "completion_frame": 121,
+      "partial_stages": 23,
+      "graphics_end_lcd_modes": {
+        "1": 304
+      },
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0
+    },
+    {
+      "speed": 3,
+      "held_button": "a",
+      "completion_frame": 58,
+      "partial_stages": 11,
+      "graphics_end_lcd_modes": {
+        "1": 304
+      },
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0
+    },
+    {
+      "speed": 3,
+      "held_button": "b",
+      "completion_frame": 58,
+      "partial_stages": 11,
+      "graphics_end_lcd_modes": {
+        "1": 304
+      },
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0
+    },
+    {
+      "speed": 5,
+      "held_button": null,
+      "completion_frame": 187,
+      "partial_stages": 28,
+      "graphics_end_lcd_modes": {
+        "1": 304
+      },
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0
+    },
+    {
+      "speed": 5,
+      "held_button": "a",
+      "completion_frame": 58,
+      "partial_stages": 11,
+      "graphics_end_lcd_modes": {
+        "1": 304
+      },
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0
+    },
+    {
+      "speed": 5,
+      "held_button": "b",
+      "completion_frame": 58,
+      "partial_stages": 11,
+      "graphics_end_lcd_modes": {
+        "1": 304
+      },
+      "blocked_vram_writes": 0,
+      "blocked_palette_writes": 0
+    }
+  ],
+  "model": "SameBoy CGB-E"
+}

@@ -1,0 +1,156 @@
+{
+  "rom_sha256": "bf1df666a9991d4836be6c2ee9780194b96606f9c576ffd5bd4ecc5608ea316a",
+  "cases": [
+    {
+      "renderer": "color",
+      "speed": "fast",
+      "held_button": null,
+      "completion_frame": 58,
+      "distinct_partial_frames": 11,
+      "max_display_lag_frames": 2
+    },
+    {
+      "renderer": "color",
+      "speed": "fast",
+      "held_button": "a",
+      "completion_frame": 58,
+      "distinct_partial_frames": 11,
+      "max_display_lag_frames": 2
+    },
+    {
+      "renderer": "color",
+      "speed": "fast",
+      "held_button": "b",
+      "completion_frame": 58,
+      "distinct_partial_frames": 11,
+      "max_display_lag_frames": 2
+    },
+    {
+      "renderer": "color",
+      "speed": "medium",
+      "held_button": null,
+      "completion_frame": 121,
+      "distinct_partial_frames": 28,
+      "max_display_lag_frames": 1
+    },
+    {
+      "renderer": "color",
+      "speed": "medium",
+      "held_button": "a",
+      "completion_frame": 58,
+      "distinct_partial_frames": 11,
+      "max_display_lag_frames": 2
+    },
+    {
+      "renderer": "color",
+      "speed": "medium",
+      "held_button": "b",
+      "completion_frame": 58,
+      "distinct_partial_frames": 11,
+      "max_display_lag_frames": 2
+    },
+    {
+      "renderer": "color",
+      "speed": "slow",
+      "held_button": null,
+      "completion_frame": 184,
+      "distinct_partial_frames": 28,
+      "max_display_lag_frames": 3
+    },
+    {
+      "renderer": "color",
+      "speed": "slow",
+      "held_button": "a",
+      "completion_frame": 58,
+      "distinct_partial_frames": 11,
+      "max_display_lag_frames": 2
+    },
+    {
+      "renderer": "color",
+      "speed": "slow",
+      "held_button": "b",
+      "completion_frame": 58,
+      "distinct_partial_frames": 11,
+      "max_display_lag_frames": 2
+    },
+    {
+      "renderer": "native",
+      "speed": "fast",
+      "held_button": null,
+      "completion_frame": 58,
+      "distinct_partial_frames": 11,
+      "max_display_lag_frames": 2
+    },
+    {
+      "renderer": "native",
+      "speed": "fast",
+      "held_button": "a",
+      "completion_frame": 58,
+      "distinct_partial_frames": 11,
+      "max_display_lag_frames": 2
+    },
+    {
+      "renderer": "native",
+      "speed": "fast",
+      "held_button": "b",
+      "completion_frame": 58,
+      "distinct_partial_frames": 11,
+      "max_display_lag_frames": 2
+    },
+    {
+      "renderer": "native",
+      "speed": "medium",
+      "held_button": null,
+      "completion_frame": 121,
+      "distinct_partial_frames": 28,
+      "max_display_lag_frames": 1
+    },
+    {
+      "renderer": "native",
+      "speed": "medium",
+      "held_button": "a",
+      "completion_frame": 58,
+      "distinct_partial_frames": 11,
+      "max_display_lag_frames": 2
+    },
+    {
+      "renderer": "native",
+      "speed": "medium",
+      "held_button": "b",
+      "completion_frame": 58,
+      "distinct_partial_frames": 11,
+      "max_display_lag_frames": 2
+    },
+    {
+      "renderer": "native",
+      "speed": "slow",
+      "held_button": null,
+      "completion_frame": 184,
+      "distinct_partial_frames": 28,
+      "max_display_lag_frames": 2
+    },
+    {
+      "renderer": "native",
+      "speed": "slow",
+      "held_button": "a",
+      "completion_frame": 58,
+      "distinct_partial_frames": 11,
+      "max_display_lag_frames": 2
+    },
+    {
+      "renderer": "native",
+      "speed": "slow",
+      "held_button": "b",
+      "completion_frame": 58,
+      "distinct_partial_frames": 11,
+      "max_display_lag_frames": 2
+    }
+  ],
+  "prompt_blink_changes": 9,
+  "line_scroll": "passed",
+  "dialogue_close": "passed",
+  "graphics_end_lcd_modes": {
+    "1": 9433
+  },
+  "fixture": "Real scientist/sign dialogue, RAM map positioning and button interaction"
+}

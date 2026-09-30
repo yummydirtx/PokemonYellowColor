@@ -152,7 +152,15 @@ check_attributes()
 capture('pikachu_follower')
 press('left', 20, 40)
 press('right', 4, 8)
-press('a', 1, 249)
+p.button('a', 4)
+for _ in range(900):
+    p.tick(1)
+    face = p.screen.image.convert('RGB').crop((56, 48, 96, 88))
+    yellow = sum(r > 220 and 180 < g < 250 and b < 50 for r, g, b in face.get_flattened_data())
+    if value('wColorCommand') == 0x80 and yellow > 200:
+        break
+else:
+    raise AssertionError('Follower interaction did not display a yellow portrait')
 capture('pikachu_portrait')
 p.tick(500)
 for _ in range(12):

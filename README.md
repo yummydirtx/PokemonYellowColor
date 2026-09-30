@@ -1,7 +1,7 @@
 # Pokémon Yellow Color
 
 A playable Game Boy Color enhancement of English Pokémon Yellow, with per-tile
-overworld colors and Gen 2 battle graphics. **Version 0.1.2 is a preview build:**
+overworld colors and Gen 2 battle graphics. **Version 0.1.3 is a preview build:**
 the opening, all tilesets, sprite loaders, menus, saving, and surfing minigame
 have automated checks; a complete playthrough and physical hardware testing
 are still outstanding.
@@ -40,6 +40,11 @@ checksums are in [dist/manifest.json](dist/manifest.json).
 - Pikachu's follower and reaction portraits have yellow fur. All 61 portrait
   graphics, including partial animation patches, have separate fur/background
   colors, with white eye highlights and red-orange cheeks.
+- Dialogue appears progressively at all three text speeds; holding A or B
+  accelerates it. Text prompts and line scrolling refresh during input waits.
+- GBC gameplay uses the double-speed CPU, with unchanged frame-based game rules
+  and correctly timed Pikachu voice samples. Unchanged NPC palettes are cached.
+  Pokémon Centers, link rooms, and printing retain the original serial clock.
 - Scrolling updates tile graphics and palette attributes together. Full-screen
   menus restore the entire background attribute map on return.
 - Yellow's story, encounters, battle rules, follower, voice samples, and surfing
@@ -77,11 +82,14 @@ python3 -m venv .venv
 .venv/bin/python scripts/verify_portraits.py
 .venv/bin/python scripts/build_overworld_sprites.py --check
 .venv/bin/python scripts/verify_assets.py
+.venv/bin/python scripts/verify_text.py
 ```
 
 Run the scripts in that order, from the repository root, after building.
 The first creates emulator states for the later checks. Outputs go to
 `build/verification/`. See [testing and limitations](docs/TESTING.md).
+The additional SameBoy checks described there account for graphics DMA stalls
+and verify walking, LCD access, voice timing, and CPU-speed transitions.
 
 ## Credits
 
@@ -92,6 +100,7 @@ The first creates emulator states for the later checks. Outputs go to
 - [dannye/pokeyellow-gen-2-gfx](https://github.com/dannye/pokeyellow-gen-2-gfx):
   Gen 2 Pokémon/trainer graphics, palettes, and back-sprite integration.
 - [RGBDS](https://rgbds.gbdev.io/), [PyBoy](https://github.com/Baekalfen/PyBoy),
+  [SameBoy](https://github.com/LIJI32/SameBoy),
   and [Pan Docs](https://gbdev.io/pandocs/): development tools and references.
 
 [Pinned revisions and implementation notes](docs/UPSTREAM.md) document the

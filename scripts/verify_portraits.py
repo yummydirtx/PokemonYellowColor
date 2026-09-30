@@ -75,5 +75,21 @@ sheet.save(OUT / 'portrait_reactions.png')
 (OUT / 'portraits.json').write_text(json.dumps({
     'loaded_graphics': sorted(loaded), 'animations': results,
 }, indent=2) + '\n')
+# A full-screen README example uses the normal interaction path, without the
+# tilemap call trampoline. High happiness is a screenshot-only RAM fixture.
+with (OUT / 'opening.state').open('rb') as stream:
+    p.load_state(stream)
+p.memory[address('wPikachuHappiness')] = 255
+p.button('a', 4)
+best = 0
+for _ in range(900):
+    p.tick(1)
+    if p.memory[address('wColorCommand')] == 0x80:
+        face = p.screen.image.convert('RGB').crop((56, 48, 96, 88))
+        yellow = sum(r > 220 and 180 < g < 250 and b < 50 for r, g, b in face.get_flattened_data())
+        if yellow > best:
+            best = yellow
+            p.screen.image.resize((480, 432), Image.Resampling.NEAREST).save(OUT / 'portrait_readme.png')
+assert best > 200, 'README portrait interaction failed'
 p.stop(save=False)
 print('Passed: all 29 reaction scripts, all 61 graphics, yellow fur and palette restoration.')

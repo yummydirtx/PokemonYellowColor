@@ -1,0 +1,270 @@
+{
+  "sameboy_revision": "213a12ce93d66b105a113debd9396306066a7cfc",
+  "rom_sha256": "bf1df666a9991d4836be6c2ee9780194b96606f9c576ffd5bd4ecc5608ea316a",
+  "walking": {
+    "original": {
+      "sha256": "8cbaa499397e4f1a679c992ea9382a2dd7942ab398b48c19829c2d9529de47bf",
+      "scenes": [
+        {
+          "scene": "OaksLabCenter",
+          "frames": 512,
+          "cpu_speed": 0,
+          "game_updates": 247,
+          "updates_per_second": 28.81,
+          "walking_updates": 64,
+          "median_walking_interval_frames": 2.0,
+          "oam_transfers": 512
+        },
+        {
+          "scene": "OaksLabFloor",
+          "frames": 512,
+          "cpu_speed": 0,
+          "game_updates": 241,
+          "updates_per_second": 28.11,
+          "walking_updates": 233,
+          "median_walking_interval_frames": 2.001,
+          "oam_transfers": 512
+        },
+        {
+          "scene": "PalletTown",
+          "frames": 512,
+          "cpu_speed": 0,
+          "game_updates": 241,
+          "updates_per_second": 28.11,
+          "walking_updates": 233,
+          "median_walking_interval_frames": 2.0,
+          "oam_transfers": 512
+        }
+      ]
+    },
+    "before_optimization": {
+      "sha256": "a87f21fa97710d1a3d1e68e9e99f6f8c268b88d880324155b669f98489062ad7",
+      "scenes": [
+        {
+          "scene": "OaksLabCenter",
+          "frames": 512,
+          "cpu_speed": 0,
+          "game_updates": 169,
+          "updates_per_second": 19.71,
+          "walking_updates": 64,
+          "median_walking_interval_frames": 3.001,
+          "oam_transfers": 512,
+          "obj_palette_uploads": 168,
+          "graphics": {
+            "end_lcd_modes": {
+              "1": 512
+            },
+            "end_scanlines": {
+              "148": 456,
+              "149": 48,
+              "153": 8
+            }
+          }
+        },
+        {
+          "scene": "OaksLabFloor",
+          "frames": 512,
+          "cpu_speed": 0,
+          "game_updates": 165,
+          "updates_per_second": 19.25,
+          "walking_updates": 156,
+          "median_walking_interval_frames": 3.009,
+          "oam_transfers": 511,
+          "obj_palette_uploads": 164,
+          "graphics": {
+            "end_lcd_modes": {
+              "1": 511
+            },
+            "end_scanlines": {
+              "148": 443,
+              "149": 48,
+              "153": 20
+            }
+          }
+        },
+        {
+          "scene": "PalletTown",
+          "frames": 512,
+          "cpu_speed": 0,
+          "game_updates": 239,
+          "updates_per_second": 27.88,
+          "walking_updates": 232,
+          "median_walking_interval_frames": 2.0,
+          "oam_transfers": 511,
+          "obj_palette_uploads": 240,
+          "graphics": {
+            "end_lcd_modes": {
+              "1": 511
+            },
+            "end_scanlines": {
+              "148": 436,
+              "149": 46,
+              "153": 29
+            }
+          }
+        }
+      ]
+    },
+    "optimized": {
+      "sha256": "bf1df666a9991d4836be6c2ee9780194b96606f9c576ffd5bd4ecc5608ea316a",
+      "scenes": [
+        {
+          "scene": "OaksLabCenter",
+          "frames": 512,
+          "cpu_speed": 1,
+          "game_updates": 256,
+          "updates_per_second": 29.86,
+          "walking_updates": 64,
+          "median_walking_interval_frames": 2.0,
+          "oam_transfers": 512,
+          "obj_palette_uploads": 0,
+          "graphics": {
+            "end_lcd_modes": {
+              "1": 512
+            },
+            "end_scanlines": {
+              "146": 504,
+              "148": 7,
+              "149": 1
+            }
+          }
+        },
+        {
+          "scene": "OaksLabFloor",
+          "frames": 512,
+          "cpu_speed": 1,
+          "game_updates": 256,
+          "updates_per_second": 29.86,
+          "walking_updates": 248,
+          "median_walking_interval_frames": 2.0,
+          "oam_transfers": 512,
+          "obj_palette_uploads": 0,
+          "graphics": {
+            "end_lcd_modes": {
+              "1": 512
+            },
+            "end_scanlines": {
+              "146": 481,
+              "148": 27,
+              "149": 4
+            }
+          }
+        },
+        {
+          "scene": "PalletTown",
+          "frames": 512,
+          "cpu_speed": 1,
+          "game_updates": 256,
+          "updates_per_second": 29.86,
+          "walking_updates": 248,
+          "median_walking_interval_frames": 2.0,
+          "oam_transfers": 512,
+          "obj_palette_uploads": 0,
+          "graphics": {
+            "end_lcd_modes": {
+              "1": 512
+            },
+            "end_scanlines": {
+              "146": 481,
+              "148": 28,
+              "149": 3
+            }
+          }
+        }
+      ]
+    }
+  },
+  "pikachu_pcm": [
+    {
+      "mode": "cgb_double",
+      "clips": 42,
+      "bits_checked": 1447632,
+      "interval_8mhz_ticks": 360
+    },
+    {
+      "mode": "cgb_single",
+      "clips": 42,
+      "bits_checked": 1447632,
+      "interval_8mhz_ticks": 360
+    },
+    {
+      "mode": "dmg",
+      "clips": 42,
+      "bits_checked": 1447632,
+      "interval_8mhz_ticks": 360
+    }
+  ],
+  "clock_selection": [
+    {
+      "map": "VIRIDIAN_POKECENTER",
+      "double_speed": false
+    },
+    {
+      "map": "PEWTER_POKECENTER",
+      "double_speed": false
+    },
+    {
+      "map": "CERULEAN_POKECENTER",
+      "double_speed": false
+    },
+    {
+      "map": "LAVENDER_POKECENTER",
+      "double_speed": false
+    },
+    {
+      "map": "VERMILION_POKECENTER",
+      "double_speed": false
+    },
+    {
+      "map": "CELADON_POKECENTER",
+      "double_speed": false
+    },
+    {
+      "map": "FUCHSIA_POKECENTER",
+      "double_speed": false
+    },
+    {
+      "map": "CINNABAR_POKECENTER",
+      "double_speed": false
+    },
+    {
+      "map": "SAFFRON_POKECENTER",
+      "double_speed": false
+    },
+    {
+      "map": "MT_MOON_POKECENTER",
+      "double_speed": false
+    },
+    {
+      "map": "ROCK_TUNNEL_POKECENTER",
+      "double_speed": false
+    },
+    {
+      "map": "INDIGO_PLATEAU_LOBBY",
+      "double_speed": false
+    },
+    {
+      "map": "TRADE_CENTER",
+      "double_speed": false
+    },
+    {
+      "map": "COLOSSEUM",
+      "double_speed": false
+    },
+    {
+      "map": "OAKS_LAB",
+      "double_speed": true
+    },
+    {
+      "map": "PALLET_TOWN",
+      "double_speed": true
+    }
+  ],
+  "printer_clock_entry_exit": "passed",
+  "soft_reset_keeps_double_speed": "passed",
+  "limitations": [
+    "Emulated hardware timing; physical GBC retest required",
+    "Cable/printer clock selection checked; no physical connection test",
+    "PCM bitstream/rate checked; speaker output not assessed"
+  ]
+}

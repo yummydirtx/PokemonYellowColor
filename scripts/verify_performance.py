@@ -123,7 +123,8 @@ print('All 42 PCM clips preserve their bits and timing in all three CPU modes.',
 constants = {m[0]: (int(m[3], 16), int(m[1]), int(m[2])) for m in re.findall(
     r'map_const\s+(\w+),\s*(\d+),\s*(\d+)\s*; \$([0-9A-Fa-f]+)',
     Path('src/constants/map_constants.asm').read_text())}
-serial_maps = re.findall(r'\b[A-Z][A-Z_]+\b', Path('src/color/speed.asm').read_text().split('.serialMaps\n')[1].split('ColorEnableDoubleSpeed::')[0])
+serial_table = re.search(r'\n\.serialMaps\n(.*?)\n\n', Path('src/color/speed.asm').read_text(), re.S)[1]
+serial_maps = re.findall(r'\b[A-Z][A-Z_]+\b', serial_table)
 serial_maps = [n for n in serial_maps if n in constants]
 assert len(serial_maps) == 14
 p = SameBoy(ROM, SAVE)
@@ -141,9 +142,11 @@ p.call('Printer_PlayMapMusic')
 assert p.get(0xff4d) & 0x80
 report['clock_selection'] = compatibility
 report['printer_clock_entry_exit'] = 'passed'
+p.sync()
+p.watch(['Init'])
 p.lib.sb_register(5, p.addr('SoftReset'))
 p.tick(1000)
-assert p.get(0xff4d) & 0x80
+assert p.get(0xff4d) & 0x80 and any(e['name'] == 'Init' for e in p.events())
 report['soft_reset_keeps_double_speed'] = 'passed'
 p.close()
 report['limitations'] = ['Emulated hardware timing; physical GBC retest required',

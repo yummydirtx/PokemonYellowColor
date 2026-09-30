@@ -65,147 +65,147 @@
   "animations": [
     {
       "animation": 0,
-      "frames": 203,
+      "frames": 199,
       "yellow_pixels": 627
     },
     {
       "animation": 1,
-      "frames": 203,
+      "frames": 199,
       "yellow_pixels": 627
     },
     {
       "animation": 2,
-      "frames": 160,
+      "frames": 156,
       "yellow_pixels": 606
     },
     {
       "animation": 3,
-      "frames": 267,
+      "frames": 263,
       "yellow_pixels": 537
     },
     {
       "animation": 4,
-      "frames": 239,
+      "frames": 235,
       "yellow_pixels": 601
     },
     {
       "animation": 5,
-      "frames": 123,
+      "frames": 119,
       "yellow_pixels": 529
     },
     {
       "animation": 6,
-      "frames": 245,
+      "frames": 241,
       "yellow_pixels": 600
     },
     {
       "animation": 7,
-      "frames": 204,
+      "frames": 200,
       "yellow_pixels": 607
     },
     {
       "animation": 8,
-      "frames": 160,
+      "frames": 156,
       "yellow_pixels": 630
     },
     {
       "animation": 9,
-      "frames": 195,
+      "frames": 191,
       "yellow_pixels": 646
     },
     {
       "animation": 10,
-      "frames": 202,
+      "frames": 198,
       "yellow_pixels": 665
     },
     {
       "animation": 11,
-      "frames": 330,
+      "frames": 326,
       "yellow_pixels": 510
     },
     {
       "animation": 12,
-      "frames": 258,
+      "frames": 253,
       "yellow_pixels": 583
     },
     {
       "animation": 13,
-      "frames": 180,
+      "frames": 176,
       "yellow_pixels": 594
     },
     {
       "animation": 14,
-      "frames": 150,
+      "frames": 146,
       "yellow_pixels": 521
     },
     {
       "animation": 15,
-      "frames": 180,
+      "frames": 176,
       "yellow_pixels": 645
     },
     {
       "animation": 16,
-      "frames": 126,
+      "frames": 122,
       "yellow_pixels": 577
     },
     {
       "animation": 17,
-      "frames": 330,
+      "frames": 326,
       "yellow_pixels": 559
     },
     {
       "animation": 18,
-      "frames": 208,
+      "frames": 204,
       "yellow_pixels": 567
     },
     {
       "animation": 19,
-      "frames": 162,
+      "frames": 158,
       "yellow_pixels": 458
     },
     {
       "animation": 20,
-      "frames": 180,
+      "frames": 176,
       "yellow_pixels": 534
     },
     {
       "animation": 21,
-      "frames": 333,
+      "frames": 329,
       "yellow_pixels": 432
     },
     {
       "animation": 22,
-      "frames": 150,
+      "frames": 146,
       "yellow_pixels": 442
     },
     {
       "animation": 23,
-      "frames": 240,
+      "frames": 236,
       "yellow_pixels": 467
     },
     {
       "animation": 24,
-      "frames": 210,
+      "frames": 206,
       "yellow_pixels": 496
     },
     {
       "animation": 25,
-      "frames": 228,
+      "frames": 224,
       "yellow_pixels": 508
     },
     {
       "animation": 26,
-      "frames": 338,
+      "frames": 334,
       "yellow_pixels": 510
     },
     {
       "animation": 27,
-      "frames": 120,
+      "frames": 116,
       "yellow_pixels": 398
     },
     {
       "animation": 28,
-      "frames": 222,
+      "frames": 218,
       "yellow_pixels": 372
     }
   ]

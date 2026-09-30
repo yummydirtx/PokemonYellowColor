@@ -2,14 +2,22 @@
   "opening_gameplay": "passed",
   "menu_restore": "passed",
   "save_reload": "passed",
-  "vblank_end_scanlines": {
-    "145": 19333,
-    "146": 2393,
-    "147": 8,
-    "148": 2,
-    "149": 216,
-    "150": 462,
-    "151": 257
+  "tile_copy_end_scanlines": {
+    "144": 17968,
+    "145": 12601,
+    "146": 395,
+    "147": 1211,
+    "148": 2
+  },
+  "graphics_end_lcd_modes": {
+    "1": 32177
+  },
+  "graphics_end_scanlines": {
+    "145": 6141,
+    "146": 23360,
+    "147": 1436,
+    "148": 1148,
+    "149": 92
   },
   "map_matrix": [
     {

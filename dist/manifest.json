@@ -1,11 +1,11 @@
 {
-  "version": "0.1.2",
+  "version": "0.1.3",
   "status": "preview",
   "toolchain": "rgbasm v1.0.3",
   "source_sha1": "cc7d03262ebfaf2f06772c1a480c7d9d5f4a38e1",
   "source_crc32": "7d527d62",
-  "target_sha256": "48cbf21e1b4edefbb4c28d6d549e5a3d86915c523366b32bda69cc7207681e66",
+  "target_sha256": "bf1df666a9991d4836be6c2ee9780194b96606f9c576ffd5bd4ecc5608ea316a",
   "target_size": 2097152,
-  "patch_size": 233387,
-  "patch_sha256": "7a1b6f985f96feceaef03431aeee3f4de71f3d596b67f4d174eca27ea1feafe4"
+  "patch_size": 241916,
+  "patch_sha256": "4a912e80c9a4731263eea81dfdd8a5b26e102df31b61139d6a6ba16fb4348f30"
 }
