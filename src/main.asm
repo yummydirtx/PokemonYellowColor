@@ -515,3 +515,5 @@ MewPicBack::          INCBIN "gfx/pokemon/back/mewb.pic"
 SECTION "bank42", ROMX, BANK[$42]
 
 INCLUDE "data/sgb/sgb_palettes.asm"
+
+INCLUDE "color/pikachu_graphics.asm"

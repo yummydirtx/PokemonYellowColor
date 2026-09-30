@@ -55,10 +55,9 @@ ColorUpdateBG:
 	ld a, [wColorCommand]
 	cp $80
 	jr nz, .terrain
-	ld a, PAL_PIKACHU_PORTRAIT
-	call GetCGBBasePalAddress
+	ld de, ColorPortraitPalette
 	xor a
-	call DMGPalToCGBPal
+	call ColorDMGPalToCGBPal
 	jr .transfer
 .terrain
 	ld a, [wColorPaletteSet]
@@ -436,6 +435,9 @@ ColorObjectPalettes:
 	RGB 31,31,31, 31,28,3, 22,12,2, 3,3,4 ; Pikachu
 	RGB 31,31,31, 25,25,25, 13,14,16, 3,3,4 ; gray
 	RGB 31,31,31, 31,22,14, 19,9,24, 3,3,4 ; purple
+
+ColorPortraitPalette:
+	RGB 31,31,31, 31,28,3, 27,8,3, 3,3,3 ; white, fur, cheeks, outline
 
 ColorDMGPalToCGBPal:
 ; Populate wCGBPal with colors from a base palette, selected using one of the

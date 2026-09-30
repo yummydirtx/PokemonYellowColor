@@ -14,8 +14,9 @@ project. It retains the original single CPU speed used by Pikachu PCM audio
 and serial code; link compatibility still needs validation. Tile IDs and palette attributes are prepared together, then
 transferred using GBC DMA. Horizontal columns use unrolled CPU transfers.
 
-Bank 0x3b holds the palette/color engine; banks 0x40–0x42 hold expanded graphics
-and palette data. The resulting cartridge is 2 MiB, MBC5 with 32 KiB battery RAM.
+Bank 0x3b holds the palette/color engine; banks 0x40–0x42 hold expanded battle graphics
+and palette data. Banks 0x43–0x44 hold the CGB reaction portrait variants.
+The resulting cartridge is 2 MiB, MBC5 with 32 KiB battery RAM.
 Existing game and save data addresses remain unchanged; eleven unused bytes of
 fixed audio-page RAM hold renderer state. Additional scratch buffers use WRAM
 bank 2 only in interrupt-disabled leaf code, because the original stack is in
@@ -28,6 +29,13 @@ continues to honor the original fade registers.
 
 Yellow's beach house has a dedicated tile-color table. Pikachu's dynamic
 follower slot is handled separately from the ordinary NPC picture IDs.
+
+`scripts/build_portraits.py` derives CGB-only indexed tile data from Yellow's
+original portrait PNGs. Enclosed fur regions receive the yellow index, while
+the exterior field and small eye highlights retain white. Partial animation
+graphics are classified in the context of their complete base frame. Original
+PNGs and the original DMG/SGB graphics path remain available. The generated
+assembly is checked in so normal builds do not require image-processing tools.
 
 Original code/assets retain their original ownership and attribution. This
 repository does not assert a new license over Pokémon or upstream assets.

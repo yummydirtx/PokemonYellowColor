@@ -1,4 +1,4 @@
-# Version 0.1.0 verification
+# Version 0.1.1 verification
 
 The final clean build was tested with RGBDS 1.0.3 and PyBoy 2.7.0 on 2026-09-30.
 The exact build and patch hashes are recorded in `dist/manifest.json`.
@@ -17,6 +17,8 @@ The exact build and patch hashes are recorded in `dist/manifest.json`.
 | Save and fresh-emulator Continue | Game checksum accepted; map and party data restored |
 | Map entry matrix | 26 maps covering all 25 tilesets; zero visible palette attribute mismatches |
 | Pokémon sprite loaders | 151 front + 151 back sprites; decoded VRAM matches source graphics byte-for-byte |
+| Pikachu reaction portraits | All 29 reaction scripts and 61 graphic entries exercised; yellow fur and return to overworld palettes checked |
+| Portrait source regeneration | Checked-in CGB tile data matches the deterministic generator; original PNGs remain unchanged |
 | Surfing minigame | Gameplay, results, exit, and overworld palette restoration passed |
 | Monochrome fallback | New game through the bedroom, using PyBoy's DMG boot ROM |
 | Active-display overworld transfer timing | Transfer endpoint remained within scanlines 145–151 in the opening test |
@@ -39,7 +41,7 @@ are in `docs/screenshots/`. Re-running the scripts produces fresh results in
 
 This is a playable preview, not a claim that every possible game path has been
 tested. A complete playthrough, every battle animation, evolution/trade/Hall of
-Fame transitions, all Pikachu emotions, printer/link/Super Game Boy operation,
+Fame transitions, emotion-selection triggers, printer/link/Super Game Boy operation,
 and physical GBC/flash-cartridge testing remain outstanding. Headless tests do
 not assess audible PCM quality. The original single CPU speed is retained.
 

@@ -478,6 +478,23 @@ INCLUDE "data/pikachu/pikachu_pic_tilemaps.asm"
 
 LoadPikaPicAnimGFXHeader:
 	push hl
+	push af
+	ldh a, [hOnCGB]
+	and a
+	jr z, .original
+	pop af
+	and a
+	jr z, .legacy
+	cp $3e ; the unused overworld-sprite entry keeps its original layout
+	jr nc, .legacy
+	farcall ColorPikaGraphicHeader
+	ld b, h
+	ld c, l
+	pop hl
+	ret
+.original
+	pop af
+.legacy
 	ld e, a
 	ld d, 0
 	ld hl, PikaPicAnimGFXHeaders

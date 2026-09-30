@@ -1,7 +1,7 @@
 # Pokémon Yellow Color
 
 A playable Game Boy Color enhancement of English Pokémon Yellow, with per-tile
-overworld colors and Gen 2 battle graphics. **Version 0.1.0 is a preview build:**
+overworld colors and Gen 2 battle graphics. **Version 0.1.1 is a preview build:**
 the opening, all tilesets, sprite loaders, menus, saving, and surfing minigame
 have automated checks; a complete playthrough and physical hardware testing
 are still outstanding.
@@ -34,8 +34,9 @@ checksums are in [dist/manifest.json](dist/manifest.json).
 - Towns use distinct roof palettes; NPCs and the player have object palettes.
 - All 151 Pokémon have Gen 2 front and detailed 6×6 back sprites with species
   palettes. Trainer graphics come from the same Gen 2 graphics integration.
-- Pikachu's follower is yellow. Its original emotion portraits retain their
-  dedicated palette while the surrounding map stays colored.
+- Pikachu's follower and reaction portraits have yellow fur. All 61 portrait
+  graphics, including partial animation patches, have separate fur/background
+  colors, with white eye highlights and red-orange cheeks.
 - Scrolling updates tile graphics and palette attributes together. Full-screen
   menus restore the entire background attribute map on return.
 - Yellow's story, encounters, battle rules, follower, voice samples, and surfing
@@ -43,6 +44,7 @@ checksums are in [dist/manifest.json](dist/manifest.json).
 
 ![Pallet Town](docs/screenshots/pallet.png)
 ![Gen 2 Pikachu and Eevee in battle](docs/screenshots/battle.png)
+![Yellow Pikachu reaction portrait](docs/screenshots/portrait.png)
 
 ## Build and verify
 
@@ -67,10 +69,12 @@ python3 -m venv .venv
 .venv/bin/python scripts/verify_emulator.py
 .venv/bin/python scripts/verify_sprites.py
 .venv/bin/python scripts/verify_special_scenes.py
+.venv/bin/python scripts/build_portraits.py --check
+.venv/bin/python scripts/verify_portraits.py
 ```
 
 Run the scripts in that order, from the repository root, after building.
-The first creates emulator states for the other two. Outputs go to
+The first creates emulator states for the later checks. Outputs go to
 `build/verification/`. See [testing and limitations](docs/TESTING.md).
 
 ## Credits

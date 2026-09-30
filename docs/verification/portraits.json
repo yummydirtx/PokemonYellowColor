@@ -1,0 +1,212 @@
+{
+  "loaded_graphics": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61
+  ],
+  "animations": [
+    {
+      "animation": 0,
+      "frames": 203,
+      "yellow_pixels": 627
+    },
+    {
+      "animation": 1,
+      "frames": 203,
+      "yellow_pixels": 627
+    },
+    {
+      "animation": 2,
+      "frames": 160,
+      "yellow_pixels": 606
+    },
+    {
+      "animation": 3,
+      "frames": 267,
+      "yellow_pixels": 537
+    },
+    {
+      "animation": 4,
+      "frames": 239,
+      "yellow_pixels": 601
+    },
+    {
+      "animation": 5,
+      "frames": 123,
+      "yellow_pixels": 529
+    },
+    {
+      "animation": 6,
+      "frames": 245,
+      "yellow_pixels": 600
+    },
+    {
+      "animation": 7,
+      "frames": 204,
+      "yellow_pixels": 607
+    },
+    {
+      "animation": 8,
+      "frames": 160,
+      "yellow_pixels": 630
+    },
+    {
+      "animation": 9,
+      "frames": 195,
+      "yellow_pixels": 646
+    },
+    {
+      "animation": 10,
+      "frames": 202,
+      "yellow_pixels": 665
+    },
+    {
+      "animation": 11,
+      "frames": 330,
+      "yellow_pixels": 510
+    },
+    {
+      "animation": 12,
+      "frames": 258,
+      "yellow_pixels": 583
+    },
+    {
+      "animation": 13,
+      "frames": 180,
+      "yellow_pixels": 594
+    },
+    {
+      "animation": 14,
+      "frames": 150,
+      "yellow_pixels": 521
+    },
+    {
+      "animation": 15,
+      "frames": 180,
+      "yellow_pixels": 645
+    },
+    {
+      "animation": 16,
+      "frames": 126,
+      "yellow_pixels": 577
+    },
+    {
+      "animation": 17,
+      "frames": 330,
+      "yellow_pixels": 559
+    },
+    {
+      "animation": 18,
+      "frames": 208,
+      "yellow_pixels": 567
+    },
+    {
+      "animation": 19,
+      "frames": 162,
+      "yellow_pixels": 458
+    },
+    {
+      "animation": 20,
+      "frames": 180,
+      "yellow_pixels": 534
+    },
+    {
+      "animation": 21,
+      "frames": 333,
+      "yellow_pixels": 432
+    },
+    {
+      "animation": 22,
+      "frames": 150,
+      "yellow_pixels": 442
+    },
+    {
+      "animation": 23,
+      "frames": 240,
+      "yellow_pixels": 467
+    },
+    {
+      "animation": 24,
+      "frames": 210,
+      "yellow_pixels": 496
+    },
+    {
+      "animation": 25,
+      "frames": 228,
+      "yellow_pixels": 508
+    },
+    {
+      "animation": 26,
+      "frames": 339,
+      "yellow_pixels": 510
+    },
+    {
+      "animation": 27,
+      "frames": 120,
+      "yellow_pixels": 398
+    },
+    {
+      "animation": 28,
+      "frames": 222,
+      "yellow_pixels": 372
+    }
+  ]
+}
