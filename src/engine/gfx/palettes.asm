@@ -9,6 +9,7 @@ _RunPaletteCommand:
 	push af
 	xor a
 	ld [wColorActive], a
+	ld [wColorAutoReady], a
 	pop af
 	cp SET_PAL_OVERWORLD
 	jr nz, .native
@@ -374,6 +375,9 @@ YellowIntroPaletteAction::
 	ret
 
 LoadOverworldPikachuFrontpicPalettes::
+	ld a, [wColorActive]
+	and a
+	jp nz, ColorPikachuPortrait
 	ld hl, PalPacket_Empty
 	ld de, wPalPacket
 	ld bc, $10

@@ -19,6 +19,11 @@ ColorGetTiles:
 	ld [wColorTilesHigh], a
 	ret
 
+ColorPikachuPortrait:
+	ld a, $80
+	ld [wColorCommand], a
+	jp ColorUpdateBG
+
 ColorLoadOverworld:
 	ld a, SET_PAL_OVERWORLD
 	ld [wDefaultPaletteCommand], a
@@ -36,13 +41,26 @@ ColorLoadOverworld:
 	ld a, [hl]
 	ld [wColorPaletteSet + 1], a
 	call ColorUpdateBG
-	jp ColorUpdateOBJ
+	call ColorUpdateOBJ
+	jp ColorRepaintMaps
 
 ; Convert all eight palettes through the native DMG fade registers.
 ColorUpdateBG:
 	xor a
 	ld [wColorPaletteIndex], a
 .loop
+	ld a, [wColorPaletteIndex]
+	cp 7
+	jr nz, .terrain
+	ld a, [wColorCommand]
+	cp $80
+	jr nz, .terrain
+	ld a, PAL_PIKACHU_PORTRAIT
+	call GetCGBBasePalAddress
+	xor a
+	call DMGPalToCGBPal
+	jr .transfer
+.terrain
 	ld a, [wColorPaletteSet]
 	ld l, a
 	ld a, [wColorPaletteSet + 1]
@@ -82,6 +100,7 @@ ColorUpdateBG:
 .convert
 	xor a
 	call ColorDMGPalToCGBPal
+.transfer
 	ld a, [wColorPaletteIndex]
 	call TransferCurBGPData
 	ld hl, wColorPaletteIndex
@@ -467,3 +486,36 @@ ColorDMGPalToCGBPal:
 	add hl, de
 	ret
 
+
+; Native full-screen menus replace both attribute maps. Restore colors from the
+; actual VRAM tile IDs, including scrolled/offscreen rows, when returning to maps.
+; The short DI section protects each paired VRAM access; EI between tiles keeps
+; audio and input interrupts serviced. Waiting for mode 0/1 leaves mode 2 as a
+; safety margin before the next mode 3, so no writes touch inaccessible VRAM.
+ColorRepaintMaps:
+	ld hl, vBGMap0
+	ld a, [wColorTilesHigh]
+	ld d, a
+.loop
+	di
+.wait
+	ldh a, [rSTAT]
+	and 2
+	jr nz, .wait
+	xor a
+	ldh [rVBK], a
+	ld a, [hl]
+	ld e, a
+	ld a, [de]
+	ld c, a
+	ld a, 1
+	ldh [rVBK], a
+	ld [hl], c
+	xor a
+	ldh [rVBK], a
+	ei
+	inc hl
+	ld a, h
+	cp $a0
+	jr nz, .loop
+	ret

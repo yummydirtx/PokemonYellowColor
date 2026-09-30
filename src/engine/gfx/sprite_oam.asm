@@ -247,6 +247,10 @@ ColorSpritePalette:
 	push bc
 	push hl
 	ldh a, [hSpriteOffset2]
+	cp $f0
+	ld a, 5 ; Yellow uses dynamic picture IDs for the follower slot
+	jr z, .store
+	ldh a, [hSpriteOffset2]
 	ld l, a
 	ld h, HIGH(wSpriteStateData1)
 	ld a, [hl]
@@ -255,6 +259,7 @@ ColorSpritePalette:
 	ld hl, ColorSpritePaletteTable
 	add hl, bc
 	ld a, [hl]
+.store
 	ld [wColorSpritePal], a
 	pop hl
 	pop bc
