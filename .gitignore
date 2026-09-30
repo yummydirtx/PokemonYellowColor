@@ -1,0 +1,13 @@
+# ROM dumps, built ROMs, emulator saves, and local dependencies never leave this machine.
+*.gb
+*.gbc
+*.sav
+*.srm
+*.state
+*.state.*
+*.rtc
+.cache/
+.venv/
+build/
+__pycache__/
+.DS_Store
