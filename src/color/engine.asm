@@ -1,4 +1,4 @@
-; Single-speed CGB renderer. Original audio/PCM, link timing and save layout stay intact.
+; CGB renderer. CPU speed is selected independently of the palette mode.
 ; Extra WRAM is accessed only in interrupt-disabled leaf code. The original stack
 ; lives in bank 1, so no push/pop/call/ret is permitted while bank 2 is selected.
 DEF COLOR_BUFFER EQU $d000
@@ -110,6 +110,11 @@ ColorUpdateBG:
 	ret
 
 ColorUpdateOBJ:
+	; Both native OBJ registers trigger this shared eight-palette update.
+	; Color conversion records OBP0; acknowledge OBP1 too, or LoadGBPal
+	; uploads all eight palettes on every overworld tick, even without a fade.
+	ldh a, [rOBP1]
+	ld [wLastOBP1], a
 	xor a
 	ld [wColorPaletteIndex], a
 .loop
@@ -137,6 +142,7 @@ ColorUpdateOBJ:
 ; LCD is disabled by map-loading callers. Keep both VRAM banks in lockstep.
 ColorMapAttributes::
 	push de
+	call ColorSelectMapSpeed
 	call ColorGetTiles
 	pop de
 	ld a, 1
@@ -172,6 +178,11 @@ ColorMapAttributes::
 ; Generate the next six rows outside VBlank, aligned for a 192-byte GDMA.
 ColorPrepareAuto::
 	call ColorPrepareScroll
+	; Joypad's text pump may already have prepared these rows. Keep the
+	; pending buffer (and its copy kind) intact until VBlank consumes it.
+	ld a, [wColorAutoReady]
+	and a
+	ret nz
 	ldh a, [hVBlankCopyBGSource]
 	and a
 	jr z, .auto

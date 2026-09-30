@@ -427,6 +427,7 @@ INCLUDE "engine/debug/debug_menu.asm"
 SECTION "Yellow Color", ROMX, BANK[$3b]
 INCLUDE "engine/gfx/palettes.asm"
 INCLUDE "color/engine.asm"
+INCLUDE "color/speed.asm"
 INCLUDE "color/transfers.asm"
 INCLUDE "color/tilesets.asm"
 INCLUDE "color/map_palette_constants.asm"

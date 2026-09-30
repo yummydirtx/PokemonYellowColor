@@ -52,6 +52,8 @@ Init::
 	ldh [hLoadedROMBank], a
 	ld [rROMB], a
 	call WriteDMACodeToHRAM
+	; LCD is off and interrupts are masked. Idempotent on soft reset.
+	farcall ColorEnableDoubleSpeed
 
 	xor a
 	ldh [hTileAnimations], a

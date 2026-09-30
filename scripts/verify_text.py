@@ -110,7 +110,7 @@ for native in [False, True]:
         for button in [None, 'a', 'b']:
             setup(native=native)
             put('wOptions', (get('wOptions') & 0xf0) | speed)
-            p.button('a', 1)
+            p.button('a', 4)  # cover both phases of the 30 Hz overworld input loop
             written_at, shown_at = {}, {}
             partial_counts = set()
             complete_at = None
@@ -151,7 +151,7 @@ for renderer in ['color', 'native']:
 # Pallet's sign has a real CONT command, a blinking prompt, and a third line.
 setup(0, 10, 7, 10, 'up')
 put('wOptions', (get('wOptions') & 0xf0) | 3)
-p.button('a', 1)
+p.button('a', 4)
 first_page = encoded(['PALLET TOWN', 'Shades of your'])
 arrow_states, arrow_changes = [], 0
 for frame in range(360):
@@ -181,14 +181,11 @@ assert get('wColorActive') == 1 and get('hWY') == 144, 'Dialogue did not close n
 assert end_modes and set(end_modes) == {1}, f'Graphics ended outside VBlank: {end_modes}'
 p.stop(save=False)
 
-sheet = Image.new('RGB', (640, 316), '#222222')
+sheet = Image.new('RGB', (1280, 314), '#222222')
 draw = ImageDraw.Draw(sheet)
 for i, (frame, image) in enumerate(samples):
-    draw.text((i*160+3, 3), f'Frame {frame}', fill='white')
-    sheet.paste(image.resize((160, 144), Image.Resampling.NEAREST), (i*160, 20))
-# Larger text-box crops below the full, untouched screenshots.
-for i, (_, image) in enumerate(samples):
-    sheet.paste(image.crop((0, 96, 160, 144)).resize((160, 96), Image.Resampling.NEAREST), (i*160, 190))
+    draw.text((i*320+3, 3), f'Frame {frame}', fill='white')
+    sheet.paste(image.resize((320, 288), Image.Resampling.NEAREST), (i*320, 20))
 sheet.save(OUT / 'text_progression.png')
 gif[0].save(OUT / 'text_progression.gif', save_all=True, append_images=gif[1:], duration=34, loop=0)
 report = {'rom_sha256': hashlib.sha256(Path('src/pokeyellow.gbc').read_bytes()).hexdigest(),

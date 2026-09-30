@@ -41,8 +41,22 @@ def press(key, frames=4, settle=60):
 
 def mash(key, count, settle):
     for _ in range(count):
-        p.button(key)
+        p.button(key, 4)
         p.tick(settle)
+
+
+def walk_to(axis, target):
+    """Stop on a coordinate so CPU improvements cannot change the route."""
+    name = 'wXCoord' if axis == 'x' else 'wYCoord'
+    key = ('right' if axis == 'x' else 'down') if value(name) < target else ('left' if axis == 'x' else 'up')
+    p.button_press(key)
+    for _ in range(300):
+        if value(name) == target:
+            break
+        p.tick(1)
+    p.button_release(key)
+    p.tick(40)
+    assert value(name) == target, (axis, target, value(name))
 
 
 def capture(name):
@@ -110,20 +124,22 @@ field_state = io.BytesIO()
 p.save_state(field_state)
 press('up', 250, 60)
 assert value('wCurMap') == 37
-for key, frames in [('down', 40), ('left', 75), ('down', 110), ('left', 65), ('down', 40)]:
-    press(key, frames, 60)
+press('down', 160, 60)
 assert value('wCurMap') == 0
 check_attributes()
 capture('pallet')
-press('right', 80, 60)
+walk_to('y', 6)
+walk_to('x', 10)
 press('up', 160, 60)
 mash('a', 20, 50)
 capture('oak_capture')
 mash('a', 15, 50)
 mash('a', 100, 45)
 assert value('wCurMap') == 40
-for key, frames, settle in [('down', 18, 25), ('right', 34, 25), ('up', 6, 25)]:
-    press(key, frames, settle)
+mash('b', 8, 45)
+walk_to('y', 4)
+walk_to('x', 7)
+press('up', 4, 25)
 mash('a', 150, 40)
 assert value('wPartyCount') == 1
 mash('b', 10, 40)

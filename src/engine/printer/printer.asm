@@ -488,6 +488,7 @@ Printer_ResetJoypadHRAM:
 	ret
 
 Printer_PlayPrinterMusic:
+	farcall ColorEnableSingleSpeed
 	call Printer_FadeOutMusicAndWait
 	ld a, [wAudioROMBank]
 	ld [wAudioSavedROMBank], a
@@ -499,6 +500,7 @@ Printer_PlayPrinterMusic:
 	ret
 
 Printer_PlayMapMusic:
+	farcall ColorSelectMapSpeed
 	call Printer_FadeOutMusicAndWait
 	call PlayDefaultMusic
 	ret
