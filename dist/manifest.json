@@ -1,0 +1,11 @@
+{
+  "version": "0.1.0",
+  "status": "preview",
+  "toolchain": "rgbasm v1.0.3",
+  "source_sha1": "cc7d03262ebfaf2f06772c1a480c7d9d5f4a38e1",
+  "source_crc32": "7d527d62",
+  "target_sha256": "f37e763447288b0b59bec5602cce84e0a65197c00a38ece6d50d22c26c3fcf0e",
+  "target_size": 2097152,
+  "patch_size": 194730,
+  "patch_sha256": "e43296651d06954516c9d3fed4841066365553190a5b18c2d32e4d514adc800e"
+}

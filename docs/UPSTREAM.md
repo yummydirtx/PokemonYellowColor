@@ -10,8 +10,8 @@ Pinned source revisions used for this project:
 | https://github.com/gbdev/rgbds | `v1.0.3` | Assembler/linker/graphics toolchain |
 
 The color transfer implementation in `src/color/engine.asm` is new for this
-project. It runs at the original single CPU speed to preserve Pikachu PCM audio
-and link timing. Tile IDs and palette attributes are prepared together, then
+project. It retains the original single CPU speed used by Pikachu PCM audio
+and serial code; link compatibility still needs validation. Tile IDs and palette attributes are prepared together, then
 transferred using GBC DMA. Horizontal columns use unrolled CPU transfers.
 
 Bank 0x3b holds the palette/color engine; banks 0x40–0x42 hold expanded graphics
@@ -20,6 +20,14 @@ Existing game and save data addresses remain unchanged; eleven unused bytes of
 fixed audio-page RAM hold renderer state. Additional scratch buffers use WRAM
 bank 2 only in interrupt-disabled leaf code, because the original stack is in
 bank 1.
+
+Full-screen menu exit rebuilds both VRAM attribute maps from the actual tile
+IDs, including offscreen scroll rows. The display interrupt defers graphics
+work when it arrives too late for safe VRAM/OAM access. Palette conversion
+continues to honor the original fade registers.
+
+Yellow's beach house has a dedicated tile-color table. Pikachu's dynamic
+follower slot is handled separately from the ordinary NPC picture IDs.
 
 Original code/assets retain their original ownership and attribution. This
 repository does not assert a new license over Pokémon or upstream assets.

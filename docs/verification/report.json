@@ -1,0 +1,151 @@
+{
+  "opening_gameplay": "passed",
+  "menu_restore": "passed",
+  "save_reload": "passed",
+  "vblank_end_scanlines": {
+    "145": 19731,
+    "146": 2370,
+    "147": 8,
+    "148": 2,
+    "149": 216,
+    "150": 462,
+    "151": 263
+  },
+  "map_matrix": [
+    {
+      "map": "PALLET_TOWN",
+      "tileset": 0,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "CERULEAN_CITY",
+      "tileset": 0,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "VIRIDIAN_FOREST",
+      "tileset": 3,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "MT_MOON_1F",
+      "tileset": 17,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "SUMMER_BEACH_HOUSE",
+      "tileset": 24,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "AGATHAS_ROOM",
+      "tileset": 15,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "BIKE_SHOP",
+      "tileset": 21,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "BILLS_HOUSE",
+      "tileset": 16,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "BLUES_HOUSE",
+      "tileset": 8,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "BRUNOS_ROOM",
+      "tileset": 7,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "CELADON_CHIEF_HOUSE",
+      "tileset": 19,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "CELADON_DINER",
+      "tileset": 18,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "CELADON_HOTEL",
+      "tileset": 6,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "CERULEAN_BADGE_HOUSE",
+      "tileset": 13,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "CERULEAN_MART",
+      "tileset": 2,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "CINNABAR_GYM",
+      "tileset": 22,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "CINNABAR_LAB",
+      "tileset": 20,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "COPYCATS_HOUSE_1F",
+      "tileset": 1,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "COPYCATS_HOUSE_2F",
+      "tileset": 4,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "FIGHTING_DOJO",
+      "tileset": 5,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "INDIGO_PLATEAU",
+      "tileset": 23,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "MUSEUM_1F",
+      "tileset": 10,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "ROUTE_11_GATE_1F",
+      "tileset": 12,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "UNDERGROUND_PATH_NORTH_SOUTH",
+      "tileset": 11,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "VERMILION_DOCK",
+      "tileset": 14,
+      "palette_mismatches": 0
+    },
+    {
+      "map": "VIRIDIAN_FOREST_NORTH_GATE",
+      "tileset": 9,
+      "palette_mismatches": 0
+    }
+  ],
+  "limitations": [
+    "No full playthrough",
+    "No physical GBC or link-cable testing",
+    "Audio output not assessed by this headless test"
+  ]
+}
