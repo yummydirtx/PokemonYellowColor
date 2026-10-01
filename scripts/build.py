@@ -25,14 +25,14 @@ if version != 'rgbasm v1.0.3':
     parser.error(f'Expected rgbasm v1.0.3; got {version}')
 subprocess.run(['make', '-C', str(ROOT / 'src'), f'-j{min(os.cpu_count() or 2, 8)}', 'yellow', f'RGBDS={rgbds}/'], check=True)
 target = (ROOT / 'src/pokeyellow.gbc').read_bytes()
-patch = create(source, target, b'Pokemon Yellow Color 0.1.3; English Yellow UE; Gen 2 battle graphics')
+patch = create(source, target, b'Pokemon Yellow Color 0.1.4; English Yellow UE; Gen 2 battle graphics')
 assert apply(source, patch) == target
 (ROOT / 'dist').mkdir(exist_ok=True)
 (ROOT / 'build').mkdir(exist_ok=True)
 (ROOT / 'dist/PokemonYellowColor.bps').write_bytes(patch)
 shutil.copyfile(ROOT / 'src/pokeyellow.gbc', ROOT / 'build/PokemonYellowColor.gbc')
 manifest = {
-    'version': '0.1.3', 'status': 'preview', 'toolchain': version,
+    'version': '0.1.4', 'status': 'preview', 'toolchain': version,
     'source_sha1': hashlib.sha1(source).hexdigest(),
     'source_crc32': f'{zlib.crc32(source):08x}',
     'target_sha256': hashlib.sha256(target).hexdigest(),

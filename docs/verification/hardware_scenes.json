@@ -1,5 +1,5 @@
 {
-  "rom_sha256": "bf1df666a9991d4836be6c2ee9780194b96606f9c576ffd5bd4ecc5608ea316a",
+  "rom_sha256": "72c1a5aa7d570965e9fd9b083a718e2e039a7483a4819b471c5dfb4c19ae9238",
   "maps": [
     {
       "map": "OAKS_LAB",
@@ -221,8 +221,8 @@
     {
       "speed": 3,
       "held_button": null,
-      "completion_frame": 121,
-      "partial_stages": 23,
+      "completion_frame": 124,
+      "partial_stages": 28,
       "graphics_end_lcd_modes": {
         "1": 304
       },

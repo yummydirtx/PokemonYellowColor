@@ -2,7 +2,7 @@
 """Verify healing pulses and text completion before fanfares in SameBoy.
 
 Healing calls the actual ROM routine after positioning at a Center; pickups
-use real button interaction with a Potion in Viridian Forest. No ROM edits.
+use real button interaction with visible/hidden items in Viridian Forest. No ROM edits.
 """
 import argparse
 import hashlib

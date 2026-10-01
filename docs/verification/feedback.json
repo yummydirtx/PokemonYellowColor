@@ -1,0 +1,264 @@
+{
+  "rom_sha256": "72c1a5aa7d570965e9fd9b083a718e2e039a7483a4819b471c5dfb4c19ae9238",
+  "model": "SameBoy CGB-E",
+  "healing": [
+    {
+      "center": "Viridian",
+      "party_size": 1,
+      "pulse_phases": [
+        "ff7fbf14ff7f6310",
+        "ff7fff7fbf146310",
+        "ff7fbf14ff7f6310",
+        "ff7fff7fbf146310",
+        "ff7fbf14ff7f6310",
+        "ff7fff7fbf146310",
+        "ff7fbf14ff7f6310",
+        "ff7fff7fbf146310"
+      ],
+      "palette_restored": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "center": "Viridian",
+      "party_size": 6,
+      "pulse_phases": [
+        "ff7fbf14ff7f6310",
+        "ff7fff7fbf146310",
+        "ff7fbf14ff7f6310",
+        "ff7fff7fbf146310",
+        "ff7fbf14ff7f6310",
+        "ff7fff7fbf146310",
+        "ff7fbf14ff7f6310",
+        "ff7fff7fbf146310"
+      ],
+      "palette_restored": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "center": "Fuchsia",
+      "party_size": 1,
+      "pulse_phases": [
+        "ff7fbf14ff7f6310",
+        "ff7fff7fbf146310",
+        "ff7fbf14ff7f6310",
+        "ff7fff7fbf146310",
+        "ff7fbf14ff7f6310",
+        "ff7fff7fbf146310",
+        "ff7fbf14ff7f6310",
+        "ff7fff7fbf146310"
+      ],
+      "palette_restored": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "center": "Fuchsia",
+      "party_size": 6,
+      "pulse_phases": [
+        "ff7fbf14ff7f6310",
+        "ff7fff7fbf146310",
+        "ff7fbf14ff7f6310",
+        "ff7fff7fbf146310",
+        "ff7fbf14ff7f6310",
+        "ff7fff7fbf146310",
+        "ff7fbf14ff7f6310",
+        "ff7fff7fbf146310"
+      ],
+      "palette_restored": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    }
+  ],
+  "item_fanfares": [
+    {
+      "pickup": "visible",
+      "speed": 1,
+      "held_button": null,
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "visible",
+      "speed": 1,
+      "held_button": "a",
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "visible",
+      "speed": 1,
+      "held_button": "b",
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "visible",
+      "speed": 3,
+      "held_button": null,
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "visible",
+      "speed": 3,
+      "held_button": "a",
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "visible",
+      "speed": 3,
+      "held_button": "b",
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "visible",
+      "speed": 5,
+      "held_button": null,
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "visible",
+      "speed": 5,
+      "held_button": "a",
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "visible",
+      "speed": 5,
+      "held_button": "b",
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "hidden",
+      "speed": 1,
+      "held_button": null,
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "hidden",
+      "speed": 1,
+      "held_button": "a",
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "hidden",
+      "speed": 1,
+      "held_button": "b",
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "hidden",
+      "speed": 3,
+      "held_button": null,
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "hidden",
+      "speed": 3,
+      "held_button": "a",
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "hidden",
+      "speed": 3,
+      "held_button": "b",
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "hidden",
+      "speed": 5,
+      "held_button": null,
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "hidden",
+      "speed": 5,
+      "held_button": "a",
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "pickup": "hidden",
+      "speed": 5,
+      "held_button": "b",
+      "text_complete_before_sound": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    }
+  ]
+}

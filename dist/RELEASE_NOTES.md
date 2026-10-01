@@ -1,28 +1,23 @@
-# Pokémon Yellow Color 0.1.3 — preview
+# Pokémon Yellow Color 0.1.4 — preview
 
-Fixes the noticeable walking slowdown, especially in Oak's lab. Normal GBC
-gameplay now uses the double-speed CPU, and an unchanged-palette cache bug no
-longer causes all eight character palettes to be uploaded every game update.
-Prepared background buffers are reused until consumed. The crowded-lab
-SameBoy fixture improves from roughly 20 to 30 game updates per second.
-The original frame-based movement rules remain intact.
+Fixes Pokémon Center healing balls and monitors remaining static. Their
+original eight-phase pulse now changes a dedicated red/white CGB palette,
+without recoloring Center NPCs, and restores the normal palettes afterward.
 
-All 42 Pikachu recordings retain their original sample bits and playback rate.
-Pokémon Centers, the Indigo Plateau lobby, link rooms, and printer sessions
-use the original CPU/serial clock; normal maps return to double speed.
+Fixes item fanfares starting before the last letters appear. Text-command
+sounds now wait for the preceding text to reach the screen, including fast
+text and A/B acceleration. Hidden pickups use the same synchronization.
 
-Fixes dialogue remaining blank during normal letter-by-letter printing and
-appearing only after a later refresh. Holding B previously happened to use a
-working refresh path. Input polling now keeps color tile transfers supplied,
-so normal text speeds, A/B acceleration, blinking prompts, and line scrolling
-all update visibly.
+Adds adapted Gen 2 battle effects for ThunderShock, Thunderbolt, Thunder Wave,
+Thunder, Scratch, Cut, Tackle, and Quick Attack. These use Crystal's effect
+artwork, palettes, OAM layouts, and frame sequences, placed for Yellow's front
+and back sprites. Effects stay above the text box and restore their palettes.
+This is a selected-effects port, not the complete Gen 2 animation engine;
+Yellow's sounds, damage/status rules, animation option, and other moves remain.
 
-Also defers terrain animation and OAM transfers when large graphics uploads
-leave insufficient VBlank time. Stronger timing checks include the final OAM
-transfer; all monitored graphics work ends within VBlank.
-
-Includes the building/interior/NPC color pass from 0.1.2, yellow Pikachu reaction
-portraits, and Gen 2 front/back battle sprites for all 151 Pokémon.
+Includes the double-speed performance work, progressive text, building/interior/
+NPC colors, yellow Pikachu portraits, and all 151 Gen 2 front/back sprites from
+previous versions.
 
 Apply `PokemonYellowColor.bps` to unmodified English USA/Europe Yellow:
 
@@ -33,11 +28,13 @@ Apply `PokemonYellowColor.bps` to unmodified English USA/Europe Yellow:
 Apply to the original ROM, not a previously patched version. The output is a
 2 MiB GBC-compatible ROM. Only the patch and checksum manifest are release assets.
 
-Validation uses PyBoy plus independent SameBoy checks that include actual DMA
-stalls. It covers 18 dialogue speed/button/renderer combinations, prompt
-blinking and line scrolling, opening gameplay, 35 asset map entries across
-all 25 tilesets, all 82 NPC types, 302 Pokémon sprite loads, all 29 Pikachu
-reactions, menus, save/reload, surfing, and a DMG boot. See `docs/TESTING.md`.
+New SameBoy checks cover healing with one/six party members, 18 text speed/
+button combinations at the exact fanfare start, and 48 animation combinations:
+eight moves × both directions × three sprite pairs. They check sprite limits,
+text-box clipping, unchanged Pokémon graphics, restored tilemaps/palettes, and
+blocked LCD writes. Animation-off and native fallback paths are also checked.
+The existing opening, sprite, portrait, map, text, save, surfing, performance,
+and hardware timing checks remain in place. See `docs/TESTING.md`.
 
 This remains a playable preview: a complete playthrough and physical hardware/
 link testing remain outstanding. Old emulator save states are build-specific;

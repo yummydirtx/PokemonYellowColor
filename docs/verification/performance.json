@@ -1,6 +1,6 @@
 {
   "sameboy_revision": "213a12ce93d66b105a113debd9396306066a7cfc",
-  "rom_sha256": "bf1df666a9991d4836be6c2ee9780194b96606f9c576ffd5bd4ecc5608ea316a",
+  "rom_sha256": "72c1a5aa7d570965e9fd9b083a718e2e039a7483a4819b471c5dfb4c19ae9238",
   "walking": {
     "original": {
       "sha256": "8cbaa499397e4f1a679c992ea9382a2dd7942ab398b48c19829c2d9529de47bf",
@@ -32,7 +32,7 @@
           "game_updates": 241,
           "updates_per_second": 28.11,
           "walking_updates": 233,
-          "median_walking_interval_frames": 2.0,
+          "median_walking_interval_frames": 2.001,
           "oam_transfers": 512
         }
       ]
@@ -68,15 +68,15 @@
           "game_updates": 165,
           "updates_per_second": 19.25,
           "walking_updates": 156,
-          "median_walking_interval_frames": 3.009,
-          "oam_transfers": 511,
-          "obj_palette_uploads": 164,
+          "median_walking_interval_frames": 3.006,
+          "oam_transfers": 507,
+          "obj_palette_uploads": 165,
           "graphics": {
             "end_lcd_modes": {
-              "1": 511
+              "1": 507
             },
             "end_scanlines": {
-              "148": 443,
+              "148": 439,
               "149": 48,
               "153": 20
             }
@@ -88,16 +88,16 @@
           "cpu_speed": 0,
           "game_updates": 239,
           "updates_per_second": 27.88,
-          "walking_updates": 232,
+          "walking_updates": 231,
           "median_walking_interval_frames": 2.0,
-          "oam_transfers": 511,
-          "obj_palette_uploads": 240,
+          "oam_transfers": 508,
+          "obj_palette_uploads": 239,
           "graphics": {
             "end_lcd_modes": {
-              "1": 511
+              "1": 508
             },
             "end_scanlines": {
-              "148": 436,
+              "148": 433,
               "149": 46,
               "153": 29
             }
@@ -106,7 +106,7 @@
       ]
     },
     "optimized": {
-      "sha256": "bf1df666a9991d4836be6c2ee9780194b96606f9c576ffd5bd4ecc5608ea316a",
+      "sha256": "72c1a5aa7d570965e9fd9b083a718e2e039a7483a4819b471c5dfb4c19ae9238",
       "scenes": [
         {
           "scene": "OaksLabCenter",

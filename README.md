@@ -1,7 +1,7 @@
 # Pokémon Yellow Color
 
 A playable Game Boy Color enhancement of English Pokémon Yellow, with per-tile
-overworld colors and Gen 2 battle graphics. **Version 0.1.3 is a preview build:**
+overworld colors and Gen 2 battle graphics. **Version 0.1.4 is a preview build:**
 the opening, all tilesets, sprite loaders, menus, saving, and surfing minigame
 have automated checks; a complete playthrough and physical hardware testing
 are still outstanding.
@@ -37,11 +37,17 @@ checksums are in [dist/manifest.json](dist/manifest.json).
   white uniforms; their standing and walking frames use CGB-specific tiles.
 - All 151 Pokémon have Gen 2 front and detailed 6×6 back sprites with species
   palettes. Trainer graphics come from the same Gen 2 graphics integration.
+- Eight moves use adapted Gen 2 effect artwork and frame sequences: ThunderShock,
+  Thunderbolt, Thunder Wave, Thunder, Scratch, Cut, Tackle, and Quick Attack.
+  Effects have their own palettes and stay above the battle text box.
 - Pikachu's follower and reaction portraits have yellow fur. All 61 portrait
   graphics, including partial animation patches, have separate fur/background
   colors, with white eye highlights and red-orange cheeks.
 - Dialogue appears progressively at all three text speeds; holding A or B
   accelerates it. Text prompts and line scrolling refresh during input waits.
+  Item fanfares wait until the preceding text is fully displayed.
+- Pokémon Center healing balls and monitors pulse red and white, then restore
+  the normal NPC palettes.
 - GBC gameplay uses the double-speed CPU, with unchanged frame-based game rules
   and correctly timed Pikachu voice samples. Unchanged NPC palettes are cached.
   Pokémon Centers, link rooms, and printing retain the original serial clock.
@@ -54,6 +60,9 @@ checksums are in [dist/manifest.json](dist/manifest.json).
 ![Oak's lab](docs/screenshots/oaks_lab.png)
 ![Gen 2 Pikachu and Eevee in battle](docs/screenshots/battle.png)
 ![Yellow Pikachu reaction portrait](docs/screenshots/portrait.png)
+
+![Gen 2 ThunderShock in Yellow](docs/screenshots/thundershock.gif)
+![Pokémon Center healing pulse](docs/screenshots/healing_pulse.gif)
 
 ## Build and verify
 
@@ -83,6 +92,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/build_overworld_sprites.py --check
 .venv/bin/python scripts/verify_assets.py
 .venv/bin/python scripts/verify_text.py
+.venv/bin/python scripts/build_battle_effects.py --check
 ```
 
 Run the scripts in that order, from the repository root, after building.
@@ -99,6 +109,8 @@ and verify walking, LCD access, voice timing, and CPU-speed transitions.
   map and roof palettes, from FroggestSpirit, Drenn, dannye, and contributors.
 - [dannye/pokeyellow-gen-2-gfx](https://github.com/dannye/pokeyellow-gen-2-gfx):
   Gen 2 Pokémon/trainer graphics, palettes, and back-sprite integration.
+- [pret/pokecrystal](https://github.com/pret/pokecrystal): selected battle-effect
+  graphics, palettes, OAM layouts, and frame sequences adapted to Yellow.
 - [RGBDS](https://rgbds.gbdev.io/), [PyBoy](https://github.com/Baekalfen/PyBoy),
   [SameBoy](https://github.com/LIJI32/SameBoy),
   and [Pan Docs](https://gbdev.io/pandocs/): development tools and references.

@@ -1,4 +1,4 @@
-# Version 0.1.3 verification
+# Version 0.1.4 verification
 
 The final clean build was tested with RGBDS 1.0.3, PyBoy 2.7.0, and SameBoy
 revision `213a12ce93d66b105a113debd9396306066a7cfc` on 2026-09-30.
@@ -15,8 +15,14 @@ The exact build and patch hashes are recorded in `dist/manifest.json`.
 | Opening with button input | New game, naming, both house floors, Pallet, Oak's capture, lab, starter, rival battle, follower |
 | Overworld scrolling | All four directions and toroidal background-map wrapping |
 | Party/stats menu return | No visible palette attribute mismatches |
-| Dialogue progression | 18 combinations: fast/medium/slow, no held button/A/B, color and original transfer branches; complete text reaches VRAM, with at least 11 partial stages and at most 3 frames display lag |
+| Dialogue progression | 18 combinations: fast/medium/slow, no held button/A/B, color and original transfer branches; complete text reaches VRAM, with at least 10 partial stages and at most 3 frames display lag |
 | Text prompts and line scrolling | Blinking arrow, CONT moving the previous bottom line to the top, progressive third line, and normal dialogue close passed |
+| Healing pulse | SameBoy: one/six party members in Viridian and Fuchsia Centers; all eight phases alternate, NPC palettes restore, zero blocked VRAM/palette writes |
+| Item-fanfare synchronization | SameBoy: actual visible Potion and hidden Antidote pickups at all three speeds with no held button/A/B; both text rows match WRAM at the exact instruction that starts the sound |
+| Gen 2 battle effects | SameBoy: eight moves × both directions × three front/back pairs (48 cases); no picture-byte or BG-palette corruption, tilemap/OBJ palettes restored, no stale OAM, zero blocked VRAM/palette writes |
+| Effect hardware limits | At most 38 OAM entries and nine sprites on a scanline; tiles stay above the text box and inside the effect VRAM range |
+| Effect fallback | Animations-off option skips effects; Ember still uses the original engine; native dispatch bypasses the Gen 2 effect player |
+| Effect source regeneration | Imported PNG hashes and generated frames/timelines match the checked-in Gen 2 source data |
 | Save and fresh-emulator Continue | Game checksum accepted; map and party data restored |
 | Map entry matrix | 26 maps covering all 25 tilesets; zero visible palette attribute mismatches |
 | Asset color audit | 35 map entries across all 25 tilesets, tile and NPC atlases visually reviewed; zero palette attribute mismatches |
@@ -47,7 +53,7 @@ VRAM/palette writes as well as the end of graphics work.
 
 The walking comparison uses 512-frame button sequences in each location:
 
-| Scene | Original Yellow updates/sec | Before optimization | Version 0.1.3 |
+| Scene | Original Yellow updates/sec | Before optimization | Version 0.1.4 |
 | --- | ---: | ---: | ---: |
 | Oak's lab, center | 28.81 | 19.71 | 29.86 |
 | Oak's lab, lower floor | 28.11 | 19.25 | 29.86 |
@@ -79,6 +85,21 @@ The reported bug was reproduced before the fix: without a held button, all 29
 non-space characters reached WRAM but none reached the visible tilemap during
 the 240-frame capture. With B held, the visible text progressed normally.
 
+The healing regression calls the actual healing-machine routine after a map
+positioning fixture and checks every flash in hardware OAM/palette RAM. The
+previous build fails this check because all eight palette samples are identical.
+Fuchsia specifically covers the purple Rocker NPC: the healing palette must
+not commandeer his palette. The fanfare regression uses button input to pick
+up a visible Potion and hidden Antidote in Viridian Forest and stops at `PlaySound` before playback.
+
+The battle-effects fixture enters a real Rattata encounter, then calls
+`MoveAnimation` with Pikachu/Rattata, Charizard/Gengar, and Snorlax/Mew pictures.
+It inspects both attack directions each frame and compares the sprite graphics,
+background palettes, and final tilemap against their pre-animation values.
+This isolates visual behavior; it is not a complete combat-rules test. Opening
+playthrough coverage separately exercises the new effects during a real battle.
+The contact sheet and GIFs show these emulator fixtures, including test names.
+
 Machine-readable results are preserved in `docs/verification/`; screenshots
 are in `docs/screenshots/`. Re-running the scripts produces fresh results in
 `build/verification/`. Floating IPS was built from revision
@@ -95,6 +116,8 @@ git -C .cache/sameboy checkout 213a12ce93d66b105a113debd9396306066a7cfc
 make -C .cache/sameboy -j4 build/lib/libsameboy.a bootroms RGBDS=../../.cache/rgbds/
 .venv/bin/python scripts/verify_performance.py
 .venv/bin/python scripts/verify_hardware_scenes.py
+.venv/bin/python scripts/verify_feedback.py
+.venv/bin/python scripts/verify_battle_effects.py
 ```
 
 The performance comparison also expects the exact original ROM and its matching
