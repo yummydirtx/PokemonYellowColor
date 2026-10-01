@@ -8,10 +8,16 @@ AnimateHealingMachine:
 	push af
 	ld [hl], $ff
 	push hl
+	ld a, [wColorCommand]
+	push af
+	ld a, $81
+	ld [wColorCommand], a
 	ldh a, [rOBP1]
 	push af
 	ld a, $e0
 	ldh [rOBP1], a
+	cpl
+	ld [wLastOBP1], a
 	call UpdateCGBPal_OBP1
 	ld hl, wShadowOAMSprite33
 	ld de, PokeCenterOAMData
@@ -54,6 +60,10 @@ AnimateHealingMachine:
 	call DelayFrames
 	pop af
 	ldh [rOBP1], a
+	cpl
+	ld [wLastOBP1], a ; force restoration even if the register is unchanged
+	pop af
+	ld [wColorCommand], a
 	call UpdateCGBPal_OBP1
 	pop hl
 	pop af
@@ -64,15 +74,17 @@ PokeCenterFlashingMonitorAndHealBall:
 	INCBIN "gfx/overworld/heal_machine.2bpp"
 
 PokeCenterOAMData:
+	; Palette 2 is unused by Center NPCs, including Fuchsia's purple Rocker.
+	; The low palette bits are ignored on DMG.
 	; heal machine monitor
-	dbsprite  6,  4,  4,  4, $7c, OAM_PAL1 | OAM_HIGH_PALS
+	dbsprite  6,  4,  4,  4, $7c, OAM_PAL1 | 2
 	; poke balls 1-6
-	dbsprite  6,  5,  0,  3, $7d, OAM_PAL1 | OAM_HIGH_PALS
-	dbsprite  7,  5,  0,  3, $7d, OAM_PAL1 | OAM_HIGH_PALS | OAM_XFLIP
-	dbsprite  6,  6,  0,  0, $7d, OAM_PAL1 | OAM_HIGH_PALS
-	dbsprite  7,  6,  0,  0, $7d, OAM_PAL1 | OAM_HIGH_PALS | OAM_XFLIP
-	dbsprite  6,  6,  0,  5, $7d, OAM_PAL1 | OAM_HIGH_PALS
-	dbsprite  7,  6,  0,  5, $7d, OAM_PAL1 | OAM_HIGH_PALS | OAM_XFLIP
+	dbsprite  6,  5,  0,  3, $7d, OAM_PAL1 | 2
+	dbsprite  7,  5,  0,  3, $7d, OAM_PAL1 | 2 | OAM_XFLIP
+	dbsprite  6,  6,  0,  0, $7d, OAM_PAL1 | 2
+	dbsprite  7,  6,  0,  0, $7d, OAM_PAL1 | 2 | OAM_XFLIP
+	dbsprite  6,  6,  0,  5, $7d, OAM_PAL1 | 2
+	dbsprite  7,  6,  0,  5, $7d, OAM_PAL1 | 2 | OAM_XFLIP
 
 ; d = value to xor with palette
 FlashSprite8Times:

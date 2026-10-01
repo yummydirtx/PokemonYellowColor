@@ -520,3 +520,5 @@ INCLUDE "data/sgb/sgb_palettes.asm"
 INCLUDE "color/pikachu_graphics.asm"
 
 INCLUDE "color/overworld_sprites.asm"
+
+INCLUDE "color/effects.asm"

@@ -89,6 +89,15 @@ class SameBoy:
 
     def call(self, name, registers=None, timeout=600):
         """RAM trampoline for testing an actual ROM routine; caller saves fixtures."""
+        self.begin_call(name, registers)
+        for frame in range(timeout):
+            self.tick(1)
+            if self.call_finished():
+                return frame + 1
+        raise AssertionError(f'{name} did not return')
+
+    def begin_call(self, name, registers=None):
+        """Start a routine fixture so tests can inspect intermediate frames."""
         self.sync()
         bank, pc = self.symbols[name]
         if bank:
@@ -107,12 +116,10 @@ class SameBoy:
         self.lib.sb_register(5, pc)
         for index, value in (registers or {}).items():
             self.lib.sb_register(index, value)
-        for frame in range(timeout):
-            self.tick(1)
-            if self.get(ack):
-                self.in_fixture = True
-                return frame + 1
-        raise AssertionError(f'{name} did not return')
+
+    def call_finished(self):
+        self.in_fixture = bool(self.get(self.addr('wTileMap') + 16))
+        return self.in_fixture
 
     def sync(self):
         # Frame callbacks can stop at the interrupt vector with IME cleared.

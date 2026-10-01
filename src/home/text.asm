@@ -512,6 +512,11 @@ TextCommand_PAUSE::
 
 TextCommand_SOUND::
 ; play a sound effect from TextCommandSounds
+	; The sound wait does not pump the color renderer. Finish displaying the
+	; preceding text before the fanfare (including when A/B skips its delay).
+	push bc
+	farcall ColorFinishText
+	pop bc
 	pop hl
 	push bc
 	dec hl

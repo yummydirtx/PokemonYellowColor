@@ -128,7 +128,19 @@ ColorUpdateOBJ:
 	add hl, de
 	ld d, h
 	ld e, l
+	; Healing-machine objects reserve palette 2 and pulse through OBP1.
+	ld a, [wColorPaletteIndex]
+	cp 2
+	jr nz, .normal
+	ld a, [wColorCommand]
+	cp $81
+	jr nz, .normal
+	ld de, ColorHealingPalette
+	ld a, CONVERT_OBP1
+	jr .convert
+.normal
 	ld a, CONVERT_OBP0
+.convert
 	call ColorDMGPalToCGBPal
 	ld a, [wColorPaletteIndex]
 	call TransferCurOBPData
@@ -449,6 +461,9 @@ ColorObjectPalettes:
 
 ColorPortraitPalette:
 	RGB 31,31,31, 31,28,3, 27,8,3, 3,3,3 ; white, fur, cheeks, outline
+
+ColorHealingPalette:
+	RGB 31,31,31, 31,20,20, 31,5,5, 3,3,4 ; white/red pulse, dark outline
 
 ColorDMGPalToCGBPal:
 ; Populate wCGBPal with colors from a base palette, selected using one of the
