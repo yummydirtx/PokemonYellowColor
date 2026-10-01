@@ -28,6 +28,15 @@ It verifies the input and all BPS checksums and refuses to overwrite an existing
 output. Load the resulting 2 MiB ROM in Game Boy Color mode. Full artifact
 checksums are in [dist/manifest.json](dist/manifest.json).
 
+## Before and after
+
+[Watch the 43-second showcase](docs/showcase/showcase.mp4): Pallet Town,
+Route 1, Oak’s lab, Viridian Forest, and ThunderShock. Both versions are captured
+in Game Boy Color mode, with matching walking poses for the moving color reveal.
+[Download the individual videos and GIFs](docs/showcase/README.md).
+
+![Walking through Pallet Town: original Yellow to full color](docs/showcase/pallet.gif)
+
 ## What changes
 
 - All 25 overworld tilesets have individual terrain and furniture colors.

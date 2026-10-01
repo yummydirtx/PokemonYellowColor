@@ -163,8 +163,7 @@ def render(name, number):
     cmd=[FFMPEG,'-y','-hide_banner','-loglevel','error',
          '-f','rawvideo','-pix_fmt','rgb24','-s','1080x1080','-r','2097152/70224',
          '-i','pipe:0','-i',str(wav),'-c:v','libx264','-preset','medium','-crf','18',
-         '-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',
-         '-shortest',str(mp4)]
+         '-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',str(mp4)]
     proc=subprocess.Popen(cmd,stdin=subprocess.PIPE)
     gif_frames, checks = [], []
     title, subtitle = TITLES[name]
@@ -232,6 +231,35 @@ def montage(names):
                     str(OUT/'showcase.mp4')],check=True)
 
 
+def validate_exports(report):
+    results = {}
+    for path in sorted(OUT.glob('*.mp4')):
+        info = json.loads(subprocess.check_output([
+            'ffprobe','-v','error','-count_frames','-show_streams','-show_format',
+            '-of','json',str(path)]))
+        video = next(s for s in info['streams'] if s['codec_type']=='video')
+        audio = next(s for s in info['streams'] if s['codec_type']=='audio')
+        assert (video['width'],video['height'],video['codec_name']) == (1080,1080,'h264')
+        assert (audio['codec_name'],audio['channels'],audio['sample_rate']) == ('aac',2,'48000')
+        subprocess.run([FFMPEG,'-v','error','-xerror','-i',str(path),'-f','null','-'],check=True)
+        result = dict(decoded_without_errors=True,frames=int(video['nb_read_frames']),
+                      duration=float(info['format']['duration']),bytes=path.stat().st_size,
+                      sha256=hashlib.sha256(path.read_bytes()).hexdigest())
+        if path.stem in report['clips']:
+            clip = report['clips'][path.stem]
+            assert result['frames']==clip['frames'], ('Dropped export frame',path)
+            assert result['sha256']==clip['sha256']
+            with Image.open(path.with_suffix('.gif')) as gif:
+                duration = 0
+                for i in range(gif.n_frames):
+                    gif.seek(i)
+                    duration += gif.info.get('duration',0)
+            assert abs(duration/1000-clip['seconds']) < .011, ('GIF timing drift',path)
+            result['gif_duration'] = duration/1000
+        results[path.name] = result
+    return results
+
+
 if __name__=='__main__':
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--scenes',nargs='+',default=list(TITLES))
@@ -248,3 +276,5 @@ if __name__=='__main__':
         report_path.write_text(json.dumps(REPORT,indent=2)+'\n')
     if set(TITLES)<=set(REPORT['clips']):
         montage(list(TITLES))
+    REPORT['export_validation'] = validate_exports(REPORT)
+    report_path.write_text(json.dumps(REPORT,indent=2)+'\n')

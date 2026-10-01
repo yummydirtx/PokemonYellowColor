@@ -1,0 +1,188 @@
+{
+  "clips": {
+    "pallet": {
+      "walking_poses_matched": 566,
+      "exact_pose_matches": 566,
+      "original_frames": 597,
+      "color_frames": 566,
+      "audio": "Continuous Color take; original walking frames aligned to its footsteps",
+      "wipe_lcd_frames": [
+        128,
+        230
+      ],
+      "seconds": 9.476371765136719,
+      "frames": 283,
+      "size": [
+        1080,
+        1080
+      ],
+      "fps": 29.863750284802915,
+      "audio_peak": 12919,
+      "sha256": "138e07026ea6501a19ee9139fce006454c51f218e4dbdaa1697caf7ed99a404e"
+    },
+    "route1": {
+      "walking_poses_matched": 454,
+      "exact_pose_matches": 454,
+      "original_frames": 478,
+      "color_frames": 454,
+      "audio": "Continuous Color take; original walking frames aligned to its footsteps",
+      "wipe_lcd_frames": [
+        128,
+        230
+      ],
+      "seconds": 7.601188659667969,
+      "frames": 227,
+      "size": [
+        1080,
+        1080
+      ],
+      "fps": 29.863750284802915,
+      "audio_peak": 16971,
+      "sha256": "dc9df41f906b96eb72d658be7eef83bd41f6beb545cf4f9e8a9831873f9d70ed"
+    },
+    "lab": {
+      "walking_poses_matched": 533,
+      "exact_pose_matches": 533,
+      "original_frames": 561,
+      "color_frames": 533,
+      "audio": "Continuous Color take; original walking frames aligned to its footsteps",
+      "wipe_lcd_frames": [
+        128,
+        230
+      ],
+      "seconds": 8.940605163574219,
+      "frames": 267,
+      "size": [
+        1080,
+        1080
+      ],
+      "fps": 29.863750284802915,
+      "audio_peak": 12848,
+      "sha256": "acfb9cd0776236d61aac6c98c86b0d1e1fb2477800eeb360b8f8abd817e94a08"
+    },
+    "forest": {
+      "walking_poses_matched": 551,
+      "exact_pose_matches": 551,
+      "original_frames": 585,
+      "color_frames": 551,
+      "audio": "Continuous Color take; original walking frames aligned to its footsteps",
+      "wipe_lcd_frames": [
+        128,
+        230
+      ],
+      "seconds": 9.241973876953125,
+      "frames": 276,
+      "size": [
+        1080,
+        1080
+      ],
+      "fps": 29.863750284802915,
+      "audio_peak": 17092,
+      "sha256": "c317df0227608a9e5c668cc894e7417623c28d01ba8c78a8859de7a7546b7882"
+    },
+    "battle": {
+      "original_attack": [
+        94,
+        195
+      ],
+      "color_attack": [
+        92,
+        190
+      ],
+      "edit": "First player attack replayed in each version; stationary wipe between replays",
+      "audio": "Each replay uses its own captured game audio; 12 ms edit ramps",
+      "wipe_lcd_frames": [
+        153,
+        249
+      ],
+      "seconds": 7.5677032470703125,
+      "frames": 226,
+      "size": [
+        1080,
+        1080
+      ],
+      "fps": 29.863750284802915,
+      "audio_peak": 17762,
+      "sha256": "661ef0045bbbafcdde9df7d4062d2304048f538221dc6520bd7d040a19bd060b"
+    }
+  },
+  "sources": {
+    "original": {
+      "rom_sha256": "8cbaa499397e4f1a679c992ea9382a2dd7942ab398b48c19829c2d9529de47bf",
+      "model": "SameBoy CGB-E",
+      "lcd_fps": 59.72750056960583,
+      "audio": "48000 Hz signed little-endian 16-bit stereo",
+      "fixtures": [
+        "same normal save",
+        "map positions",
+        "ASH / PIKACHU names",
+        "no random encounters during walking",
+        "forest trainers already beaten",
+        "wild Pikachu and ThunderShock moves"
+      ]
+    },
+    "color": {
+      "rom_sha256": "fde8ce1369fd08ea54ed4d6f51d8af5a69484261499f3aca45e8d79053f074f7",
+      "model": "SameBoy CGB-E",
+      "lcd_fps": 59.72750056960583,
+      "audio": "48000 Hz signed little-endian 16-bit stereo",
+      "fixtures": [
+        "same normal save",
+        "map positions",
+        "ASH / PIKACHU names",
+        "no random encounters during walking",
+        "forest trainers already beaten",
+        "wild Pikachu and ThunderShock moves"
+      ]
+    }
+  },
+  "export_validation": {
+    "battle.mp4": {
+      "decoded_without_errors": true,
+      "frames": 226,
+      "duration": 7.567708,
+      "bytes": 334116,
+      "sha256": "661ef0045bbbafcdde9df7d4062d2304048f538221dc6520bd7d040a19bd060b",
+      "gif_duration": 7.57
+    },
+    "forest.mp4": {
+      "decoded_without_errors": true,
+      "frames": 276,
+      "duration": 9.241979,
+      "bytes": 1676924,
+      "sha256": "c317df0227608a9e5c668cc894e7417623c28d01ba8c78a8859de7a7546b7882",
+      "gif_duration": 9.24
+    },
+    "lab.mp4": {
+      "decoded_without_errors": true,
+      "frames": 267,
+      "duration": 8.940605,
+      "bytes": 672119,
+      "sha256": "acfb9cd0776236d61aac6c98c86b0d1e1fb2477800eeb360b8f8abd817e94a08",
+      "gif_duration": 8.94
+    },
+    "pallet.mp4": {
+      "decoded_without_errors": true,
+      "frames": 283,
+      "duration": 9.476375,
+      "bytes": 1125571,
+      "sha256": "138e07026ea6501a19ee9139fce006454c51f218e4dbdaa1697caf7ed99a404e",
+      "gif_duration": 9.48
+    },
+    "route1.mp4": {
+      "decoded_without_errors": true,
+      "frames": 227,
+      "duration": 7.601189,
+      "bytes": 1235877,
+      "sha256": "dc9df41f906b96eb72d658be7eef83bd41f6beb545cf4f9e8a9831873f9d70ed",
+      "gif_duration": 7.6
+    },
+    "showcase.mp4": {
+      "decoded_without_errors": true,
+      "frames": 1279,
+      "duration": 42.827854,
+      "bytes": 5527119,
+      "sha256": "dd39c5e2b4ba99fb2fc853ef56fdfb629d324f3bf365391f2fddfc8b532a393c"
+    }
+  }
+}
