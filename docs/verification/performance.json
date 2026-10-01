@@ -1,6 +1,6 @@
 {
   "sameboy_revision": "213a12ce93d66b105a113debd9396306066a7cfc",
-  "rom_sha256": "d89cedf76a3ac446050f2bb9dcc3a920c7ba9d6f6391dd337a5bbb98aa4b7872",
+  "rom_sha256": "fde8ce1369fd08ea54ed4d6f51d8af5a69484261499f3aca45e8d79053f074f7",
   "walking": {
     "original": {
       "sha256": "8cbaa499397e4f1a679c992ea9382a2dd7942ab398b48c19829c2d9529de47bf",
@@ -32,7 +32,7 @@
           "game_updates": 241,
           "updates_per_second": 28.11,
           "walking_updates": 233,
-          "median_walking_interval_frames": 2.0,
+          "median_walking_interval_frames": 2.001,
           "oam_transfers": 512
         }
       ]
@@ -47,7 +47,7 @@
           "game_updates": 169,
           "updates_per_second": 19.71,
           "walking_updates": 64,
-          "median_walking_interval_frames": 3.002,
+          "median_walking_interval_frames": 3.001,
           "oam_transfers": 512,
           "obj_palette_uploads": 168,
           "graphics": {
@@ -69,15 +69,15 @@
           "updates_per_second": 19.25,
           "walking_updates": 152,
           "median_walking_interval_frames": 3.006,
-          "oam_transfers": 509,
+          "oam_transfers": 508,
           "obj_palette_uploads": 165,
           "graphics": {
             "end_lcd_modes": {
-              "1": 509
+              "1": 508
             },
             "end_scanlines": {
               "0": 1,
-              "148": 442,
+              "148": 441,
               "149": 48,
               "153": 18
             }
@@ -87,27 +87,28 @@
           "scene": "PalletTown",
           "frames": 512,
           "cpu_speed": 0,
-          "game_updates": 238,
-          "updates_per_second": 27.76,
+          "game_updates": 239,
+          "updates_per_second": 27.88,
           "walking_updates": 231,
           "median_walking_interval_frames": 2.001,
-          "oam_transfers": 510,
+          "oam_transfers": 511,
           "obj_palette_uploads": 239,
           "graphics": {
             "end_lcd_modes": {
-              "1": 510
+              "1": 511
             },
             "end_scanlines": {
-              "148": 435,
+              "0": 1,
+              "148": 436,
               "149": 46,
-              "153": 29
+              "153": 28
             }
           }
         }
       ]
     },
     "optimized": {
-      "sha256": "d89cedf76a3ac446050f2bb9dcc3a920c7ba9d6f6391dd337a5bbb98aa4b7872",
+      "sha256": "fde8ce1369fd08ea54ed4d6f51d8af5a69484261499f3aca45e8d79053f074f7",
       "scenes": [
         {
           "scene": "OaksLabCenter",

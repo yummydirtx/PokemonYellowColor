@@ -28,6 +28,8 @@ and palette data. Banks 0x43–0x44 hold the CGB reaction portrait variants.
 Bank 0x45 holds CGB copies of scientist, Oak, cook, and Seel overworld sprites.
 Bank 0x46 holds text flushing and the selected Gen 2 effect timelines; bank
 0x47 holds their graphics. The effects reuse existing battle scratch RAM.
+Bank 0x48 holds the outdoor material variants and tileset loader. The three
+small CGB flower frames stay in ROM0 for bank-switch-free VBlank animation.
 The resulting cartridge is 2 MiB, MBC5 with 32 KiB battery RAM.
 Existing game and save data addresses remain unchanged; eleven unused bytes of
 fixed audio-page RAM hold renderer state. Additional scratch buffers use WRAM
@@ -68,6 +70,19 @@ The material pass replaces inherited grayscale defaults with cream masonry,
 wood, teal tile, sandstone, lavender stone, and blue-gray metal. Tile assignments
 separate equipment and window glass from walls/floors across shared tilesets.
 The palette table omits its unused padding; all 25 palette sets are range checked.
+
+`scripts/build_terrain.py` separates the rounded barriers' enclosed surfaces
+from their shared ground color in CGB-only copies of the overworld/forest
+tilesets. Wooden posts, rounded stones, forest stump end grain/bark, and a small
+forest stone receive material fills. The original outline and exterior pixels
+remain intact. Flower masks retain the three poses and distinguish coral petals
+from green leaves using a dedicated outdoor palette. Every flower-animation
+update selects the matching CGB frame, so it cannot revert to the old artwork.
+Indoor animated tiles keep their existing art/palettes. Map load and reload
+select the variants only on CGB; native graphics, blocks, collision and save
+layout remain unchanged. The loader adds no per-frame overworld work; VBlank
+only adds the small flower-selection branch. `--check` verifies the generated
+assembly, and normal builds need no image-processing tools.
 
 `ColorFinishText` drains a pending color transfer plus three fresh tilemap
 portions before text-command sounds. It counts completed transfers, so a

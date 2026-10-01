@@ -1,4 +1,4 @@
-# Version 0.1.5 verification
+# Version 0.1.6 verification
 
 The final clean build was tested with RGBDS 1.0.3, PyBoy 2.7.0, and SameBoy
 revision `213a12ce93d66b105a113debd9396306066a7cfc` on 2026-09-30.
@@ -25,6 +25,9 @@ The exact build and patch hashes are recorded in `dist/manifest.json`.
 | Effect hardware limits | At most 38 OAM entries and nine sprites on a scanline; tiles stay above the text box and inside the effect VRAM range |
 | Effect fallback | Animations-off option skips effects; Ember still uses the original engine; native dispatch bypasses the Gen 2 effect player |
 | Effect source regeneration | Imported PNG hashes and generated frames/timelines match the checked-in Gen 2 source data |
+| Outdoor materials | SameBoy: all 25 tilesets loaded in both CGB-E and DMG models (50 exact artwork comparisons); original native sheets preserved |
+| Flowers and terrain restoration | All three CGB and original DMG flower poses observed; water keeps animating; Route 1, Pallet, Route 22 and forest tiles survive menu return; zero blocked VRAM/palette writes |
+| Terrain source regeneration | CGB wood/stone/stump masks and three flower frames match their checked-in generated data |
 | Save and fresh-emulator Continue | Game checksum accepted; map and party data restored |
 | Map entry matrix | 26 maps covering all 25 tilesets; zero visible palette attribute mismatches |
 | Asset color audit | 35 map entries across all 25 tilesets, tile and NPC atlases visually reviewed; zero palette attribute mismatches |
@@ -55,7 +58,7 @@ VRAM/palette writes as well as the end of graphics work.
 
 The walking comparison uses 512-frame button sequences in each location:
 
-| Scene | Original Yellow updates/sec | Before optimization | Version 0.1.5 |
+| Scene | Original Yellow updates/sec | Before optimization | Version 0.1.6 |
 | --- | ---: | ---: | ---: |
 | Oak's lab, center | 28.81 | 19.71 | 29.86 |
 | Oak's lab, lower floor | 28.11 | 19.25 | 29.86 |
@@ -132,6 +135,7 @@ make -C .cache/sameboy -j4 build/lib/libsameboy.a bootroms RGBDS=../../.cache/rg
 .venv/bin/python scripts/verify_feedback.py
 .venv/bin/python scripts/verify_battle_effects.py
 .venv/bin/python scripts/verify_thundershock.py
+.venv/bin/python scripts/verify_terrain.py
 ```
 
 The performance comparison also expects the exact original ROM and its matching

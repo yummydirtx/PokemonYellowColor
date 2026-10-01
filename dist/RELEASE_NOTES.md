@@ -1,22 +1,26 @@
-# Pokémon Yellow Color 0.1.5 — preview
+# Pokémon Yellow Color 0.1.6 — preview
 
-Reworks ThunderShock into three short bursts of expanding, moving Gen 2 sparks.
-The opaque black core is gone, the Pokémon remains visible, and the sound starts
-with the first sparks. The final burst ends with the sound and leads straight
-into the hit reaction. The new 92-frame effect replaces the previous 112-frame
-sequence. Its motion and timing are adapted for Yellow, using unchanged Crystal
-spark artwork. The other seven adapted moves retain their existing sequences.
+Adds a second outdoor material pass. Rounded fence posts now have wood-colored
+interiors, rounded route stones have warm stone fills, and forest stumps have
+colored cut faces, growth rings and bark. A small forest stone also receives a
+material fill. These details previously shared the near-white ground color.
 
-The README preview now shows the revised effect during a button-driven battle
-turn. Both attack directions have been checked across three sprite pairs, with
-additional checks for the three bursts, visible movement, palette restoration,
-sprite limits and safe LCD writes. A complete ThunderShock turn verifies both
-attacks, damage, player PP consumption and return to the battle menu.
+Flowers now have pink petals and green foliage in all three animation poses.
+Their dedicated outdoor palette and CGB frame data remain in place as the
+flowers sway. The README includes current scenery and a before/after comparison.
 
-Includes the healing pulses, synchronized item jingles, double-speed performance
-work, progressive text, overworld colors, yellow Pikachu portraits, and all 151
-Gen 2 front/back sprites from previous versions. The existing regression suite
-was rerun for this build; see `docs/TESTING.md` for results and limitations.
+The original Game Boy graphics remain intact. Tile IDs, map blocks, collision,
+encounters and saves are unchanged. Outdoor replacements load with the normal
+map graphics; they add no per-frame walking work. The flower animation adds a
+small frame-selection branch without switching ROM banks during VBlank.
+
+Checks cover all 25 tileset loads on CGB and DMG (50 artwork comparisons), all
+three flower poses on both models, water animation, and outdoor menu restoration.
+The existing opening, maps, text, healing, fanfares, sprites, portraits, battle
+effects, save, surfing, walking and voice-timing suite was rerun. See
+`docs/TESTING.md` for results and limitations.
+
+Includes the ThunderShock revision and all prior color/performance fixes.
 
 Apply `PokemonYellowColor.bps` to unmodified English USA/Europe Yellow:
 
@@ -28,5 +32,5 @@ Apply to the original ROM, not a previously patched version. The output is a
 2 MiB GBC-compatible ROM. Only the patch and checksum manifest are release assets.
 
 This remains a playable preview: a complete playthrough and physical hardware/
-link testing remain outstanding. Old emulator save states are build-specific;
+link testing remain outstanding. Emulator save states are build-specific;
 use normal in-game saves when moving between versions.

@@ -1,0 +1,305 @@
+{
+  "rom_sha256": "fde8ce1369fd08ea54ed4d6f51d8af5a69484261499f3aca45e8d79053f074f7",
+  "loader_checks": [
+    {
+      "model": "CGB-E",
+      "tileset": 0,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 1,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 2,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 3,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 4,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 5,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 6,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 7,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 8,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 9,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 10,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 11,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 12,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 13,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 14,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 15,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 16,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 17,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 18,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 19,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 20,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 21,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 22,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 23,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "CGB-E",
+      "tileset": 24,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 0,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 1,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 2,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 3,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 4,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 5,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 6,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 7,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 8,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 9,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 10,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 11,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 12,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 13,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 14,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 15,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 16,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 17,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 18,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 19,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 20,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 21,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 22,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 23,
+      "exact_tile_bytes": true
+    },
+    {
+      "model": "DMG",
+      "tileset": 24,
+      "exact_tile_bytes": true
+    }
+  ],
+  "dmg_flower_poses": [
+    1,
+    2,
+    3
+  ],
+  "scenes": [
+    {
+      "map": "route1",
+      "flower_poses": 3,
+      "water_phases": 5,
+      "tiles_preserved_after_menu": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "map": "pallet",
+      "flower_poses": 3,
+      "water_phases": 5,
+      "tiles_preserved_after_menu": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "map": "route22",
+      "flower_poses": 3,
+      "water_phases": 5,
+      "tiles_preserved_after_menu": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "map": "forest",
+      "flower_poses": 0,
+      "water_phases": 5,
+      "tiles_preserved_after_menu": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    }
+  ],
+  "limitations": [
+    "Emulator RAM fixtures; no physical GBC test"
+  ]
+}

@@ -1,7 +1,7 @@
 # Pokémon Yellow Color
 
 A playable Game Boy Color enhancement of English Pokémon Yellow, with per-tile
-overworld colors and Gen 2 battle graphics. **Version 0.1.5 is a preview build:**
+overworld colors and Gen 2 battle graphics. **Version 0.1.6 is a preview build:**
 the opening, all tilesets, sprite loaders, menus, saving, and surfing minigame
 have automated checks; a complete playthrough and physical hardware testing
 are still outstanding.
@@ -33,6 +33,8 @@ checksums are in [dist/manifest.json](dist/manifest.json).
 - All 25 overworld tilesets have individual terrain and furniture colors.
 - Towns use distinct roof palettes, cream masonry, blue windows, and natural
   wood, stone, and metal colors in interiors. Pallet has terracotta roofs.
+- Rounded route barriers have filled wood/stone colors. Forest stumps have
+  colored cut faces and bark; animated flowers have pink petals and green leaves.
 - NPCs have skin and clothing colors. Scientists, Oak, and cooks have separate
   white uniforms; their standing and walking frames use CGB-specific tiles.
 - All 151 Pokémon have Gen 2 front and detailed 6×6 back sprites with species
@@ -65,6 +67,9 @@ checksums are in [dist/manifest.json](dist/manifest.json).
 ![Reworked ThunderShock during a battle turn](docs/screenshots/thundershock.gif)
 ![Pokémon Center healing pulse](docs/screenshots/healing_pulse.gif)
 
+![Outdoor material improvements, before and after](docs/screenshots/terrain_comparison.png)
+![Colored flowers in motion](docs/screenshots/flowers.gif)
+
 ## Build and verify
 
 Building requires a C compiler, GNU Make, Python 3, and **RGBDS 1.0.3**.
@@ -94,6 +99,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/verify_assets.py
 .venv/bin/python scripts/verify_text.py
 .venv/bin/python scripts/build_battle_effects.py --check
+.venv/bin/python scripts/build_terrain.py --check
 ```
 
 Run the scripts in that order, from the repository root, after building.
