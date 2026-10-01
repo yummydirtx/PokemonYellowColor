@@ -86,10 +86,15 @@ verifies generated assembly from the checked-in data.
 
 This is an adaptation of selected effects, not Crystal's complete animation
 engine. Yellow keeps its sound effects, damage/status logic, animation option,
-and other moves. ThunderShock/Thunderbolt use the Gen 2 flickering core and
-spark frames without the small circular core motion or full-screen palette
-inversion. Tackle retains Yellow's lunge and uses the Gen 2 impact. Quick Attack
-uses Gen 2 speed lines and an impact, with the user hidden during the dash.
+and other moves. ThunderShock uses Crystal's unchanged spark pixels in a new
+92-frame sequence: three expanding bursts, short clear intervals, and a
+two-pixel orbit mirrored for each attack direction. It omits the opaque
+explosion core that obscured the target in 0.1.4, and starts the sound with the
+sparks. This motion/timing is an adaptation, not Crystal's original sequence.
+Thunderbolt retains its Gen 2 core/spark frames without the small circular core
+motion or full-screen inversion. Tackle retains Yellow's lunge and uses the
+Gen 2 impact. Quick Attack uses Gen 2 speed lines and an impact, with the user
+hidden during the dash.
 Coordinates are adapted separately for front/back targets, and effect tiles
 are clipped above the text box. OAM palettes 6/7 carry gray/electric colors;
 original palettes are restored afterward. Graphics use only the existing

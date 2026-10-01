@@ -1,23 +1,22 @@
-# Pokémon Yellow Color 0.1.4 — preview
+# Pokémon Yellow Color 0.1.5 — preview
 
-Fixes Pokémon Center healing balls and monitors remaining static. Their
-original eight-phase pulse now changes a dedicated red/white CGB palette,
-without recoloring Center NPCs, and restores the normal palettes afterward.
+Reworks ThunderShock into three short bursts of expanding, moving Gen 2 sparks.
+The opaque black core is gone, the Pokémon remains visible, and the sound starts
+with the first sparks. The final burst ends with the sound and leads straight
+into the hit reaction. The new 92-frame effect replaces the previous 112-frame
+sequence. Its motion and timing are adapted for Yellow, using unchanged Crystal
+spark artwork. The other seven adapted moves retain their existing sequences.
 
-Fixes item fanfares starting before the last letters appear. Text-command
-sounds now wait for the preceding text to reach the screen, including fast
-text and A/B acceleration. Hidden pickups use the same synchronization.
+The README preview now shows the revised effect during a button-driven battle
+turn. Both attack directions have been checked across three sprite pairs, with
+additional checks for the three bursts, visible movement, palette restoration,
+sprite limits and safe LCD writes. A complete ThunderShock turn verifies both
+attacks, damage, player PP consumption and return to the battle menu.
 
-Adds adapted Gen 2 battle effects for ThunderShock, Thunderbolt, Thunder Wave,
-Thunder, Scratch, Cut, Tackle, and Quick Attack. These use Crystal's effect
-artwork, palettes, OAM layouts, and frame sequences, placed for Yellow's front
-and back sprites. Effects stay above the text box and restore their palettes.
-This is a selected-effects port, not the complete Gen 2 animation engine;
-Yellow's sounds, damage/status rules, animation option, and other moves remain.
-
-Includes the double-speed performance work, progressive text, building/interior/
-NPC colors, yellow Pikachu portraits, and all 151 Gen 2 front/back sprites from
-previous versions.
+Includes the healing pulses, synchronized item jingles, double-speed performance
+work, progressive text, overworld colors, yellow Pikachu portraits, and all 151
+Gen 2 front/back sprites from previous versions. The existing regression suite
+was rerun for this build; see `docs/TESTING.md` for results and limitations.
 
 Apply `PokemonYellowColor.bps` to unmodified English USA/Europe Yellow:
 
@@ -27,14 +26,6 @@ Apply `PokemonYellowColor.bps` to unmodified English USA/Europe Yellow:
 
 Apply to the original ROM, not a previously patched version. The output is a
 2 MiB GBC-compatible ROM. Only the patch and checksum manifest are release assets.
-
-New SameBoy checks cover healing with one/six party members, 18 text speed/
-button combinations at the exact fanfare start, and 48 animation combinations:
-eight moves × both directions × three sprite pairs. They check sprite limits,
-text-box clipping, unchanged Pokémon graphics, restored tilemaps/palettes, and
-blocked LCD writes. Animation-off and native fallback paths are also checked.
-The existing opening, sprite, portrait, map, text, save, surfing, performance,
-and hardware timing checks remain in place. See `docs/TESTING.md`.
 
 This remains a playable preview: a complete playthrough and physical hardware/
 link testing remain outstanding. Old emulator save states are build-specific;

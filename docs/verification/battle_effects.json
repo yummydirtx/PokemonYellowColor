@@ -1,5 +1,5 @@
 {
-  "rom_sha256": "72c1a5aa7d570965e9fd9b083a718e2e039a7483a4819b471c5dfb4c19ae9238",
+  "rom_sha256": "d89cedf76a3ac446050f2bb9dcc3a920c7ba9d6f6391dd337a5bbb98aa4b7872",
   "model": "SameBoy CGB-E",
   "cases": [
     {
@@ -7,11 +7,10 @@
       "side": 0,
       "back_species": 84,
       "front_species": 165,
-      "frames": 120,
-      "max_sprites": 8,
-      "max_per_scanline": 4,
+      "frames": 99,
+      "max_sprites": 4,
+      "max_per_scanline": 2,
       "effect_palettes": [
-        6,
         7
       ],
       "blocked_writes": [
@@ -19,18 +18,19 @@
         0
       ],
       "picture_bytes_preserved": true,
-      "tilemap_and_palettes_restored": true
+      "tilemap_and_palettes_restored": true,
+      "spark_bursts": 3,
+      "distinct_spark_positions": 16
     },
     {
       "move": "THUNDERSHOCK",
       "side": 1,
       "back_species": 84,
       "front_species": 165,
-      "frames": 120,
-      "max_sprites": 8,
-      "max_per_scanline": 4,
+      "frames": 99,
+      "max_sprites": 4,
+      "max_per_scanline": 2,
       "effect_palettes": [
-        6,
         7
       ],
       "blocked_writes": [
@@ -38,7 +38,9 @@
         0
       ],
       "picture_bytes_preserved": true,
-      "tilemap_and_palettes_restored": true
+      "tilemap_and_palettes_restored": true,
+      "spark_bursts": 3,
+      "distinct_spark_positions": 16
     },
     {
       "move": "THUNDERBOLT",
@@ -299,11 +301,10 @@
       "side": 0,
       "back_species": 180,
       "front_species": 14,
-      "frames": 120,
-      "max_sprites": 8,
-      "max_per_scanline": 4,
+      "frames": 99,
+      "max_sprites": 4,
+      "max_per_scanline": 2,
       "effect_palettes": [
-        6,
         7
       ],
       "blocked_writes": [
@@ -311,18 +312,19 @@
         0
       ],
       "picture_bytes_preserved": true,
-      "tilemap_and_palettes_restored": true
+      "tilemap_and_palettes_restored": true,
+      "spark_bursts": 3,
+      "distinct_spark_positions": 16
     },
     {
       "move": "THUNDERSHOCK",
       "side": 1,
       "back_species": 180,
       "front_species": 14,
-      "frames": 120,
-      "max_sprites": 8,
-      "max_per_scanline": 4,
+      "frames": 99,
+      "max_sprites": 4,
+      "max_per_scanline": 2,
       "effect_palettes": [
-        6,
         7
       ],
       "blocked_writes": [
@@ -330,7 +332,9 @@
         0
       ],
       "picture_bytes_preserved": true,
-      "tilemap_and_palettes_restored": true
+      "tilemap_and_palettes_restored": true,
+      "spark_bursts": 3,
+      "distinct_spark_positions": 16
     },
     {
       "move": "THUNDERBOLT",
@@ -591,11 +595,10 @@
       "side": 0,
       "back_species": 132,
       "front_species": 21,
-      "frames": 120,
-      "max_sprites": 8,
-      "max_per_scanline": 4,
+      "frames": 99,
+      "max_sprites": 4,
+      "max_per_scanline": 2,
       "effect_palettes": [
-        6,
         7
       ],
       "blocked_writes": [
@@ -603,18 +606,19 @@
         0
       ],
       "picture_bytes_preserved": true,
-      "tilemap_and_palettes_restored": true
+      "tilemap_and_palettes_restored": true,
+      "spark_bursts": 3,
+      "distinct_spark_positions": 16
     },
     {
       "move": "THUNDERSHOCK",
       "side": 1,
       "back_species": 132,
       "front_species": 21,
-      "frames": 120,
-      "max_sprites": 8,
-      "max_per_scanline": 4,
+      "frames": 99,
+      "max_sprites": 4,
+      "max_per_scanline": 2,
       "effect_palettes": [
-        6,
         7
       ],
       "blocked_writes": [
@@ -622,7 +626,9 @@
         0
       ],
       "picture_bytes_preserved": true,
-      "tilemap_and_palettes_restored": true
+      "tilemap_and_palettes_restored": true,
+      "spark_bursts": 3,
+      "distinct_spark_positions": 16
     },
     {
       "move": "THUNDERBOLT",

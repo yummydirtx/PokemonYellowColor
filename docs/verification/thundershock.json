@@ -1,0 +1,39 @@
+{
+  "rom_sha256": "d89cedf76a3ac446050f2bb9dcc3a920c7ba9d6f6391dd337a5bbb98aa4b7872",
+  "model": "SameBoy CGB-E",
+  "attacks": [
+    {
+      "side": 0,
+      "start": 76,
+      "sound_start": 81,
+      "end": 173,
+      "hit_sound": 174
+    },
+    {
+      "side": 1,
+      "start": 454,
+      "sound_start": 459,
+      "end": 551,
+      "hit_sound": 552
+    }
+  ],
+  "hp_before": {
+    "Battle": 21,
+    "Enemy": 18
+  },
+  "hp_after": {
+    "Battle": 19,
+    "Enemy": 16
+  },
+  "player_pp_consumed": 1,
+  "enemy_pp_unchanged": true,
+  "returned_to_menu": true,
+  "blocked_writes": [
+    0,
+    0
+  ],
+  "limitations": [
+    "Encounter/moves set in emulator RAM",
+    "No physical GBC test"
+  ]
+}

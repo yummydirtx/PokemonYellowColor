@@ -1,7 +1,7 @@
 # Pokémon Yellow Color
 
 A playable Game Boy Color enhancement of English Pokémon Yellow, with per-tile
-overworld colors and Gen 2 battle graphics. **Version 0.1.4 is a preview build:**
+overworld colors and Gen 2 battle graphics. **Version 0.1.5 is a preview build:**
 the opening, all tilesets, sprite loaders, menus, saving, and surfing minigame
 have automated checks; a complete playthrough and physical hardware testing
 are still outstanding.
@@ -40,6 +40,7 @@ checksums are in [dist/manifest.json](dist/manifest.json).
 - Eight moves use adapted Gen 2 effect artwork and frame sequences: ThunderShock,
   Thunderbolt, Thunder Wave, Thunder, Scratch, Cut, Tackle, and Quick Attack.
   Effects have their own palettes and stay above the battle text box.
+  ThunderShock uses three moving spark bursts, with no opaque disk over the target.
 - Pikachu's follower and reaction portraits have yellow fur. All 61 portrait
   graphics, including partial animation patches, have separate fur/background
   colors, with white eye highlights and red-orange cheeks.
@@ -61,7 +62,7 @@ checksums are in [dist/manifest.json](dist/manifest.json).
 ![Gen 2 Pikachu and Eevee in battle](docs/screenshots/battle.png)
 ![Yellow Pikachu reaction portrait](docs/screenshots/portrait.png)
 
-![Gen 2 ThunderShock in Yellow](docs/screenshots/thundershock.gif)
+![Reworked ThunderShock during a battle turn](docs/screenshots/thundershock.gif)
 ![Pokémon Center healing pulse](docs/screenshots/healing_pulse.gif)
 
 ## Build and verify

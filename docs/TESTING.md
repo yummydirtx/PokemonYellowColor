@@ -1,4 +1,4 @@
-# Version 0.1.4 verification
+# Version 0.1.5 verification
 
 The final clean build was tested with RGBDS 1.0.3, PyBoy 2.7.0, and SameBoy
 revision `213a12ce93d66b105a113debd9396306066a7cfc` on 2026-09-30.
@@ -20,6 +20,8 @@ The exact build and patch hashes are recorded in `dist/manifest.json`.
 | Healing pulse | SameBoy: one/six party members in Viridian and Fuchsia Centers; all eight phases alternate, NPC palettes restore, zero blocked VRAM/palette writes |
 | Item-fanfare synchronization | SameBoy: actual visible Potion and hidden Antidote pickups at all three speeds with no held button/A/B; both text rows match WRAM at the exact instruction that starts the sound |
 | Gen 2 battle effects | SameBoy: eight moves × both directions × three front/back pairs (48 cases); no picture-byte or BG-palette corruption, tilemap/OBJ palettes restored, no stale OAM, zero blocked VRAM/palette writes |
+| ThunderShock motion | Three distinct spark bursts and at least 12 distinct OAM arrangements in both directions across all three sprite pairs; only four spark sprites, with no opaque core |
+| ThunderShock battle turn | Button-selected move against a wild Pikachu fixture; both sides animate, take damage, and return to the menu; player PP decrements normally; hit sound follows the sparks within one frame; zero blocked LCD writes |
 | Effect hardware limits | At most 38 OAM entries and nine sprites on a scanline; tiles stay above the text box and inside the effect VRAM range |
 | Effect fallback | Animations-off option skips effects; Ember still uses the original engine; native dispatch bypasses the Gen 2 effect player |
 | Effect source regeneration | Imported PNG hashes and generated frames/timelines match the checked-in Gen 2 source data |
@@ -53,7 +55,7 @@ VRAM/palette writes as well as the end of graphics work.
 
 The walking comparison uses 512-frame button sequences in each location:
 
-| Scene | Original Yellow updates/sec | Before optimization | Version 0.1.4 |
+| Scene | Original Yellow updates/sec | Before optimization | Version 0.1.5 |
 | --- | ---: | ---: | ---: |
 | Oak's lab, center | 28.81 | 19.71 | 29.86 |
 | Oak's lab, lower floor | 28.11 | 19.25 | 29.86 |
@@ -98,7 +100,18 @@ It inspects both attack directions each frame and compares the sprite graphics,
 background palettes, and final tilemap against their pre-animation values.
 This isolates visual behavior; it is not a complete combat-rules test. Opening
 playthrough coverage separately exercises the new effects during a real battle.
-The contact sheet and GIFs show these emulator fixtures, including test names.
+The effect matrix contact sheet and GIFs show these emulator fixtures, including test names.
+
+The additional ThunderShock capture uses a normal battle turn after setting the
+wild encounter, nickname and available moves in test RAM. Button input selects
+the attack and advances text; the game handles both attacks, damage, PP and the
+return to its menu. The README GIF now comes from this capture, with an
+[opponent-side preview](screenshots/thundershock_enemy.gif) and
+[chronological frames](screenshots/thundershock_sequence.png) showing expansion
+and the clear intervals. The hit sound begins within one frame of the final burst.
+GIF delays alternate between 30 and 40 ms to preserve the Game Boy's frame rate
+when sampling every other frame. This is a visual adaptation of the Gen 2
+sparks; automated motion/safety checks alone do not establish visual quality.
 
 Machine-readable results are preserved in `docs/verification/`; screenshots
 are in `docs/screenshots/`. Re-running the scripts produces fresh results in
@@ -118,6 +131,7 @@ make -C .cache/sameboy -j4 build/lib/libsameboy.a bootroms RGBDS=../../.cache/rg
 .venv/bin/python scripts/verify_hardware_scenes.py
 .venv/bin/python scripts/verify_feedback.py
 .venv/bin/python scripts/verify_battle_effects.py
+.venv/bin/python scripts/verify_thundershock.py
 ```
 
 The performance comparison also expects the exact original ROM and its matching
