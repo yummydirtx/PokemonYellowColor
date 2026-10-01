@@ -11,8 +11,8 @@ class Event(C.Structure):
 
 
 class SameBoy:
-    def __init__(self, rom, save=None, dmg=False):
-        self.lib = C.CDLL(str(Path('build/performance/sameboy_bridge.dylib').resolve()))
+    def __init__(self, rom, save=None, dmg=False, library='build/performance/sameboy_bridge.dylib'):
+        self.lib = C.CDLL(str(Path(library).resolve()))
         self.symbols = {m[3]: (int(m[1], 16), int(m[2], 16)) for m in re.finditer(
             r'^([0-9a-f]+):([0-9a-f]+) (\S+)', Path(rom).with_suffix('.sym').read_text(), re.M)}
         self.lib.sb_open.argtypes = [C.c_char_p, C.c_char_p, C.c_char_p, C.c_int]
