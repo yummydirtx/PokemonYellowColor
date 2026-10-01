@@ -29,7 +29,7 @@ for mid, name in [(41, 'Viridian'), (154, 'Fuchsia')]:
         before = bytes(p.lib.sb_memory(9)[:64])
         p.watch(['FlashSprite8Times.loop'])
         p.lib.sb_clear_write_counts()
-        p.begin_call('AnimateHealingMachine')
+        p.begin_call('AnimateHealingMachine', scratch='wTileMapBackup2')
         phases, pictures = [], []
         previous = 0
         for frame in range(900):

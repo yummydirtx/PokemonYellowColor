@@ -24,6 +24,7 @@ class SameBoy:
         assert self.lib.sb_open(str(rom).encode(), str(boot).encode(),
                                 str(save).encode() if save else None, 2 if dmg else 0x205) == 0
         self.in_fixture = False
+        self.fixture_addr = self.addr('wTileMap')
 
     def addr(self, name):
         return self.symbols[name][1]
@@ -96,14 +97,15 @@ class SameBoy:
                 return frame + 1
         raise AssertionError(f'{name} did not return')
 
-    def begin_call(self, name, registers=None):
+    def begin_call(self, name, registers=None, scratch='wTileMap'):
         """Start a routine fixture so tests can inspect intermediate frames."""
         self.sync()
         bank, pc = self.symbols[name]
         if bank:
             self.put(0x2000, bank)
             self.put('hLoadedROMBank', bank)
-        trap = self.addr('wTileMap')
+        trap = self.addr(scratch)
+        self.fixture_addr = trap
         ack = trap + 16
         code = [0x3e, 1, 0xea, ack & 255, ack >> 8, 0xc3, (trap+5) & 255, (trap+5) >> 8]
         for i, b in enumerate(code):
@@ -118,12 +120,17 @@ class SameBoy:
             self.lib.sb_register(index, value)
 
     def call_finished(self):
-        self.in_fixture = bool(self.get(self.addr('wTileMap') + 16))
+        self.in_fixture = bool(self.get(self.fixture_addr + 16))
         return self.in_fixture
 
     def sync(self):
         # Frame callbacks can stop at the interrupt vector with IME cleared.
         # Finish that ISR before replacing PC; otherwise a fixture skips RETI
         # and falsely deadlocks the next DelayFrame, especially on DMG.
-        pc = self.addr('wTileMap') + 5 if self.in_fixture else self.addr('DelayFrame.halt')
-        assert self.lib.sb_sync(pc), 'Could not reach an interrupt-safe fixture point'
+        if self.in_fixture:
+            ready = self.lib.sb_sync(self.fixture_addr + 5)
+        else:
+            # Battle menus busy-poll Joypad rather than sleeping in DelayFrame.
+            # VBlank uses ReadJoypad, so this is also a main-thread boundary.
+            ready = self.lib.sb_sync_main(self.addr('DelayFrame.halt'), self.addr('Joypad'))
+        assert ready, 'Could not reach an interrupt-safe fixture point'

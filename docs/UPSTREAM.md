@@ -7,6 +7,7 @@ Pinned source revisions used for this project:
 | https://github.com/pret/pokeyellow | `e89ead154b9968aa50eed9328ff2b38b6c194382` | Complete baseline disassembly, verified byte-for-byte against the user's English Yellow dump |
 | https://github.com/dannye/pokered-gbc | `c1a3b6c5a7591472241036d0cf09c3817f841f93` | Terrain assignments, map and roof palettes; credits to FroggestSpirit, Drenn, dannye and contributors |
 | https://github.com/dannye/pokeyellow-gen-2-gfx | `0ac32c82681b32c0a8c8b9162c18ce31ac74f876` | Gen 2 Pokémon and trainer artwork, species/trainer palettes, 6×6 back sprite loading, introduction palette helpers |
+| https://github.com/pret/pokecrystal | `5beda23ffa505f62e1dad7e3d7c214d1737b3358` | Selected battle-effect artwork, palettes, OAM layouts, and framesets |
 | https://github.com/gbdev/rgbds | `v1.0.3` | Assembler/linker/graphics toolchain |
 | https://github.com/LIJI32/SameBoy | `213a12ce93d66b105a113debd9396306066a7cfc` | Independent CGB/DMG timing checks, including GDMA stalls and PCM bit intervals |
 
@@ -25,6 +26,8 @@ transferred using GBC DMA. Horizontal columns use unrolled CPU transfers.
 Bank 0x3b holds the palette/color engine; banks 0x40–0x42 hold expanded battle graphics
 and palette data. Banks 0x43–0x44 hold the CGB reaction portrait variants.
 Bank 0x45 holds CGB copies of scientist, Oak, cook, and Seel overworld sprites.
+Bank 0x46 holds text flushing and the selected Gen 2 effect timelines; bank
+0x47 holds their graphics. The effects reuse existing battle scratch RAM.
 The resulting cartridge is 2 MiB, MBC5 with 32 KiB battery RAM.
 Existing game and save data addresses remain unchanged; eleven unused bytes of
 fixed audio-page RAM hold renderer state. Additional scratch buffers use WRAM
@@ -65,6 +68,32 @@ The material pass replaces inherited grayscale defaults with cream masonry,
 wood, teal tile, sandstone, lavender stone, and blue-gray metal. Tile assignments
 separate equipment and window glass from walls/floors across shared tilesets.
 The palette table omits its unused padding; all 25 palette sets are range checked.
+
+`ColorFinishText` drains a pending color transfer plus three fresh tilemap
+portions before text-command sounds. It counts completed transfers, so a
+deferred VBlank cannot leave the final letters waiting until after the jingle.
+During healing, OBJ palette 2 uses OBP1's original eight-phase pulse; that slot
+is unused by Center NPCs. Other palettes continue using OBP0. The prior mode
+and all NPC palettes are restored when healing ends.
+
+`scripts/build_battle_effects.py` compiles eight selected Gen 2 effects to small
+OAM timelines. `src/data/battle_anims/gen2_frames.json` contains the imported
+framesets/OAM definitions and hashes of the unmodified source PNGs. Normal
+builds need no upstream checkout. To reproduce the import, check out the pinned
+Crystal revision and run `--import-upstream .cache/pokecrystal`; `--check`
+verifies generated assembly from the checked-in data.
+
+This is an adaptation of selected effects, not Crystal's complete animation
+engine. Yellow keeps its sound effects, damage/status logic, animation option,
+and other moves. ThunderShock/Thunderbolt use the Gen 2 flickering core and
+spark frames without the small circular core motion or full-screen palette
+inversion. Tackle retains Yellow's lunge and uses the Gen 2 impact. Quick Attack
+uses Gen 2 speed lines and an impact, with the user hidden during the dash.
+Coordinates are adapted separately for front/back targets, and effect tiles
+are clipped above the text box. OAM palettes 6/7 carry gray/electric colors;
+original palettes are restored afterward. Graphics use only the existing
+animation tile range, leaving the 7×7 padded front/back pictures intact.
+DMG/SGB and field animations retain Yellow's original effects.
 
 Original code/assets retain their original ownership and attribution. This
 repository does not assert a new license over Pokémon or upstream assets.

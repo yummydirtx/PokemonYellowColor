@@ -68,6 +68,15 @@ int sb_sync(unsigned addr) {
     while (GB_get_registers(gb)->pc != addr && ticks < end) ticks += GB_run(gb);
     return GB_get_registers(gb)->pc == addr;
 }
+int sb_sync_main(unsigned delay, unsigned joypad) {
+    uint64_t end = ticks + 140448 * 300;
+    while (ticks < end) {
+        unsigned pc = GB_get_registers(gb)->pc;
+        if (pc == delay || pc == joypad) return 1;
+        ticks += GB_run(gb);
+    }
+    return 0;
+}
 void sb_key(unsigned key, int held) { GB_set_key_state(gb, key, held); }
 uint8_t sb_read(unsigned addr) { return GB_read_memory(gb, addr); }
 void sb_write(unsigned addr, uint8_t value) { GB_write_memory(gb, addr, value); }

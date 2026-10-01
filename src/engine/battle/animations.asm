@@ -189,6 +189,8 @@ DrawFrameBlock:
 	ret
 
 PlayAnimation:
+	farcall Gen2TryAnimation
+	ret c
 	xor a
 	ldh [hROMBankTemp], a ; it looks like nothing reads this
 	ld [wSubAnimTransform], a
@@ -2356,6 +2358,12 @@ GetIntroMoveSound: ; unreferenced
 	call GetMoveSound
 	ld b, a
 	ret
+
+Gen2PlayMoveSound:
+	ld a, [wAnimationID]
+	dec a
+	call GetMoveSound
+	jp PlaySound
 
 GetMoveSound:
 	ld hl, MoveSoundTable

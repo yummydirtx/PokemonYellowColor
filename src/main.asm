@@ -522,3 +522,4 @@ INCLUDE "color/pikachu_graphics.asm"
 INCLUDE "color/overworld_sprites.asm"
 
 INCLUDE "color/effects.asm"
+INCLUDE "color/battle_effects.asm"

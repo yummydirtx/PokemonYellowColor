@@ -989,6 +989,10 @@ TransferCurOBPData:
 	pop de
 	ret
 
+ColorTransferEffectPalette::
+	ld a, c
+	jp TransferCurOBPData
+
 TransferPalColorLCDEnabled:
 ; Transfer a palette color while the LCD is enabled.
 
