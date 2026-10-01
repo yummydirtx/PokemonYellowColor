@@ -523,3 +523,5 @@ INCLUDE "color/overworld_sprites.asm"
 
 INCLUDE "color/effects.asm"
 INCLUDE "color/battle_effects.asm"
+
+INCLUDE "color/terrain.asm"

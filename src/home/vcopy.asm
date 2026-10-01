@@ -256,6 +256,15 @@ UpdateMovingBgTiles::
 	jr z, .copy
 	ld hl, FlowerTile3
 .copy
+	ldh a, [hOnCGB]
+	and a
+	jr z, .nativeFlower
+	ld a, [wCurMapTileset]
+	and a ; OVERWORLD; indoor animated tiles keep their native palette/art
+	jr nz, .nativeFlower
+	ld de, ColorFlowerTile1 - FlowerTile1
+	add hl, de
+.nativeFlower
 	ld de, vTileset tile $03
 	ld c, TILE_SIZE
 .loop
@@ -269,3 +278,5 @@ UpdateMovingBgTiles::
 FlowerTile1: INCBIN "gfx/tilesets/flower/flower1.2bpp"
 FlowerTile2: INCBIN "gfx/tilesets/flower/flower2.2bpp"
 FlowerTile3: INCBIN "gfx/tilesets/flower/flower3.2bpp"
+
+INCLUDE "color/flower_data.asm"

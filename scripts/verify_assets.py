@@ -145,7 +145,7 @@ assert len(entries) == 82
 npcs.save(OUT / 'npc_assets.png')
 
 # Complete tile atlases, colored from the ROM's per-tileset palette tables.
-map_palettes = palettes(data('MapPalettes', 40*8))
+map_palettes = palettes(data('MapPalettes', symbols['MapPalettesEnd'][1] - symbols['MapPalettes'][1]))
 header_names = re.findall(r'\ttileset (\w+),', Path('src/data/tilesets/tileset_headers.asm').read_text())
 gfx_sources, aliases = {}, []
 for line in Path('src/gfx/tilesets.asm').read_text().splitlines():
@@ -170,7 +170,8 @@ for number, name in enumerate(header_names):
     ptr = int.from_bytes(data('ColorTilesetPointers', 50)[number*2:number*2+2], 'little')
     attrs = data_at(bank, ptr, 256)
     assert all(a < 8 for a in attrs)
-    raw = data(name + '_GFX', len(gfx_sources[name + '_GFX'].read_bytes()))
+    art = 'ColorTerrain' + name if name in ['Overworld', 'Forest'] else name + '_GFX'
+    raw = data(art, len(gfx_sources[name + '_GFX'].read_bytes()))
     x, y = number % 5*264, number // 5*134
     ad.text((x+2, y), name, fill='white')
     for t in range(len(raw)//16):

@@ -242,4 +242,11 @@ MapPalettes:
 	RGB 15,12,20
 	RGB 6,5,8
 
+; 0x28: OUTDOOR_FLOWERS; ground, coral petals, green foliage, dark flower center
+	RGB 27,31,27
+	RGB 31,16,20
+	RGB 8,19,6
+	RGB 12,7,6
+
+MapPalettesEnd:
 	assert (@ - MapPalettes) == NUM_MAP_PALETTES * 8

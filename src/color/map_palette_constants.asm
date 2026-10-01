@@ -40,6 +40,7 @@
 	const INDOOR_TEAL
 	const INDOOR_SANDSTONE
 	const INDOOR_LAVENDER
+	const OUTDOOR_FLOWERS
 DEF NUM_MAP_PALETTES EQU const_value
 
 ; Named to make tileset palette assignments consistent with Pokecrystal

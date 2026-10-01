@@ -859,14 +859,7 @@ INCLUDE "data/tilesets/bike_riding_tilesets.asm"
 
 ; load the tile pattern data of the current tileset into VRAM
 LoadTilesetTilePatternData::
-	ld a, [wTilesetGfxPtr]
-	ld l, a
-	ld a, [wTilesetGfxPtr + 1]
-	ld h, a
-	ld de, vTileset
-	ld bc, MAP_TILESET_SIZE tiles
-	ld a, [wTilesetBank]
-	jp FarCopyData
+	farjp ColorLoadTilesetTilePatternData
 
 ; this loads the current map's complete tile map (which references blocks, not individual tiles) to wOverworldMap
 ; it can also load partial tile maps of connected maps into a border of length 3 around the current map
