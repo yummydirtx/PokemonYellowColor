@@ -64,34 +64,40 @@ for mid, name in [(41, 'Viridian'), (154, 'Fuchsia')]:
             pictures[0].save(out / 'healing_pulse.gif', save_all=True,
                              append_images=pictures[1:], duration=167, loop=0)
 
-for speed in [1, 3, 5]:
-    for button in [None, 'a', 'b']:
-        assert p.lib.sb_load(state) == 0
-        p.in_fixture = False
-        p.warp(51, 17, 25, 12)
-        p.press('up', 4, 20)
-        p.put('wOptions', (p.get('wOptions') & 0xf0) | speed)
-        p.lib.sb_clear_write_counts()
-        p.press('a', 4, 0)
-        if button:
-            p.key(button, True)
-        # Stop at instruction boundaries, before the sound starts, so even a
-        # one-frame stale tail is detected rather than hidden by frame sampling.
-        assert p.lib.sb_sync(p.addr('TextCommand_SOUND'))
-        assert p.lib.sb_sync(p.addr('PlaySound'))
-        base = p.get('hAutoBGTransferDest') | p.get(p.addr('hAutoBGTransferDest')+1) << 8
-        vram = p.lib.sb_memory(3)
-        shown = [bytes(vram[base-0x8000+y*32:base-0x8000+y*32+20]) for y in [14, 16]]
-        written = [bytes(p.get(p.addr('wTileMap')+y*20+x) for x in range(20)) for y in [14, 16]]
-        assert shown == written, (speed, button, 'Fanfare started before the text was visible')
-        assert sum(c >= 0x80 for row in written for c in row) >= 15, 'Wrong pickup fixture'
-        p.tick(300)
-        if button:
-            p.key(button, False)
-        bad = [p.lib.sb_bad_vram_writes(), p.lib.sb_bad_palette_writes()]
-        assert bad == [0, 0], ('pickup', speed, button, bad)
-        items.append({'speed': speed, 'held_button': button, 'text_complete_before_sound': True,
-                      'blocked_writes': bad})
+for pickup in ["visible", "hidden"]:
+    for speed in [1, 3, 5]:
+        for button in [None, 'a', 'b']:
+            assert p.lib.sb_load(state) == 0
+            p.in_fixture = False
+            if pickup == 'visible':
+                p.warp(51, 17, 25, 12)
+                p.press('up', 4, 20)
+            else:
+                p.warp(51, 17, 16, 41)
+                p.put('wSpritePlayerStateData1FacingDirection', 0)  # face hidden Antidote
+            p.put('wOptions', (p.get('wOptions') & 0xf0) | speed)
+            p.lib.sb_clear_write_counts()
+            p.press('a', 4, 0)
+            if button:
+                p.key(button, True)
+            # Stop at instruction boundaries, before the sound starts, so even a
+            # one-frame stale tail is detected rather than hidden by frame sampling.
+            assert p.lib.sb_sync(p.addr('TextCommand_SOUND' if pickup == 'visible' else 'PlaySoundWaitForCurrent'))
+            assert p.lib.sb_sync(p.addr('PlaySound'))
+            base = p.get('hAutoBGTransferDest') | p.get(p.addr('hAutoBGTransferDest')+1) << 8
+            vram = p.lib.sb_memory(3)
+            shown = [bytes(vram[base-0x8000+y*32:base-0x8000+y*32+20]) for y in [14, 16]]
+            written = [bytes(p.get(p.addr('wTileMap')+y*20+x) for x in range(20)) for y in [14, 16]]
+            assert shown == written, (speed, button, 'Fanfare started before the text was visible')
+            assert sum(c >= 0x80 for row in written for c in row) >= 15, 'Wrong pickup fixture'
+            p.tick(300)
+            if button:
+                p.key(button, False)
+            bad = [p.lib.sb_bad_vram_writes(), p.lib.sb_bad_palette_writes()]
+            assert bad == [0, 0], ('pickup', speed, button, bad)
+            items.append({'pickup': pickup, 'speed': speed, 'held_button': button, 'text_complete_before_sound': True,
+                          'blocked_writes': bad})
+
 p.close()
 report = {'rom_sha256': hashlib.sha256(Path(args.rom).read_bytes()).hexdigest(),
           'model': 'SameBoy CGB-E', 'healing': healing, 'item_fanfares': items}

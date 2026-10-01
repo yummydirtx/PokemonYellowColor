@@ -72,6 +72,7 @@ The palette table omits its unused padding; all 25 palette sets are range checke
 `ColorFinishText` drains a pending color transfer plus three fresh tilemap
 portions before text-command sounds. It counts completed transfers, so a
 deferred VBlank cannot leave the final letters waiting until after the jingle.
+Hidden pickups invoke the same flush before their direct fanfare call.
 During healing, OBJ palette 2 uses OBP1's original eight-phase pulse; that slot
 is unused by Center NPCs. Other palettes continue using OBP0. The prior mode
 and all NPC palettes are restored when healing ends.

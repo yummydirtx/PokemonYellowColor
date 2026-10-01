@@ -38,6 +38,8 @@ FoundHiddenItemText::
 	ld c, a
 	ld b, FLAG_SET
 	predef FlagActionPredef
+	; Hidden pickups play their fanfare directly instead of TX_SOUND.
+	farcall ColorFinishText
 	ld a, SFX_GET_ITEM_2
 	call PlaySoundWaitForCurrent
 	call WaitForSoundToFinish
