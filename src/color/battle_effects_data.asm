@@ -22,237 +22,213 @@ Gen2EffectTable:
 	db 0
 
 Gen2Effect_THUNDERSHOCK:
-	db 43
+	db 33
 	dw Gen2GFX_THUNDERSHOCK
 	dw Gen2Timeline_THUNDERSHOCK_0, Gen2Timeline_THUNDERSHOCK_1
 Gen2Timeline_THUNDERSHOCK_0:
-	db 2, 0
+	db 1, 1
 	dw Gen2Frame_0
-	db 2, 0
+	db 1, 0
 	dw Gen2Frame_1
-	db 2, 0
+	db 1, 0
+	dw Gen2Frame_2
+	db 1, 0
+	dw Gen2Frame_3
+	db 1, 0
+	dw Gen2Frame_4
+	db 1, 0
+	dw Gen2Frame_5
+	db 1, 0
+	dw Gen2Frame_6
+	db 1, 0
+	dw Gen2Frame_7
+	db 1, 0
+	dw Gen2Frame_8
+	db 1, 0
+	dw Gen2Frame_9
+	db 1, 0
+	dw Gen2Frame_10
+	db 1, 0
+	dw Gen2Frame_11
+	db 4, 0
+	dw Gen2Frame_12
+	db 4, 0
+	dw Gen2Frame_13
+	db 4, 0
+	dw Gen2Frame_14
+	db 4, 0
+	dw Gen2Frame_15
+	db 4, 0
+	dw Gen2Frame_16
+	db 1, 0
 	dw Gen2Frame_0
-	db 2, 0
+	db 1, 0
 	dw Gen2Frame_1
-	db 2, 0
+	db 1, 0
+	dw Gen2Frame_2
+	db 1, 0
+	dw Gen2Frame_3
+	db 1, 0
+	dw Gen2Frame_4
+	db 1, 0
+	dw Gen2Frame_5
+	db 1, 0
+	dw Gen2Frame_6
+	db 1, 0
+	dw Gen2Frame_7
+	db 1, 0
+	dw Gen2Frame_8
+	db 1, 0
+	dw Gen2Frame_9
+	db 1, 0
+	dw Gen2Frame_10
+	db 1, 0
+	dw Gen2Frame_11
+	db 4, 0
+	dw Gen2Frame_12
+	db 4, 0
+	dw Gen2Frame_13
+	db 4, 0
+	dw Gen2Frame_14
+	db 4, 0
+	dw Gen2Frame_15
+	db 4, 0
+	dw Gen2Frame_16
+	db 1, 0
 	dw Gen2Frame_0
-	db 2, 0
+	db 1, 0
 	dw Gen2Frame_1
-	db 2, 0
-	dw Gen2Frame_0
-	db 2, 0
-	dw Gen2Frame_1
-	db 2, 1
+	db 1, 0
 	dw Gen2Frame_2
-	db 2, 0
+	db 1, 0
 	dw Gen2Frame_3
-	db 2, 0
+	db 1, 0
 	dw Gen2Frame_4
-	db 2, 0
+	db 1, 0
 	dw Gen2Frame_5
-	db 2, 0
-	dw Gen2Frame_2
-	db 2, 0
-	dw Gen2Frame_3
-	db 2, 0
-	dw Gen2Frame_4
-	db 2, 0
-	dw Gen2Frame_5
-	db 2, 0
-	dw Gen2Frame_2
-	db 2, 0
-	dw Gen2Frame_3
-	db 2, 0
-	dw Gen2Frame_4
-	db 2, 0
-	dw Gen2Frame_5
-	db 2, 0
-	dw Gen2Frame_2
-	db 2, 0
-	dw Gen2Frame_3
-	db 2, 0
-	dw Gen2Frame_4
-	db 2, 0
-	dw Gen2Frame_5
-	db 2, 0
-	dw Gen2Frame_2
-	db 2, 0
-	dw Gen2Frame_3
-	db 2, 0
-	dw Gen2Frame_4
-	db 2, 0
-	dw Gen2Frame_5
-	db 2, 0
-	dw Gen2Frame_2
-	db 2, 0
-	dw Gen2Frame_3
-	db 2, 0
-	dw Gen2Frame_4
-	db 2, 0
-	dw Gen2Frame_5
-	db 2, 0
-	dw Gen2Frame_2
-	db 2, 0
-	dw Gen2Frame_3
-	db 2, 0
-	dw Gen2Frame_4
-	db 2, 0
-	dw Gen2Frame_5
-	db 2, 0
-	dw Gen2Frame_2
-	db 2, 0
-	dw Gen2Frame_3
-	db 2, 0
-	dw Gen2Frame_4
-	db 2, 0
-	dw Gen2Frame_5
-	db 2, 0
-	dw Gen2Frame_2
-	db 2, 0
-	dw Gen2Frame_3
-	db 2, 0
-	dw Gen2Frame_4
-	db 2, 0
-	dw Gen2Frame_5
-	db 2, 0
-	dw Gen2Frame_2
-	db 2, 0
-	dw Gen2Frame_3
-	db 2, 0
-	dw Gen2Frame_4
-	db 2, 0
-	dw Gen2Frame_5
-	db 2, 0
-	dw Gen2Frame_2
-	db 2, 0
-	dw Gen2Frame_3
-	db 2, 0
-	dw Gen2Frame_4
-	db 2, 0
-	dw Gen2Frame_5
-	db 2, 0
-	dw Gen2Frame_2
-	db 2, 0
-	dw Gen2Frame_3
-	db 2, 0
-	dw Gen2Frame_4
-	db 2, 0
-	dw Gen2Frame_5
+	db 1, 0
+	dw Gen2Frame_6
+	db 1, 0
+	dw Gen2Frame_7
+	db 1, 0
+	dw Gen2Frame_8
+	db 1, 0
+	dw Gen2Frame_9
+	db 1, 0
+	dw Gen2Frame_10
+	db 1, 0
+	dw Gen2Frame_11
+	db 4, 0
+	dw Gen2Frame_12
+	db 4, 0
+	dw Gen2Frame_13
+	db 4, 0
+	dw Gen2Frame_14
+	db 4, 0
+	dw Gen2Frame_15
 	db 0
 
 Gen2Timeline_THUNDERSHOCK_1:
-	db 2, 0
-	dw Gen2Frame_6
-	db 2, 0
-	dw Gen2Frame_1
-	db 2, 0
-	dw Gen2Frame_6
-	db 2, 0
-	dw Gen2Frame_1
-	db 2, 0
-	dw Gen2Frame_6
-	db 2, 0
-	dw Gen2Frame_1
-	db 2, 0
-	dw Gen2Frame_6
-	db 2, 0
-	dw Gen2Frame_1
-	db 2, 1
-	dw Gen2Frame_7
-	db 2, 0
-	dw Gen2Frame_8
-	db 2, 0
-	dw Gen2Frame_9
-	db 2, 0
-	dw Gen2Frame_10
-	db 2, 0
-	dw Gen2Frame_7
-	db 2, 0
-	dw Gen2Frame_8
-	db 2, 0
-	dw Gen2Frame_9
-	db 2, 0
-	dw Gen2Frame_10
-	db 2, 0
-	dw Gen2Frame_7
-	db 2, 0
-	dw Gen2Frame_8
-	db 2, 0
-	dw Gen2Frame_9
-	db 2, 0
-	dw Gen2Frame_10
-	db 2, 0
-	dw Gen2Frame_7
-	db 2, 0
-	dw Gen2Frame_8
-	db 2, 0
-	dw Gen2Frame_9
-	db 2, 0
-	dw Gen2Frame_10
-	db 2, 0
-	dw Gen2Frame_7
-	db 2, 0
-	dw Gen2Frame_8
-	db 2, 0
-	dw Gen2Frame_9
-	db 2, 0
-	dw Gen2Frame_10
-	db 2, 0
-	dw Gen2Frame_7
-	db 2, 0
-	dw Gen2Frame_8
-	db 2, 0
-	dw Gen2Frame_9
-	db 2, 0
-	dw Gen2Frame_10
-	db 2, 0
-	dw Gen2Frame_7
-	db 2, 0
-	dw Gen2Frame_8
-	db 2, 0
-	dw Gen2Frame_9
-	db 2, 0
-	dw Gen2Frame_10
-	db 2, 0
-	dw Gen2Frame_7
-	db 2, 0
-	dw Gen2Frame_8
-	db 2, 0
-	dw Gen2Frame_9
-	db 2, 0
-	dw Gen2Frame_10
-	db 2, 0
-	dw Gen2Frame_7
-	db 2, 0
-	dw Gen2Frame_8
-	db 2, 0
-	dw Gen2Frame_9
-	db 2, 0
-	dw Gen2Frame_10
-	db 2, 0
-	dw Gen2Frame_7
-	db 2, 0
-	dw Gen2Frame_8
-	db 2, 0
-	dw Gen2Frame_9
-	db 2, 0
-	dw Gen2Frame_10
-	db 2, 0
-	dw Gen2Frame_7
-	db 2, 0
-	dw Gen2Frame_8
-	db 2, 0
-	dw Gen2Frame_9
-	db 2, 0
-	dw Gen2Frame_10
-	db 2, 0
-	dw Gen2Frame_7
-	db 2, 0
-	dw Gen2Frame_8
-	db 2, 0
-	dw Gen2Frame_9
-	db 2, 0
-	dw Gen2Frame_10
+	db 1, 1
+	dw Gen2Frame_17
+	db 1, 0
+	dw Gen2Frame_18
+	db 1, 0
+	dw Gen2Frame_19
+	db 1, 0
+	dw Gen2Frame_20
+	db 1, 0
+	dw Gen2Frame_21
+	db 1, 0
+	dw Gen2Frame_22
+	db 1, 0
+	dw Gen2Frame_23
+	db 1, 0
+	dw Gen2Frame_24
+	db 1, 0
+	dw Gen2Frame_25
+	db 1, 0
+	dw Gen2Frame_26
+	db 1, 0
+	dw Gen2Frame_27
+	db 1, 0
+	dw Gen2Frame_28
+	db 4, 0
+	dw Gen2Frame_29
+	db 4, 0
+	dw Gen2Frame_30
+	db 4, 0
+	dw Gen2Frame_31
+	db 4, 0
+	dw Gen2Frame_32
+	db 4, 0
+	dw Gen2Frame_16
+	db 1, 0
+	dw Gen2Frame_17
+	db 1, 0
+	dw Gen2Frame_18
+	db 1, 0
+	dw Gen2Frame_19
+	db 1, 0
+	dw Gen2Frame_20
+	db 1, 0
+	dw Gen2Frame_21
+	db 1, 0
+	dw Gen2Frame_22
+	db 1, 0
+	dw Gen2Frame_23
+	db 1, 0
+	dw Gen2Frame_24
+	db 1, 0
+	dw Gen2Frame_25
+	db 1, 0
+	dw Gen2Frame_26
+	db 1, 0
+	dw Gen2Frame_27
+	db 1, 0
+	dw Gen2Frame_28
+	db 4, 0
+	dw Gen2Frame_29
+	db 4, 0
+	dw Gen2Frame_30
+	db 4, 0
+	dw Gen2Frame_31
+	db 4, 0
+	dw Gen2Frame_32
+	db 4, 0
+	dw Gen2Frame_16
+	db 1, 0
+	dw Gen2Frame_17
+	db 1, 0
+	dw Gen2Frame_18
+	db 1, 0
+	dw Gen2Frame_19
+	db 1, 0
+	dw Gen2Frame_20
+	db 1, 0
+	dw Gen2Frame_21
+	db 1, 0
+	dw Gen2Frame_22
+	db 1, 0
+	dw Gen2Frame_23
+	db 1, 0
+	dw Gen2Frame_24
+	db 1, 0
+	dw Gen2Frame_25
+	db 1, 0
+	dw Gen2Frame_26
+	db 1, 0
+	dw Gen2Frame_27
+	db 1, 0
+	dw Gen2Frame_28
+	db 4, 0
+	dw Gen2Frame_29
+	db 4, 0
+	dw Gen2Frame_30
+	db 4, 0
+	dw Gen2Frame_31
+	db 4, 0
+	dw Gen2Frame_32
 	db 0
 
 Gen2Effect_THUNDERBOLT:
@@ -261,296 +237,296 @@ Gen2Effect_THUNDERBOLT:
 	dw Gen2Timeline_THUNDERBOLT_0, Gen2Timeline_THUNDERBOLT_1
 Gen2Timeline_THUNDERBOLT_0:
 	db 2, 0
-	dw Gen2Frame_11
+	dw Gen2Frame_33
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_11
+	dw Gen2Frame_33
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_11
+	dw Gen2Frame_33
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_11
+	dw Gen2Frame_33
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 1
-	dw Gen2Frame_12
+	dw Gen2Frame_34
 	db 2, 0
-	dw Gen2Frame_13
+	dw Gen2Frame_35
 	db 2, 0
-	dw Gen2Frame_14
+	dw Gen2Frame_36
 	db 2, 0
-	dw Gen2Frame_15
+	dw Gen2Frame_37
 	db 2, 0
-	dw Gen2Frame_12
+	dw Gen2Frame_34
 	db 2, 0
-	dw Gen2Frame_13
+	dw Gen2Frame_35
 	db 2, 0
-	dw Gen2Frame_14
+	dw Gen2Frame_36
 	db 2, 0
-	dw Gen2Frame_15
+	dw Gen2Frame_37
 	db 2, 0
-	dw Gen2Frame_12
+	dw Gen2Frame_34
 	db 2, 0
-	dw Gen2Frame_13
+	dw Gen2Frame_35
 	db 2, 0
-	dw Gen2Frame_14
+	dw Gen2Frame_36
 	db 2, 0
-	dw Gen2Frame_15
+	dw Gen2Frame_37
 	db 2, 0
-	dw Gen2Frame_12
+	dw Gen2Frame_34
 	db 2, 0
-	dw Gen2Frame_13
+	dw Gen2Frame_35
 	db 2, 0
-	dw Gen2Frame_14
+	dw Gen2Frame_36
 	db 2, 0
-	dw Gen2Frame_15
+	dw Gen2Frame_37
 	db 2, 0
-	dw Gen2Frame_12
+	dw Gen2Frame_34
 	db 2, 0
-	dw Gen2Frame_13
+	dw Gen2Frame_35
 	db 2, 0
-	dw Gen2Frame_14
+	dw Gen2Frame_36
 	db 2, 0
-	dw Gen2Frame_15
+	dw Gen2Frame_37
 	db 2, 0
-	dw Gen2Frame_12
+	dw Gen2Frame_34
 	db 2, 0
-	dw Gen2Frame_13
+	dw Gen2Frame_35
 	db 2, 0
-	dw Gen2Frame_14
+	dw Gen2Frame_36
 	db 2, 0
-	dw Gen2Frame_15
+	dw Gen2Frame_37
 	db 2, 0
-	dw Gen2Frame_12
+	dw Gen2Frame_34
 	db 2, 0
-	dw Gen2Frame_13
+	dw Gen2Frame_35
 	db 2, 0
-	dw Gen2Frame_14
+	dw Gen2Frame_36
 	db 2, 0
-	dw Gen2Frame_15
+	dw Gen2Frame_37
 	db 2, 0
-	dw Gen2Frame_12
+	dw Gen2Frame_34
 	db 2, 0
-	dw Gen2Frame_13
+	dw Gen2Frame_35
 	db 2, 0
-	dw Gen2Frame_14
+	dw Gen2Frame_36
 	db 2, 0
-	dw Gen2Frame_15
+	dw Gen2Frame_37
 	db 2, 1
-	dw Gen2Frame_12
+	dw Gen2Frame_34
 	db 2, 0
-	dw Gen2Frame_13
+	dw Gen2Frame_35
 	db 2, 0
-	dw Gen2Frame_14
+	dw Gen2Frame_36
 	db 2, 0
-	dw Gen2Frame_15
+	dw Gen2Frame_37
 	db 2, 0
-	dw Gen2Frame_12
+	dw Gen2Frame_34
 	db 2, 0
-	dw Gen2Frame_13
+	dw Gen2Frame_35
 	db 2, 0
-	dw Gen2Frame_14
+	dw Gen2Frame_36
 	db 2, 0
-	dw Gen2Frame_15
+	dw Gen2Frame_37
 	db 2, 0
-	dw Gen2Frame_12
+	dw Gen2Frame_34
 	db 2, 0
-	dw Gen2Frame_13
+	dw Gen2Frame_35
 	db 2, 0
-	dw Gen2Frame_14
+	dw Gen2Frame_36
 	db 2, 0
-	dw Gen2Frame_15
+	dw Gen2Frame_37
 	db 2, 0
-	dw Gen2Frame_12
+	dw Gen2Frame_34
 	db 2, 0
-	dw Gen2Frame_13
+	dw Gen2Frame_35
 	db 2, 0
-	dw Gen2Frame_14
+	dw Gen2Frame_36
 	db 2, 0
-	dw Gen2Frame_15
+	dw Gen2Frame_37
 	db 2, 0
-	dw Gen2Frame_12
+	dw Gen2Frame_34
 	db 2, 0
-	dw Gen2Frame_13
+	dw Gen2Frame_35
 	db 2, 0
-	dw Gen2Frame_14
+	dw Gen2Frame_36
 	db 2, 0
-	dw Gen2Frame_15
+	dw Gen2Frame_37
 	db 2, 0
-	dw Gen2Frame_12
+	dw Gen2Frame_34
 	db 2, 0
-	dw Gen2Frame_13
+	dw Gen2Frame_35
 	db 2, 0
-	dw Gen2Frame_14
+	dw Gen2Frame_36
 	db 2, 0
-	dw Gen2Frame_15
+	dw Gen2Frame_37
 	db 2, 0
-	dw Gen2Frame_12
+	dw Gen2Frame_34
 	db 2, 0
-	dw Gen2Frame_13
+	dw Gen2Frame_35
 	db 2, 0
-	dw Gen2Frame_14
+	dw Gen2Frame_36
 	db 2, 0
-	dw Gen2Frame_15
+	dw Gen2Frame_37
 	db 2, 0
-	dw Gen2Frame_12
+	dw Gen2Frame_34
 	db 2, 0
-	dw Gen2Frame_13
+	dw Gen2Frame_35
 	db 2, 0
-	dw Gen2Frame_14
+	dw Gen2Frame_36
 	db 2, 0
-	dw Gen2Frame_15
+	dw Gen2Frame_37
 	db 0
 
 Gen2Timeline_THUNDERBOLT_1:
 	db 2, 0
-	dw Gen2Frame_16
-	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_38
 	db 2, 0
 	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_38
 	db 2, 0
 	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_38
 	db 2, 0
 	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_38
+	db 2, 0
+	dw Gen2Frame_16
 	db 2, 1
-	dw Gen2Frame_17
+	dw Gen2Frame_39
 	db 2, 0
-	dw Gen2Frame_18
+	dw Gen2Frame_40
 	db 2, 0
-	dw Gen2Frame_19
+	dw Gen2Frame_41
 	db 2, 0
-	dw Gen2Frame_20
+	dw Gen2Frame_42
 	db 2, 0
-	dw Gen2Frame_17
+	dw Gen2Frame_39
 	db 2, 0
-	dw Gen2Frame_18
+	dw Gen2Frame_40
 	db 2, 0
-	dw Gen2Frame_19
+	dw Gen2Frame_41
 	db 2, 0
-	dw Gen2Frame_20
+	dw Gen2Frame_42
 	db 2, 0
-	dw Gen2Frame_17
+	dw Gen2Frame_39
 	db 2, 0
-	dw Gen2Frame_18
+	dw Gen2Frame_40
 	db 2, 0
-	dw Gen2Frame_19
+	dw Gen2Frame_41
 	db 2, 0
-	dw Gen2Frame_20
+	dw Gen2Frame_42
 	db 2, 0
-	dw Gen2Frame_17
+	dw Gen2Frame_39
 	db 2, 0
-	dw Gen2Frame_18
+	dw Gen2Frame_40
 	db 2, 0
-	dw Gen2Frame_19
+	dw Gen2Frame_41
 	db 2, 0
-	dw Gen2Frame_20
+	dw Gen2Frame_42
 	db 2, 0
-	dw Gen2Frame_17
+	dw Gen2Frame_39
 	db 2, 0
-	dw Gen2Frame_18
+	dw Gen2Frame_40
 	db 2, 0
-	dw Gen2Frame_19
+	dw Gen2Frame_41
 	db 2, 0
-	dw Gen2Frame_20
+	dw Gen2Frame_42
 	db 2, 0
-	dw Gen2Frame_17
+	dw Gen2Frame_39
 	db 2, 0
-	dw Gen2Frame_18
+	dw Gen2Frame_40
 	db 2, 0
-	dw Gen2Frame_19
+	dw Gen2Frame_41
 	db 2, 0
-	dw Gen2Frame_20
+	dw Gen2Frame_42
 	db 2, 0
-	dw Gen2Frame_17
+	dw Gen2Frame_39
 	db 2, 0
-	dw Gen2Frame_18
+	dw Gen2Frame_40
 	db 2, 0
-	dw Gen2Frame_19
+	dw Gen2Frame_41
 	db 2, 0
-	dw Gen2Frame_20
+	dw Gen2Frame_42
 	db 2, 0
-	dw Gen2Frame_17
+	dw Gen2Frame_39
 	db 2, 0
-	dw Gen2Frame_18
+	dw Gen2Frame_40
 	db 2, 0
-	dw Gen2Frame_19
+	dw Gen2Frame_41
 	db 2, 0
-	dw Gen2Frame_20
+	dw Gen2Frame_42
 	db 2, 1
-	dw Gen2Frame_17
+	dw Gen2Frame_39
 	db 2, 0
-	dw Gen2Frame_18
+	dw Gen2Frame_40
 	db 2, 0
-	dw Gen2Frame_19
+	dw Gen2Frame_41
 	db 2, 0
-	dw Gen2Frame_20
+	dw Gen2Frame_42
 	db 2, 0
-	dw Gen2Frame_17
+	dw Gen2Frame_39
 	db 2, 0
-	dw Gen2Frame_18
+	dw Gen2Frame_40
 	db 2, 0
-	dw Gen2Frame_19
+	dw Gen2Frame_41
 	db 2, 0
-	dw Gen2Frame_20
+	dw Gen2Frame_42
 	db 2, 0
-	dw Gen2Frame_17
+	dw Gen2Frame_39
 	db 2, 0
-	dw Gen2Frame_18
+	dw Gen2Frame_40
 	db 2, 0
-	dw Gen2Frame_19
+	dw Gen2Frame_41
 	db 2, 0
-	dw Gen2Frame_20
+	dw Gen2Frame_42
 	db 2, 0
-	dw Gen2Frame_17
+	dw Gen2Frame_39
 	db 2, 0
-	dw Gen2Frame_18
+	dw Gen2Frame_40
 	db 2, 0
-	dw Gen2Frame_19
+	dw Gen2Frame_41
 	db 2, 0
-	dw Gen2Frame_20
+	dw Gen2Frame_42
 	db 2, 0
-	dw Gen2Frame_17
+	dw Gen2Frame_39
 	db 2, 0
-	dw Gen2Frame_18
+	dw Gen2Frame_40
 	db 2, 0
-	dw Gen2Frame_19
+	dw Gen2Frame_41
 	db 2, 0
-	dw Gen2Frame_20
+	dw Gen2Frame_42
 	db 2, 0
-	dw Gen2Frame_17
+	dw Gen2Frame_39
 	db 2, 0
-	dw Gen2Frame_18
+	dw Gen2Frame_40
 	db 2, 0
-	dw Gen2Frame_19
+	dw Gen2Frame_41
 	db 2, 0
-	dw Gen2Frame_20
+	dw Gen2Frame_42
 	db 2, 0
-	dw Gen2Frame_17
+	dw Gen2Frame_39
 	db 2, 0
-	dw Gen2Frame_18
+	dw Gen2Frame_40
 	db 2, 0
-	dw Gen2Frame_19
+	dw Gen2Frame_41
 	db 2, 0
-	dw Gen2Frame_20
+	dw Gen2Frame_42
 	db 2, 0
-	dw Gen2Frame_17
+	dw Gen2Frame_39
 	db 2, 0
-	dw Gen2Frame_18
+	dw Gen2Frame_40
 	db 2, 0
-	dw Gen2Frame_19
+	dw Gen2Frame_41
 	db 2, 0
-	dw Gen2Frame_20
+	dw Gen2Frame_42
 	db 0
 
 Gen2Effect_THUNDER_WAVE:
@@ -559,208 +535,208 @@ Gen2Effect_THUNDER_WAVE:
 	dw Gen2Timeline_THUNDER_WAVE_0, Gen2Timeline_THUNDER_WAVE_1
 Gen2Timeline_THUNDER_WAVE_0:
 	db 8, 1
-	dw Gen2Frame_21
+	dw Gen2Frame_43
 	db 8, 0
-	dw Gen2Frame_22
+	dw Gen2Frame_44
 	db 10, 0
-	dw Gen2Frame_23
+	dw Gen2Frame_45
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_23
+	dw Gen2Frame_45
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_24
+	dw Gen2Frame_46
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_24
+	dw Gen2Frame_46
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_23
+	dw Gen2Frame_45
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_23
+	dw Gen2Frame_45
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_24
+	dw Gen2Frame_46
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_24
+	dw Gen2Frame_46
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_23
+	dw Gen2Frame_45
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_23
+	dw Gen2Frame_45
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_24
+	dw Gen2Frame_46
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_24
+	dw Gen2Frame_46
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_23
+	dw Gen2Frame_45
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_23
+	dw Gen2Frame_45
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_24
+	dw Gen2Frame_46
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_24
+	dw Gen2Frame_46
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_23
+	dw Gen2Frame_45
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_23
+	dw Gen2Frame_45
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_24
+	dw Gen2Frame_46
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_24
+	dw Gen2Frame_46
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_23
+	dw Gen2Frame_45
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_23
+	dw Gen2Frame_45
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_24
+	dw Gen2Frame_46
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_24
+	dw Gen2Frame_46
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 0
 
 Gen2Timeline_THUNDER_WAVE_1:
 	db 8, 1
-	dw Gen2Frame_25
+	dw Gen2Frame_47
 	db 8, 0
-	dw Gen2Frame_26
+	dw Gen2Frame_48
 	db 10, 0
-	dw Gen2Frame_27
+	dw Gen2Frame_49
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_27
+	dw Gen2Frame_49
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_28
+	dw Gen2Frame_50
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_28
+	dw Gen2Frame_50
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_27
+	dw Gen2Frame_49
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_27
+	dw Gen2Frame_49
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_28
+	dw Gen2Frame_50
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_28
+	dw Gen2Frame_50
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_27
+	dw Gen2Frame_49
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_27
+	dw Gen2Frame_49
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_28
+	dw Gen2Frame_50
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_28
+	dw Gen2Frame_50
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_27
+	dw Gen2Frame_49
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_27
+	dw Gen2Frame_49
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_28
+	dw Gen2Frame_50
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_28
+	dw Gen2Frame_50
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_27
+	dw Gen2Frame_49
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_27
+	dw Gen2Frame_49
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_28
+	dw Gen2Frame_50
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_28
+	dw Gen2Frame_50
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_27
+	dw Gen2Frame_49
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_27
+	dw Gen2Frame_49
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_28
+	dw Gen2Frame_50
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_28
+	dw Gen2Frame_50
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 0
 
 Gen2Effect_THUNDER:
@@ -769,64 +745,64 @@ Gen2Effect_THUNDER:
 	dw Gen2Timeline_THUNDER_0, Gen2Timeline_THUNDER_1
 Gen2Timeline_THUNDER_0:
 	db 2, 1
-	dw Gen2Frame_29
+	dw Gen2Frame_51
 	db 2, 0
-	dw Gen2Frame_30
+	dw Gen2Frame_52
 	db 2, 0
-	dw Gen2Frame_31
+	dw Gen2Frame_53
 	db 10, 0
-	dw Gen2Frame_32
+	dw Gen2Frame_54
 	db 2, 1
-	dw Gen2Frame_33
+	dw Gen2Frame_55
 	db 2, 0
-	dw Gen2Frame_34
+	dw Gen2Frame_56
 	db 2, 0
-	dw Gen2Frame_35
+	dw Gen2Frame_57
 	db 10, 0
-	dw Gen2Frame_36
+	dw Gen2Frame_58
 	db 2, 1
-	dw Gen2Frame_37
+	dw Gen2Frame_59
 	db 2, 0
-	dw Gen2Frame_38
+	dw Gen2Frame_60
 	db 2, 0
-	dw Gen2Frame_39
+	dw Gen2Frame_61
 	db 16, 0
-	dw Gen2Frame_40
+	dw Gen2Frame_62
 	db 16, 0
-	dw Gen2Frame_41
+	dw Gen2Frame_63
 	db 10, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 0
 
 Gen2Timeline_THUNDER_1:
 	db 2, 1
-	dw Gen2Frame_42
+	dw Gen2Frame_64
 	db 2, 0
-	dw Gen2Frame_43
+	dw Gen2Frame_65
 	db 2, 0
-	dw Gen2Frame_44
+	dw Gen2Frame_66
 	db 10, 0
-	dw Gen2Frame_45
+	dw Gen2Frame_67
 	db 2, 1
-	dw Gen2Frame_46
+	dw Gen2Frame_68
 	db 2, 0
-	dw Gen2Frame_47
+	dw Gen2Frame_69
 	db 2, 0
-	dw Gen2Frame_48
+	dw Gen2Frame_70
 	db 10, 0
-	dw Gen2Frame_49
+	dw Gen2Frame_71
 	db 2, 1
-	dw Gen2Frame_50
+	dw Gen2Frame_72
 	db 2, 0
-	dw Gen2Frame_51
+	dw Gen2Frame_73
 	db 2, 0
-	dw Gen2Frame_52
+	dw Gen2Frame_74
 	db 16, 0
-	dw Gen2Frame_53
+	dw Gen2Frame_75
 	db 16, 0
-	dw Gen2Frame_54
+	dw Gen2Frame_76
 	db 10, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 0
 
 Gen2Effect_SCRATCH:
@@ -835,52 +811,52 @@ Gen2Effect_SCRATCH:
 	dw Gen2Timeline_SCRATCH_0, Gen2Timeline_SCRATCH_1
 Gen2Timeline_SCRATCH_0:
 	db 2, 1
-	dw Gen2Frame_55
+	dw Gen2Frame_77
 	db 2, 0
-	dw Gen2Frame_56
+	dw Gen2Frame_78
 	db 4, 0
-	dw Gen2Frame_57
+	dw Gen2Frame_79
 	db 2, 0
-	dw Gen2Frame_58
+	dw Gen2Frame_80
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_58
+	dw Gen2Frame_80
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_58
+	dw Gen2Frame_80
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_58
+	dw Gen2Frame_80
 	db 10, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 0
 
 Gen2Timeline_SCRATCH_1:
 	db 2, 1
-	dw Gen2Frame_59
+	dw Gen2Frame_81
 	db 2, 0
-	dw Gen2Frame_60
+	dw Gen2Frame_82
 	db 4, 0
-	dw Gen2Frame_61
+	dw Gen2Frame_83
 	db 2, 0
-	dw Gen2Frame_62
+	dw Gen2Frame_84
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_62
+	dw Gen2Frame_84
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_62
+	dw Gen2Frame_84
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_62
+	dw Gen2Frame_84
 	db 10, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 0
 
 Gen2Effect_CUT:
@@ -889,64 +865,64 @@ Gen2Effect_CUT:
 	dw Gen2Timeline_CUT_0, Gen2Timeline_CUT_1
 Gen2Timeline_CUT_0:
 	db 1, 1
-	dw Gen2Frame_63
+	dw Gen2Frame_85
 	db 1, 0
-	dw Gen2Frame_64
+	dw Gen2Frame_86
 	db 1, 0
-	dw Gen2Frame_65
+	dw Gen2Frame_87
 	db 1, 0
-	dw Gen2Frame_66
+	dw Gen2Frame_88
 	db 1, 0
-	dw Gen2Frame_67
+	dw Gen2Frame_89
 	db 1, 0
-	dw Gen2Frame_68
+	dw Gen2Frame_90
 	db 2, 0
-	dw Gen2Frame_69
+	dw Gen2Frame_91
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_69
+	dw Gen2Frame_91
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_69
+	dw Gen2Frame_91
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_69
+	dw Gen2Frame_91
 	db 12, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 0
 
 Gen2Timeline_CUT_1:
 	db 1, 1
-	dw Gen2Frame_70
+	dw Gen2Frame_92
 	db 1, 0
-	dw Gen2Frame_71
+	dw Gen2Frame_93
 	db 1, 0
-	dw Gen2Frame_72
+	dw Gen2Frame_94
 	db 1, 0
-	dw Gen2Frame_73
+	dw Gen2Frame_95
 	db 1, 0
-	dw Gen2Frame_74
+	dw Gen2Frame_96
 	db 1, 0
-	dw Gen2Frame_75
+	dw Gen2Frame_97
 	db 2, 0
-	dw Gen2Frame_76
+	dw Gen2Frame_98
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_76
+	dw Gen2Frame_98
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_76
+	dw Gen2Frame_98
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 2, 0
-	dw Gen2Frame_76
+	dw Gen2Frame_98
 	db 12, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 0
 
 Gen2Effect_TACKLE:
@@ -955,24 +931,24 @@ Gen2Effect_TACKLE:
 	dw Gen2Timeline_TACKLE_0, Gen2Timeline_TACKLE_1
 Gen2Timeline_TACKLE_0:
 	db 4, 8
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 6, 1
-	dw Gen2Frame_77
+	dw Gen2Frame_99
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 4, 16
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 0
 
 Gen2Timeline_TACKLE_1:
 	db 4, 8
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 6, 1
-	dw Gen2Frame_78
+	dw Gen2Frame_100
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 4, 16
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 0
 
 Gen2Effect_QUICK_ATTACK:
@@ -981,117 +957,229 @@ Gen2Effect_QUICK_ATTACK:
 	dw Gen2Timeline_QUICK_ATTACK_0, Gen2Timeline_QUICK_ATTACK_1
 Gen2Timeline_QUICK_ATTACK_0:
 	db 1, 3
-	dw Gen2Frame_79
+	dw Gen2Frame_101
 	db 1, 0
-	dw Gen2Frame_80
+	dw Gen2Frame_102
 	db 1, 0
-	dw Gen2Frame_81
+	dw Gen2Frame_103
 	db 9, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 6, 1
-	dw Gen2Frame_82
+	dw Gen2Frame_104
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 16, 4
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 0
 
 Gen2Timeline_QUICK_ATTACK_1:
 	db 1, 3
-	dw Gen2Frame_83
+	dw Gen2Frame_105
 	db 1, 0
-	dw Gen2Frame_84
+	dw Gen2Frame_106
 	db 1, 0
-	dw Gen2Frame_85
+	dw Gen2Frame_107
 	db 9, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 6, 1
-	dw Gen2Frame_86
+	dw Gen2Frame_108
 	db 2, 0
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 16, 4
-	dw Gen2Frame_1
+	dw Gen2Frame_16
 	db 0
 
 Gen2Frame_0:
 	db 16
-	db $28, $7c, $52, $06
-	db $28, $84, $52, $26
-	db $30, $7c, $52, $46
-	db $30, $84, $52, $66
+	db $22, $82, $41, $07
+	db $36, $82, $41, $67
+	db $2c, $78, $40, $07
+	db $2c, $8c, $40, $67
 Gen2Frame_1:
-	db 0
+	db 16
+	db $21, $82, $41, $07
+	db $37, $82, $41, $67
+	db $2c, $77, $40, $07
+	db $2c, $8d, $40, $67
 Gen2Frame_2:
-	db 32
-	db $28, $7c, $52, $06
-	db $28, $84, $52, $26
-	db $30, $7c, $52, $46
-	db $30, $84, $52, $66
-	db $1c, $80, $41, $07
-	db $3c, $80, $41, $67
-	db $2c, $70, $40, $07
-	db $2c, $90, $40, $67
+	db 16
+	db $20, $82, $41, $07
+	db $38, $82, $41, $67
+	db $2c, $76, $40, $07
+	db $2c, $8e, $40, $67
 Gen2Frame_3:
 	db 16
-	db $1c, $80, $41, $07
-	db $3c, $80, $41, $67
-	db $2c, $70, $40, $07
-	db $2c, $90, $40, $67
+	db $1f, $82, $41, $07
+	db $39, $82, $41, $67
+	db $2c, $75, $40, $07
+	db $2c, $8f, $40, $67
 Gen2Frame_4:
-	db 32
-	db $28, $7c, $52, $06
-	db $28, $84, $52, $26
-	db $30, $7c, $52, $46
-	db $30, $84, $52, $66
-	db $20, $74, $3f, $27
-	db $20, $8c, $3f, $07
-	db $38, $74, $3f, $67
-	db $38, $8c, $3f, $47
+	db 16
+	db $23, $77, $3f, $27
+	db $23, $8b, $3f, $07
+	db $37, $77, $3f, $67
+	db $37, $8b, $3f, $47
 Gen2Frame_5:
 	db 16
-	db $20, $74, $3f, $27
-	db $20, $8c, $3f, $07
-	db $38, $74, $3f, $67
+	db $22, $76, $3f, $27
+	db $22, $8c, $3f, $07
+	db $38, $76, $3f, $67
 	db $38, $8c, $3f, $47
 Gen2Frame_6:
 	db 16
-	db $50, $2c, $52, $26
-	db $50, $24, $52, $06
-	db $58, $2c, $52, $66
-	db $58, $24, $52, $46
+	db $21, $75, $3f, $27
+	db $21, $8d, $3f, $07
+	db $39, $75, $3f, $67
+	db $39, $8d, $3f, $47
 Gen2Frame_7:
-	db 32
-	db $50, $2c, $52, $26
-	db $50, $24, $52, $06
-	db $58, $2c, $52, $66
-	db $58, $24, $52, $46
-	db $44, $28, $41, $27
-	db $64, $28, $41, $47
-	db $54, $38, $40, $27
-	db $54, $18, $40, $47
+	db 16
+	db $20, $74, $3f, $27
+	db $20, $8e, $3f, $07
+	db $3a, $74, $3f, $67
+	db $3a, $8e, $3f, $47
 Gen2Frame_8:
 	db 16
-	db $44, $28, $41, $27
-	db $64, $28, $41, $47
-	db $54, $38, $40, $27
-	db $54, $18, $40, $47
+	db $1c, $80, $41, $07
+	db $40, $80, $41, $67
+	db $2e, $6e, $40, $07
+	db $2e, $92, $40, $67
 Gen2Frame_9:
-	db 32
-	db $50, $2c, $52, $26
-	db $50, $24, $52, $06
-	db $58, $2c, $52, $66
-	db $58, $24, $52, $46
-	db $48, $34, $3f, $07
-	db $48, $1c, $3f, $27
-	db $60, $34, $3f, $47
-	db $60, $1c, $3f, $67
+	db 16
+	db $1b, $80, $41, $07
+	db $41, $80, $41, $67
+	db $2e, $6d, $40, $07
+	db $2e, $93, $40, $67
 Gen2Frame_10:
 	db 16
-	db $48, $34, $3f, $07
-	db $48, $1c, $3f, $27
-	db $60, $34, $3f, $47
-	db $60, $1c, $3f, $67
+	db $1a, $80, $41, $07
+	db $42, $80, $41, $67
+	db $2e, $6c, $40, $07
+	db $2e, $94, $40, $67
 Gen2Frame_11:
+	db 16
+	db $19, $80, $41, $07
+	db $43, $80, $41, $67
+	db $2e, $6b, $40, $07
+	db $2e, $95, $40, $67
+Gen2Frame_12:
+	db 16
+	db $1d, $6f, $3f, $27
+	db $1d, $8f, $3f, $07
+	db $3d, $6f, $3f, $67
+	db $3d, $8f, $3f, $47
+Gen2Frame_13:
+	db 16
+	db $16, $7e, $41, $07
+	db $42, $7e, $41, $67
+	db $2c, $68, $40, $07
+	db $2c, $94, $40, $67
+Gen2Frame_14:
+	db 16
+	db $1b, $6f, $3f, $27
+	db $1b, $8f, $3f, $07
+	db $3b, $6f, $3f, $67
+	db $3b, $8f, $3f, $47
+Gen2Frame_15:
+	db 16
+	db $14, $80, $41, $07
+	db $40, $80, $41, $67
+	db $2a, $6a, $40, $07
+	db $2a, $96, $40, $67
+Gen2Frame_16:
+	db 0
+Gen2Frame_17:
+	db 16
+	db $4a, $26, $41, $27
+	db $5e, $26, $41, $47
+	db $54, $30, $40, $27
+	db $54, $1c, $40, $47
+Gen2Frame_18:
+	db 16
+	db $49, $26, $41, $27
+	db $5f, $26, $41, $47
+	db $54, $31, $40, $27
+	db $54, $1b, $40, $47
+Gen2Frame_19:
+	db 16
+	db $48, $26, $41, $27
+	db $60, $26, $41, $47
+	db $54, $32, $40, $27
+	db $54, $1a, $40, $47
+Gen2Frame_20:
+	db 16
+	db $47, $26, $41, $27
+	db $61, $26, $41, $47
+	db $54, $33, $40, $27
+	db $54, $19, $40, $47
+Gen2Frame_21:
+	db 16
+	db $4b, $31, $3f, $07
+	db $4b, $1d, $3f, $27
+	db $5f, $31, $3f, $47
+	db $5f, $1d, $3f, $67
+Gen2Frame_22:
+	db 16
+	db $4a, $32, $3f, $07
+	db $4a, $1c, $3f, $27
+	db $60, $32, $3f, $47
+	db $60, $1c, $3f, $67
+Gen2Frame_23:
+	db 16
+	db $49, $33, $3f, $07
+	db $49, $1b, $3f, $27
+	db $61, $33, $3f, $47
+	db $61, $1b, $3f, $67
+Gen2Frame_24:
+	db 16
+	db $48, $34, $3f, $07
+	db $48, $1a, $3f, $27
+	db $62, $34, $3f, $47
+	db $62, $1a, $3f, $67
+Gen2Frame_25:
+	db 16
+	db $44, $28, $41, $27
+	db $68, $28, $41, $47
+	db $56, $3a, $40, $27
+	db $56, $16, $40, $47
+Gen2Frame_26:
+	db 12
+	db $43, $28, $41, $27
+	db $56, $3b, $40, $27
+	db $56, $15, $40, $47
+Gen2Frame_27:
+	db 12
+	db $42, $28, $41, $27
+	db $56, $3c, $40, $27
+	db $56, $14, $40, $47
+Gen2Frame_28:
+	db 12
+	db $41, $28, $41, $27
+	db $56, $3d, $40, $27
+	db $56, $13, $40, $47
+Gen2Frame_29:
+	db 16
+	db $45, $39, $3f, $07
+	db $45, $19, $3f, $27
+	db $65, $39, $3f, $47
+	db $65, $19, $3f, $67
+Gen2Frame_30:
+	db 12
+	db $3e, $2a, $41, $27
+	db $54, $40, $40, $27
+	db $54, $14, $40, $47
+Gen2Frame_31:
+	db 16
+	db $43, $39, $3f, $07
+	db $43, $19, $3f, $27
+	db $63, $39, $3f, $47
+	db $63, $19, $3f, $67
+Gen2Frame_32:
+	db 16
+	db $3c, $28, $41, $27
+	db $68, $28, $41, $47
+	db $52, $3e, $40, $27
+	db $52, $12, $40, $47
+Gen2Frame_33:
 	db 64
 	db $20, $74, $53, $06
 	db $20, $7c, $54, $06
@@ -1109,7 +1197,7 @@ Gen2Frame_11:
 	db $30, $8c, $55, $66
 	db $38, $84, $54, $66
 	db $38, $8c, $53, $66
-Gen2Frame_12:
+Gen2Frame_34:
 	db 80
 	db $20, $74, $53, $06
 	db $20, $7c, $54, $06
@@ -1131,7 +1219,7 @@ Gen2Frame_12:
 	db $40, $80, $41, $67
 	db $2c, $6c, $40, $07
 	db $2c, $94, $40, $67
-Gen2Frame_13:
+Gen2Frame_35:
 	db 32
 	db $18, $80, $41, $07
 	db $40, $80, $41, $67
@@ -1141,7 +1229,7 @@ Gen2Frame_13:
 	db $48, $80, $41, $67
 	db $2c, $64, $40, $07
 	db $2c, $9c, $40, $67
-Gen2Frame_14:
+Gen2Frame_36:
 	db 80
 	db $20, $74, $53, $06
 	db $20, $7c, $54, $06
@@ -1163,7 +1251,7 @@ Gen2Frame_14:
 	db $1d, $8f, $3f, $07
 	db $3b, $71, $3f, $67
 	db $3b, $8f, $3f, $47
-Gen2Frame_15:
+Gen2Frame_37:
 	db 32
 	db $1d, $71, $3f, $27
 	db $1d, $8f, $3f, $07
@@ -1173,7 +1261,7 @@ Gen2Frame_15:
 	db $15, $97, $3f, $07
 	db $43, $69, $3f, $67
 	db $43, $97, $3f, $47
-Gen2Frame_16:
+Gen2Frame_38:
 	db 64
 	db $48, $34, $53, $26
 	db $48, $2c, $54, $26
@@ -1191,7 +1279,7 @@ Gen2Frame_16:
 	db $58, $1c, $55, $46
 	db $60, $24, $54, $46
 	db $60, $1c, $53, $46
-Gen2Frame_17:
+Gen2Frame_39:
 	db 80
 	db $48, $34, $53, $26
 	db $48, $2c, $54, $26
@@ -1213,7 +1301,7 @@ Gen2Frame_17:
 	db $68, $28, $41, $47
 	db $54, $3c, $40, $27
 	db $54, $14, $40, $47
-Gen2Frame_18:
+Gen2Frame_40:
 	db 28
 	db $40, $28, $41, $27
 	db $68, $28, $41, $47
@@ -1222,7 +1310,7 @@ Gen2Frame_18:
 	db $38, $28, $41, $27
 	db $54, $44, $40, $27
 	db $54, $0c, $40, $47
-Gen2Frame_19:
+Gen2Frame_41:
 	db 80
 	db $48, $34, $53, $26
 	db $48, $2c, $54, $26
@@ -1244,7 +1332,7 @@ Gen2Frame_19:
 	db $45, $19, $3f, $27
 	db $63, $37, $3f, $47
 	db $63, $19, $3f, $67
-Gen2Frame_20:
+Gen2Frame_42:
 	db 24
 	db $45, $37, $3f, $07
 	db $45, $19, $3f, $27
@@ -1252,13 +1340,13 @@ Gen2Frame_20:
 	db $63, $19, $3f, $67
 	db $3d, $3f, $3f, $07
 	db $3d, $11, $3f, $27
-Gen2Frame_21:
+Gen2Frame_43:
 	db 16
 	db $3c, $74, $31, $47
 	db $3c, $7c, $33, $47
 	db $3c, $84, $33, $67
 	db $3c, $8c, $31, $67
-Gen2Frame_22:
+Gen2Frame_44:
 	db 64
 	db $3c, $74, $31, $47
 	db $3c, $7c, $33, $47
@@ -1276,7 +1364,7 @@ Gen2Frame_22:
 	db $34, $84, $3e, $07
 	db $34, $8c, $31, $07
 	db $34, $94, $32, $07
-Gen2Frame_23:
+Gen2Frame_45:
 	db 104
 	db $3c, $74, $31, $47
 	db $3c, $7c, $33, $47
@@ -1304,7 +1392,7 @@ Gen2Frame_23:
 	db $24, $84, $36, $07
 	db $24, $8c, $33, $07
 	db $24, $94, $34, $07
-Gen2Frame_24:
+Gen2Frame_46:
 	db 104
 	db $1c, $74, $31, $07
 	db $1c, $7c, $33, $07
@@ -1332,13 +1420,13 @@ Gen2Frame_24:
 	db $3c, $7c, $33, $47
 	db $3c, $84, $33, $67
 	db $3c, $8c, $31, $67
-Gen2Frame_25:
+Gen2Frame_47:
 	db 16
 	db $64, $34, $31, $67
 	db $64, $2c, $33, $67
 	db $64, $24, $33, $47
 	db $64, $1c, $31, $47
-Gen2Frame_26:
+Gen2Frame_48:
 	db 64
 	db $64, $34, $31, $67
 	db $64, $2c, $33, $67
@@ -1356,7 +1444,7 @@ Gen2Frame_26:
 	db $5c, $24, $3e, $27
 	db $5c, $1c, $31, $27
 	db $5c, $14, $32, $27
-Gen2Frame_27:
+Gen2Frame_49:
 	db 104
 	db $64, $34, $31, $67
 	db $64, $2c, $33, $67
@@ -1384,7 +1472,7 @@ Gen2Frame_27:
 	db $4c, $24, $36, $27
 	db $4c, $1c, $33, $27
 	db $4c, $14, $34, $27
-Gen2Frame_28:
+Gen2Frame_50:
 	db 104
 	db $44, $34, $31, $27
 	db $44, $2c, $33, $27
@@ -1412,572 +1500,556 @@ Gen2Frame_28:
 	db $64, $2c, $33, $67
 	db $64, $24, $33, $47
 	db $64, $1c, $31, $47
-Gen2Frame_29:
-	db 8
-	db $08, $6c, $3d, $07
-	db $08, $74, $3e, $07
-Gen2Frame_30:
-	db 24
-	db $08, $6c, $3d, $07
-	db $08, $74, $3e, $07
-	db $10, $6c, $39, $07
-	db $10, $74, $3a, $07
-	db $18, $6c, $35, $07
-	db $18, $74, $36, $07
-Gen2Frame_31:
-	db 40
-	db $08, $6c, $3d, $07
-	db $08, $74, $3e, $07
-	db $10, $6c, $39, $07
-	db $10, $74, $3a, $07
-	db $18, $6c, $35, $07
-	db $18, $74, $36, $07
-	db $20, $6c, $31, $07
-	db $20, $74, $32, $07
-	db $28, $6c, $33, $07
-	db $28, $74, $34, $07
-Gen2Frame_32:
-	db 56
-	db $08, $6c, $3d, $07
-	db $08, $74, $3e, $07
-	db $10, $6c, $39, $07
-	db $10, $74, $3a, $07
-	db $18, $6c, $35, $07
-	db $18, $74, $36, $07
-	db $20, $6c, $31, $07
-	db $20, $74, $32, $07
-	db $28, $6c, $33, $07
-	db $28, $74, $34, $07
-	db $30, $74, $33, $07
-	db $30, $7c, $34, $07
-	db $38, $74, $3b, $07
-	db $38, $7c, $3c, $07
-Gen2Frame_33:
-	db 64
-	db $08, $6c, $3d, $07
-	db $08, $74, $3e, $07
-	db $10, $6c, $39, $07
-	db $10, $74, $3a, $07
-	db $18, $6c, $35, $07
-	db $18, $74, $36, $07
-	db $20, $6c, $31, $07
-	db $20, $74, $32, $07
-	db $28, $6c, $33, $07
-	db $28, $74, $34, $07
-	db $30, $74, $33, $07
-	db $30, $7c, $34, $07
-	db $38, $74, $3b, $07
-	db $38, $7c, $3c, $07
-	db $08, $94, $3d, $27
-	db $08, $8c, $3e, $27
-Gen2Frame_34:
-	db 80
-	db $08, $6c, $3d, $07
-	db $08, $74, $3e, $07
-	db $10, $6c, $39, $07
-	db $10, $74, $3a, $07
-	db $18, $6c, $35, $07
-	db $18, $74, $36, $07
-	db $20, $6c, $31, $07
-	db $20, $74, $32, $07
-	db $28, $6c, $33, $07
-	db $28, $74, $34, $07
-	db $30, $74, $33, $07
-	db $30, $7c, $34, $07
-	db $38, $74, $3b, $07
-	db $38, $7c, $3c, $07
-	db $08, $94, $3d, $27
-	db $08, $8c, $3e, $27
-	db $10, $94, $39, $27
-	db $10, $8c, $3a, $27
-	db $18, $94, $35, $27
-	db $18, $8c, $36, $27
-Gen2Frame_35:
-	db 96
-	db $08, $6c, $3d, $07
-	db $08, $74, $3e, $07
-	db $10, $6c, $39, $07
-	db $10, $74, $3a, $07
-	db $18, $6c, $35, $07
-	db $18, $74, $36, $07
-	db $20, $6c, $31, $07
-	db $20, $74, $32, $07
-	db $28, $6c, $33, $07
-	db $28, $74, $34, $07
-	db $30, $74, $33, $07
-	db $30, $7c, $34, $07
-	db $38, $74, $3b, $07
-	db $38, $7c, $3c, $07
-	db $08, $94, $3d, $27
-	db $08, $8c, $3e, $27
-	db $10, $94, $39, $27
-	db $10, $8c, $3a, $27
-	db $18, $94, $35, $27
-	db $18, $8c, $36, $27
-	db $20, $94, $31, $27
-	db $20, $8c, $32, $27
-	db $28, $94, $33, $27
-	db $28, $8c, $34, $27
-Gen2Frame_36:
-	db 112
-	db $08, $6c, $3d, $07
-	db $08, $74, $3e, $07
-	db $10, $6c, $39, $07
-	db $10, $74, $3a, $07
-	db $18, $6c, $35, $07
-	db $18, $74, $36, $07
-	db $20, $6c, $31, $07
-	db $20, $74, $32, $07
-	db $28, $6c, $33, $07
-	db $28, $74, $34, $07
-	db $30, $74, $33, $07
-	db $30, $7c, $34, $07
-	db $38, $74, $3b, $07
-	db $38, $7c, $3c, $07
-	db $08, $94, $3d, $27
-	db $08, $8c, $3e, $27
-	db $10, $94, $39, $27
-	db $10, $8c, $3a, $27
-	db $18, $94, $35, $27
-	db $18, $8c, $36, $27
-	db $20, $94, $31, $27
-	db $20, $8c, $32, $27
-	db $28, $94, $33, $27
-	db $28, $8c, $34, $27
-	db $30, $8c, $33, $27
-	db $30, $84, $34, $27
-	db $38, $8c, $3b, $27
-	db $38, $84, $3c, $27
-Gen2Frame_37:
-	db 120
-	db $08, $6c, $3d, $07
-	db $08, $74, $3e, $07
-	db $10, $6c, $39, $07
-	db $10, $74, $3a, $07
-	db $18, $6c, $35, $07
-	db $18, $74, $36, $07
-	db $20, $6c, $31, $07
-	db $20, $74, $32, $07
-	db $28, $6c, $33, $07
-	db $28, $74, $34, $07
-	db $30, $74, $33, $07
-	db $30, $7c, $34, $07
-	db $38, $74, $3b, $07
-	db $38, $7c, $3c, $07
-	db $08, $94, $3d, $27
-	db $08, $8c, $3e, $27
-	db $10, $94, $39, $27
-	db $10, $8c, $3a, $27
-	db $18, $94, $35, $27
-	db $18, $8c, $36, $27
-	db $20, $94, $31, $27
-	db $20, $8c, $32, $27
-	db $28, $94, $33, $27
-	db $28, $8c, $34, $27
-	db $30, $8c, $33, $27
-	db $30, $84, $34, $27
-	db $38, $8c, $3b, $27
-	db $38, $84, $3c, $27
-	db $08, $7c, $31, $07
-	db $08, $84, $32, $07
-Gen2Frame_38:
-	db 136
-	db $08, $6c, $3d, $07
-	db $08, $74, $3e, $07
-	db $10, $6c, $39, $07
-	db $10, $74, $3a, $07
-	db $18, $6c, $35, $07
-	db $18, $74, $36, $07
-	db $20, $6c, $31, $07
-	db $20, $74, $32, $07
-	db $28, $6c, $33, $07
-	db $28, $74, $34, $07
-	db $30, $74, $33, $07
-	db $30, $7c, $34, $07
-	db $38, $74, $3b, $07
-	db $38, $7c, $3c, $07
-	db $08, $94, $3d, $27
-	db $08, $8c, $3e, $27
-	db $10, $94, $39, $27
-	db $10, $8c, $3a, $27
-	db $18, $94, $35, $27
-	db $18, $8c, $36, $27
-	db $20, $94, $31, $27
-	db $20, $8c, $32, $27
-	db $28, $94, $33, $27
-	db $28, $8c, $34, $27
-	db $30, $8c, $33, $27
-	db $30, $84, $34, $27
-	db $38, $8c, $3b, $27
-	db $38, $84, $3c, $27
-	db $08, $7c, $31, $07
-	db $08, $84, $32, $07
-	db $10, $7c, $33, $07
-	db $10, $84, $34, $07
-	db $18, $7c, $35, $07
-	db $18, $84, $36, $07
-Gen2Frame_39:
-	db 152
-	db $08, $6c, $3d, $07
-	db $08, $74, $3e, $07
-	db $10, $6c, $39, $07
-	db $10, $74, $3a, $07
-	db $18, $6c, $35, $07
-	db $18, $74, $36, $07
-	db $20, $6c, $31, $07
-	db $20, $74, $32, $07
-	db $28, $6c, $33, $07
-	db $28, $74, $34, $07
-	db $30, $74, $33, $07
-	db $30, $7c, $34, $07
-	db $38, $74, $3b, $07
-	db $38, $7c, $3c, $07
-	db $08, $94, $3d, $27
-	db $08, $8c, $3e, $27
-	db $10, $94, $39, $27
-	db $10, $8c, $3a, $27
-	db $18, $94, $35, $27
-	db $18, $8c, $36, $27
-	db $20, $94, $31, $27
-	db $20, $8c, $32, $27
-	db $28, $94, $33, $27
-	db $28, $8c, $34, $27
-	db $30, $8c, $33, $27
-	db $30, $84, $34, $27
-	db $38, $8c, $3b, $27
-	db $38, $84, $3c, $27
-	db $08, $7c, $31, $07
-	db $08, $84, $32, $07
-	db $10, $7c, $33, $07
-	db $10, $84, $34, $07
-	db $18, $7c, $35, $07
-	db $18, $84, $36, $07
-	db $20, $7c, $37, $07
-	db $20, $84, $38, $07
-	db $28, $7c, $39, $07
-	db $28, $84, $3a, $07
-Gen2Frame_40:
-	db 112
-	db $08, $94, $3d, $27
-	db $08, $8c, $3e, $27
-	db $10, $94, $39, $27
-	db $10, $8c, $3a, $27
-	db $18, $94, $35, $27
-	db $18, $8c, $36, $27
-	db $20, $94, $31, $27
-	db $20, $8c, $32, $27
-	db $28, $94, $33, $27
-	db $28, $8c, $34, $27
-	db $30, $8c, $33, $27
-	db $30, $84, $34, $27
-	db $38, $8c, $3b, $27
-	db $38, $84, $3c, $27
-	db $08, $7c, $31, $07
-	db $08, $84, $32, $07
-	db $10, $7c, $33, $07
-	db $10, $84, $34, $07
-	db $18, $7c, $35, $07
-	db $18, $84, $36, $07
-	db $20, $7c, $37, $07
-	db $20, $84, $38, $07
-	db $28, $7c, $39, $07
-	db $28, $84, $3a, $07
-	db $30, $7c, $3b, $07
-	db $30, $84, $3c, $07
-	db $38, $7c, $3d, $07
-	db $38, $84, $3e, $07
-Gen2Frame_41:
-	db 56
-	db $08, $7c, $31, $07
-	db $08, $84, $32, $07
-	db $10, $7c, $33, $07
-	db $10, $84, $34, $07
-	db $18, $7c, $35, $07
-	db $18, $84, $36, $07
-	db $20, $7c, $37, $07
-	db $20, $84, $38, $07
-	db $28, $7c, $39, $07
-	db $28, $84, $3a, $07
-	db $30, $7c, $3b, $07
-	db $30, $84, $3c, $07
-	db $38, $7c, $3d, $07
-	db $38, $84, $3e, $07
-Gen2Frame_42:
-	db 8
-	db $38, $3c, $3d, $27
-	db $38, $34, $3e, $27
-Gen2Frame_43:
-	db 24
-	db $38, $3c, $3d, $27
-	db $38, $34, $3e, $27
-	db $40, $3c, $39, $27
-	db $40, $34, $3a, $27
-	db $48, $3c, $35, $27
-	db $48, $34, $36, $27
-Gen2Frame_44:
-	db 40
-	db $38, $3c, $3d, $27
-	db $38, $34, $3e, $27
-	db $40, $3c, $39, $27
-	db $40, $34, $3a, $27
-	db $48, $3c, $35, $27
-	db $48, $34, $36, $27
-	db $50, $3c, $31, $27
-	db $50, $34, $32, $27
-	db $58, $3c, $33, $27
-	db $58, $34, $34, $27
-Gen2Frame_45:
-	db 56
-	db $38, $3c, $3d, $27
-	db $38, $34, $3e, $27
-	db $40, $3c, $39, $27
-	db $40, $34, $3a, $27
-	db $48, $3c, $35, $27
-	db $48, $34, $36, $27
-	db $50, $3c, $31, $27
-	db $50, $34, $32, $27
-	db $58, $3c, $33, $27
-	db $58, $34, $34, $27
-	db $60, $34, $33, $27
-	db $60, $2c, $34, $27
-	db $68, $34, $3b, $27
-	db $68, $2c, $3c, $27
-Gen2Frame_46:
-	db 64
-	db $38, $3c, $3d, $27
-	db $38, $34, $3e, $27
-	db $40, $3c, $39, $27
-	db $40, $34, $3a, $27
-	db $48, $3c, $35, $27
-	db $48, $34, $36, $27
-	db $50, $3c, $31, $27
-	db $50, $34, $32, $27
-	db $58, $3c, $33, $27
-	db $58, $34, $34, $27
-	db $60, $34, $33, $27
-	db $60, $2c, $34, $27
-	db $68, $34, $3b, $27
-	db $68, $2c, $3c, $27
-	db $38, $14, $3d, $07
-	db $38, $1c, $3e, $07
-Gen2Frame_47:
-	db 80
-	db $38, $3c, $3d, $27
-	db $38, $34, $3e, $27
-	db $40, $3c, $39, $27
-	db $40, $34, $3a, $27
-	db $48, $3c, $35, $27
-	db $48, $34, $36, $27
-	db $50, $3c, $31, $27
-	db $50, $34, $32, $27
-	db $58, $3c, $33, $27
-	db $58, $34, $34, $27
-	db $60, $34, $33, $27
-	db $60, $2c, $34, $27
-	db $68, $34, $3b, $27
-	db $68, $2c, $3c, $27
-	db $38, $14, $3d, $07
-	db $38, $1c, $3e, $07
-	db $40, $14, $39, $07
-	db $40, $1c, $3a, $07
-	db $48, $14, $35, $07
-	db $48, $1c, $36, $07
-Gen2Frame_48:
-	db 96
-	db $38, $3c, $3d, $27
-	db $38, $34, $3e, $27
-	db $40, $3c, $39, $27
-	db $40, $34, $3a, $27
-	db $48, $3c, $35, $27
-	db $48, $34, $36, $27
-	db $50, $3c, $31, $27
-	db $50, $34, $32, $27
-	db $58, $3c, $33, $27
-	db $58, $34, $34, $27
-	db $60, $34, $33, $27
-	db $60, $2c, $34, $27
-	db $68, $34, $3b, $27
-	db $68, $2c, $3c, $27
-	db $38, $14, $3d, $07
-	db $38, $1c, $3e, $07
-	db $40, $14, $39, $07
-	db $40, $1c, $3a, $07
-	db $48, $14, $35, $07
-	db $48, $1c, $36, $07
-	db $50, $14, $31, $07
-	db $50, $1c, $32, $07
-	db $58, $14, $33, $07
-	db $58, $1c, $34, $07
-Gen2Frame_49:
-	db 112
-	db $38, $3c, $3d, $27
-	db $38, $34, $3e, $27
-	db $40, $3c, $39, $27
-	db $40, $34, $3a, $27
-	db $48, $3c, $35, $27
-	db $48, $34, $36, $27
-	db $50, $3c, $31, $27
-	db $50, $34, $32, $27
-	db $58, $3c, $33, $27
-	db $58, $34, $34, $27
-	db $60, $34, $33, $27
-	db $60, $2c, $34, $27
-	db $68, $34, $3b, $27
-	db $68, $2c, $3c, $27
-	db $38, $14, $3d, $07
-	db $38, $1c, $3e, $07
-	db $40, $14, $39, $07
-	db $40, $1c, $3a, $07
-	db $48, $14, $35, $07
-	db $48, $1c, $36, $07
-	db $50, $14, $31, $07
-	db $50, $1c, $32, $07
-	db $58, $14, $33, $07
-	db $58, $1c, $34, $07
-	db $60, $1c, $33, $07
-	db $60, $24, $34, $07
-	db $68, $1c, $3b, $07
-	db $68, $24, $3c, $07
-Gen2Frame_50:
-	db 120
-	db $38, $3c, $3d, $27
-	db $38, $34, $3e, $27
-	db $40, $3c, $39, $27
-	db $40, $34, $3a, $27
-	db $48, $3c, $35, $27
-	db $48, $34, $36, $27
-	db $50, $3c, $31, $27
-	db $50, $34, $32, $27
-	db $58, $3c, $33, $27
-	db $58, $34, $34, $27
-	db $60, $34, $33, $27
-	db $60, $2c, $34, $27
-	db $68, $34, $3b, $27
-	db $68, $2c, $3c, $27
-	db $38, $14, $3d, $07
-	db $38, $1c, $3e, $07
-	db $40, $14, $39, $07
-	db $40, $1c, $3a, $07
-	db $48, $14, $35, $07
-	db $48, $1c, $36, $07
-	db $50, $14, $31, $07
-	db $50, $1c, $32, $07
-	db $58, $14, $33, $07
-	db $58, $1c, $34, $07
-	db $60, $1c, $33, $07
-	db $60, $24, $34, $07
-	db $68, $1c, $3b, $07
-	db $68, $24, $3c, $07
-	db $38, $2c, $31, $27
-	db $38, $24, $32, $27
 Gen2Frame_51:
-	db 136
-	db $38, $3c, $3d, $27
-	db $38, $34, $3e, $27
-	db $40, $3c, $39, $27
-	db $40, $34, $3a, $27
-	db $48, $3c, $35, $27
-	db $48, $34, $36, $27
-	db $50, $3c, $31, $27
-	db $50, $34, $32, $27
-	db $58, $3c, $33, $27
-	db $58, $34, $34, $27
-	db $60, $34, $33, $27
-	db $60, $2c, $34, $27
-	db $68, $34, $3b, $27
-	db $68, $2c, $3c, $27
-	db $38, $14, $3d, $07
-	db $38, $1c, $3e, $07
-	db $40, $14, $39, $07
-	db $40, $1c, $3a, $07
-	db $48, $14, $35, $07
-	db $48, $1c, $36, $07
-	db $50, $14, $31, $07
-	db $50, $1c, $32, $07
-	db $58, $14, $33, $07
-	db $58, $1c, $34, $07
-	db $60, $1c, $33, $07
-	db $60, $24, $34, $07
-	db $68, $1c, $3b, $07
-	db $68, $24, $3c, $07
-	db $38, $2c, $31, $27
-	db $38, $24, $32, $27
-	db $40, $2c, $33, $27
-	db $40, $24, $34, $27
-	db $48, $2c, $35, $27
-	db $48, $24, $36, $27
+	db 8
+	db $08, $6c, $3d, $07
+	db $08, $74, $3e, $07
 Gen2Frame_52:
-	db 152
-	db $38, $3c, $3d, $27
-	db $38, $34, $3e, $27
-	db $40, $3c, $39, $27
-	db $40, $34, $3a, $27
-	db $48, $3c, $35, $27
-	db $48, $34, $36, $27
-	db $50, $3c, $31, $27
-	db $50, $34, $32, $27
-	db $58, $3c, $33, $27
-	db $58, $34, $34, $27
-	db $60, $34, $33, $27
-	db $60, $2c, $34, $27
-	db $68, $34, $3b, $27
-	db $68, $2c, $3c, $27
-	db $38, $14, $3d, $07
-	db $38, $1c, $3e, $07
-	db $40, $14, $39, $07
-	db $40, $1c, $3a, $07
-	db $48, $14, $35, $07
-	db $48, $1c, $36, $07
-	db $50, $14, $31, $07
-	db $50, $1c, $32, $07
-	db $58, $14, $33, $07
-	db $58, $1c, $34, $07
-	db $60, $1c, $33, $07
-	db $60, $24, $34, $07
-	db $68, $1c, $3b, $07
-	db $68, $24, $3c, $07
-	db $38, $2c, $31, $27
-	db $38, $24, $32, $27
-	db $40, $2c, $33, $27
-	db $40, $24, $34, $27
-	db $48, $2c, $35, $27
-	db $48, $24, $36, $27
-	db $50, $2c, $37, $27
-	db $50, $24, $38, $27
-	db $58, $2c, $39, $27
-	db $58, $24, $3a, $27
+	db 24
+	db $08, $6c, $3d, $07
+	db $08, $74, $3e, $07
+	db $10, $6c, $39, $07
+	db $10, $74, $3a, $07
+	db $18, $6c, $35, $07
+	db $18, $74, $36, $07
 Gen2Frame_53:
-	db 112
-	db $38, $14, $3d, $07
-	db $38, $1c, $3e, $07
-	db $40, $14, $39, $07
-	db $40, $1c, $3a, $07
-	db $48, $14, $35, $07
-	db $48, $1c, $36, $07
-	db $50, $14, $31, $07
-	db $50, $1c, $32, $07
-	db $58, $14, $33, $07
-	db $58, $1c, $34, $07
-	db $60, $1c, $33, $07
-	db $60, $24, $34, $07
-	db $68, $1c, $3b, $07
-	db $68, $24, $3c, $07
-	db $38, $2c, $31, $27
-	db $38, $24, $32, $27
-	db $40, $2c, $33, $27
-	db $40, $24, $34, $27
-	db $48, $2c, $35, $27
-	db $48, $24, $36, $27
-	db $50, $2c, $37, $27
-	db $50, $24, $38, $27
-	db $58, $2c, $39, $27
-	db $58, $24, $3a, $27
-	db $60, $2c, $3b, $27
-	db $60, $24, $3c, $27
-	db $68, $2c, $3d, $27
-	db $68, $24, $3e, $27
+	db 40
+	db $08, $6c, $3d, $07
+	db $08, $74, $3e, $07
+	db $10, $6c, $39, $07
+	db $10, $74, $3a, $07
+	db $18, $6c, $35, $07
+	db $18, $74, $36, $07
+	db $20, $6c, $31, $07
+	db $20, $74, $32, $07
+	db $28, $6c, $33, $07
+	db $28, $74, $34, $07
 Gen2Frame_54:
 	db 56
+	db $08, $6c, $3d, $07
+	db $08, $74, $3e, $07
+	db $10, $6c, $39, $07
+	db $10, $74, $3a, $07
+	db $18, $6c, $35, $07
+	db $18, $74, $36, $07
+	db $20, $6c, $31, $07
+	db $20, $74, $32, $07
+	db $28, $6c, $33, $07
+	db $28, $74, $34, $07
+	db $30, $74, $33, $07
+	db $30, $7c, $34, $07
+	db $38, $74, $3b, $07
+	db $38, $7c, $3c, $07
+Gen2Frame_55:
+	db 64
+	db $08, $6c, $3d, $07
+	db $08, $74, $3e, $07
+	db $10, $6c, $39, $07
+	db $10, $74, $3a, $07
+	db $18, $6c, $35, $07
+	db $18, $74, $36, $07
+	db $20, $6c, $31, $07
+	db $20, $74, $32, $07
+	db $28, $6c, $33, $07
+	db $28, $74, $34, $07
+	db $30, $74, $33, $07
+	db $30, $7c, $34, $07
+	db $38, $74, $3b, $07
+	db $38, $7c, $3c, $07
+	db $08, $94, $3d, $27
+	db $08, $8c, $3e, $27
+Gen2Frame_56:
+	db 80
+	db $08, $6c, $3d, $07
+	db $08, $74, $3e, $07
+	db $10, $6c, $39, $07
+	db $10, $74, $3a, $07
+	db $18, $6c, $35, $07
+	db $18, $74, $36, $07
+	db $20, $6c, $31, $07
+	db $20, $74, $32, $07
+	db $28, $6c, $33, $07
+	db $28, $74, $34, $07
+	db $30, $74, $33, $07
+	db $30, $7c, $34, $07
+	db $38, $74, $3b, $07
+	db $38, $7c, $3c, $07
+	db $08, $94, $3d, $27
+	db $08, $8c, $3e, $27
+	db $10, $94, $39, $27
+	db $10, $8c, $3a, $27
+	db $18, $94, $35, $27
+	db $18, $8c, $36, $27
+Gen2Frame_57:
+	db 96
+	db $08, $6c, $3d, $07
+	db $08, $74, $3e, $07
+	db $10, $6c, $39, $07
+	db $10, $74, $3a, $07
+	db $18, $6c, $35, $07
+	db $18, $74, $36, $07
+	db $20, $6c, $31, $07
+	db $20, $74, $32, $07
+	db $28, $6c, $33, $07
+	db $28, $74, $34, $07
+	db $30, $74, $33, $07
+	db $30, $7c, $34, $07
+	db $38, $74, $3b, $07
+	db $38, $7c, $3c, $07
+	db $08, $94, $3d, $27
+	db $08, $8c, $3e, $27
+	db $10, $94, $39, $27
+	db $10, $8c, $3a, $27
+	db $18, $94, $35, $27
+	db $18, $8c, $36, $27
+	db $20, $94, $31, $27
+	db $20, $8c, $32, $27
+	db $28, $94, $33, $27
+	db $28, $8c, $34, $27
+Gen2Frame_58:
+	db 112
+	db $08, $6c, $3d, $07
+	db $08, $74, $3e, $07
+	db $10, $6c, $39, $07
+	db $10, $74, $3a, $07
+	db $18, $6c, $35, $07
+	db $18, $74, $36, $07
+	db $20, $6c, $31, $07
+	db $20, $74, $32, $07
+	db $28, $6c, $33, $07
+	db $28, $74, $34, $07
+	db $30, $74, $33, $07
+	db $30, $7c, $34, $07
+	db $38, $74, $3b, $07
+	db $38, $7c, $3c, $07
+	db $08, $94, $3d, $27
+	db $08, $8c, $3e, $27
+	db $10, $94, $39, $27
+	db $10, $8c, $3a, $27
+	db $18, $94, $35, $27
+	db $18, $8c, $36, $27
+	db $20, $94, $31, $27
+	db $20, $8c, $32, $27
+	db $28, $94, $33, $27
+	db $28, $8c, $34, $27
+	db $30, $8c, $33, $27
+	db $30, $84, $34, $27
+	db $38, $8c, $3b, $27
+	db $38, $84, $3c, $27
+Gen2Frame_59:
+	db 120
+	db $08, $6c, $3d, $07
+	db $08, $74, $3e, $07
+	db $10, $6c, $39, $07
+	db $10, $74, $3a, $07
+	db $18, $6c, $35, $07
+	db $18, $74, $36, $07
+	db $20, $6c, $31, $07
+	db $20, $74, $32, $07
+	db $28, $6c, $33, $07
+	db $28, $74, $34, $07
+	db $30, $74, $33, $07
+	db $30, $7c, $34, $07
+	db $38, $74, $3b, $07
+	db $38, $7c, $3c, $07
+	db $08, $94, $3d, $27
+	db $08, $8c, $3e, $27
+	db $10, $94, $39, $27
+	db $10, $8c, $3a, $27
+	db $18, $94, $35, $27
+	db $18, $8c, $36, $27
+	db $20, $94, $31, $27
+	db $20, $8c, $32, $27
+	db $28, $94, $33, $27
+	db $28, $8c, $34, $27
+	db $30, $8c, $33, $27
+	db $30, $84, $34, $27
+	db $38, $8c, $3b, $27
+	db $38, $84, $3c, $27
+	db $08, $7c, $31, $07
+	db $08, $84, $32, $07
+Gen2Frame_60:
+	db 136
+	db $08, $6c, $3d, $07
+	db $08, $74, $3e, $07
+	db $10, $6c, $39, $07
+	db $10, $74, $3a, $07
+	db $18, $6c, $35, $07
+	db $18, $74, $36, $07
+	db $20, $6c, $31, $07
+	db $20, $74, $32, $07
+	db $28, $6c, $33, $07
+	db $28, $74, $34, $07
+	db $30, $74, $33, $07
+	db $30, $7c, $34, $07
+	db $38, $74, $3b, $07
+	db $38, $7c, $3c, $07
+	db $08, $94, $3d, $27
+	db $08, $8c, $3e, $27
+	db $10, $94, $39, $27
+	db $10, $8c, $3a, $27
+	db $18, $94, $35, $27
+	db $18, $8c, $36, $27
+	db $20, $94, $31, $27
+	db $20, $8c, $32, $27
+	db $28, $94, $33, $27
+	db $28, $8c, $34, $27
+	db $30, $8c, $33, $27
+	db $30, $84, $34, $27
+	db $38, $8c, $3b, $27
+	db $38, $84, $3c, $27
+	db $08, $7c, $31, $07
+	db $08, $84, $32, $07
+	db $10, $7c, $33, $07
+	db $10, $84, $34, $07
+	db $18, $7c, $35, $07
+	db $18, $84, $36, $07
+Gen2Frame_61:
+	db 152
+	db $08, $6c, $3d, $07
+	db $08, $74, $3e, $07
+	db $10, $6c, $39, $07
+	db $10, $74, $3a, $07
+	db $18, $6c, $35, $07
+	db $18, $74, $36, $07
+	db $20, $6c, $31, $07
+	db $20, $74, $32, $07
+	db $28, $6c, $33, $07
+	db $28, $74, $34, $07
+	db $30, $74, $33, $07
+	db $30, $7c, $34, $07
+	db $38, $74, $3b, $07
+	db $38, $7c, $3c, $07
+	db $08, $94, $3d, $27
+	db $08, $8c, $3e, $27
+	db $10, $94, $39, $27
+	db $10, $8c, $3a, $27
+	db $18, $94, $35, $27
+	db $18, $8c, $36, $27
+	db $20, $94, $31, $27
+	db $20, $8c, $32, $27
+	db $28, $94, $33, $27
+	db $28, $8c, $34, $27
+	db $30, $8c, $33, $27
+	db $30, $84, $34, $27
+	db $38, $8c, $3b, $27
+	db $38, $84, $3c, $27
+	db $08, $7c, $31, $07
+	db $08, $84, $32, $07
+	db $10, $7c, $33, $07
+	db $10, $84, $34, $07
+	db $18, $7c, $35, $07
+	db $18, $84, $36, $07
+	db $20, $7c, $37, $07
+	db $20, $84, $38, $07
+	db $28, $7c, $39, $07
+	db $28, $84, $3a, $07
+Gen2Frame_62:
+	db 112
+	db $08, $94, $3d, $27
+	db $08, $8c, $3e, $27
+	db $10, $94, $39, $27
+	db $10, $8c, $3a, $27
+	db $18, $94, $35, $27
+	db $18, $8c, $36, $27
+	db $20, $94, $31, $27
+	db $20, $8c, $32, $27
+	db $28, $94, $33, $27
+	db $28, $8c, $34, $27
+	db $30, $8c, $33, $27
+	db $30, $84, $34, $27
+	db $38, $8c, $3b, $27
+	db $38, $84, $3c, $27
+	db $08, $7c, $31, $07
+	db $08, $84, $32, $07
+	db $10, $7c, $33, $07
+	db $10, $84, $34, $07
+	db $18, $7c, $35, $07
+	db $18, $84, $36, $07
+	db $20, $7c, $37, $07
+	db $20, $84, $38, $07
+	db $28, $7c, $39, $07
+	db $28, $84, $3a, $07
+	db $30, $7c, $3b, $07
+	db $30, $84, $3c, $07
+	db $38, $7c, $3d, $07
+	db $38, $84, $3e, $07
+Gen2Frame_63:
+	db 56
+	db $08, $7c, $31, $07
+	db $08, $84, $32, $07
+	db $10, $7c, $33, $07
+	db $10, $84, $34, $07
+	db $18, $7c, $35, $07
+	db $18, $84, $36, $07
+	db $20, $7c, $37, $07
+	db $20, $84, $38, $07
+	db $28, $7c, $39, $07
+	db $28, $84, $3a, $07
+	db $30, $7c, $3b, $07
+	db $30, $84, $3c, $07
+	db $38, $7c, $3d, $07
+	db $38, $84, $3e, $07
+Gen2Frame_64:
+	db 8
+	db $38, $3c, $3d, $27
+	db $38, $34, $3e, $27
+Gen2Frame_65:
+	db 24
+	db $38, $3c, $3d, $27
+	db $38, $34, $3e, $27
+	db $40, $3c, $39, $27
+	db $40, $34, $3a, $27
+	db $48, $3c, $35, $27
+	db $48, $34, $36, $27
+Gen2Frame_66:
+	db 40
+	db $38, $3c, $3d, $27
+	db $38, $34, $3e, $27
+	db $40, $3c, $39, $27
+	db $40, $34, $3a, $27
+	db $48, $3c, $35, $27
+	db $48, $34, $36, $27
+	db $50, $3c, $31, $27
+	db $50, $34, $32, $27
+	db $58, $3c, $33, $27
+	db $58, $34, $34, $27
+Gen2Frame_67:
+	db 56
+	db $38, $3c, $3d, $27
+	db $38, $34, $3e, $27
+	db $40, $3c, $39, $27
+	db $40, $34, $3a, $27
+	db $48, $3c, $35, $27
+	db $48, $34, $36, $27
+	db $50, $3c, $31, $27
+	db $50, $34, $32, $27
+	db $58, $3c, $33, $27
+	db $58, $34, $34, $27
+	db $60, $34, $33, $27
+	db $60, $2c, $34, $27
+	db $68, $34, $3b, $27
+	db $68, $2c, $3c, $27
+Gen2Frame_68:
+	db 64
+	db $38, $3c, $3d, $27
+	db $38, $34, $3e, $27
+	db $40, $3c, $39, $27
+	db $40, $34, $3a, $27
+	db $48, $3c, $35, $27
+	db $48, $34, $36, $27
+	db $50, $3c, $31, $27
+	db $50, $34, $32, $27
+	db $58, $3c, $33, $27
+	db $58, $34, $34, $27
+	db $60, $34, $33, $27
+	db $60, $2c, $34, $27
+	db $68, $34, $3b, $27
+	db $68, $2c, $3c, $27
+	db $38, $14, $3d, $07
+	db $38, $1c, $3e, $07
+Gen2Frame_69:
+	db 80
+	db $38, $3c, $3d, $27
+	db $38, $34, $3e, $27
+	db $40, $3c, $39, $27
+	db $40, $34, $3a, $27
+	db $48, $3c, $35, $27
+	db $48, $34, $36, $27
+	db $50, $3c, $31, $27
+	db $50, $34, $32, $27
+	db $58, $3c, $33, $27
+	db $58, $34, $34, $27
+	db $60, $34, $33, $27
+	db $60, $2c, $34, $27
+	db $68, $34, $3b, $27
+	db $68, $2c, $3c, $27
+	db $38, $14, $3d, $07
+	db $38, $1c, $3e, $07
+	db $40, $14, $39, $07
+	db $40, $1c, $3a, $07
+	db $48, $14, $35, $07
+	db $48, $1c, $36, $07
+Gen2Frame_70:
+	db 96
+	db $38, $3c, $3d, $27
+	db $38, $34, $3e, $27
+	db $40, $3c, $39, $27
+	db $40, $34, $3a, $27
+	db $48, $3c, $35, $27
+	db $48, $34, $36, $27
+	db $50, $3c, $31, $27
+	db $50, $34, $32, $27
+	db $58, $3c, $33, $27
+	db $58, $34, $34, $27
+	db $60, $34, $33, $27
+	db $60, $2c, $34, $27
+	db $68, $34, $3b, $27
+	db $68, $2c, $3c, $27
+	db $38, $14, $3d, $07
+	db $38, $1c, $3e, $07
+	db $40, $14, $39, $07
+	db $40, $1c, $3a, $07
+	db $48, $14, $35, $07
+	db $48, $1c, $36, $07
+	db $50, $14, $31, $07
+	db $50, $1c, $32, $07
+	db $58, $14, $33, $07
+	db $58, $1c, $34, $07
+Gen2Frame_71:
+	db 112
+	db $38, $3c, $3d, $27
+	db $38, $34, $3e, $27
+	db $40, $3c, $39, $27
+	db $40, $34, $3a, $27
+	db $48, $3c, $35, $27
+	db $48, $34, $36, $27
+	db $50, $3c, $31, $27
+	db $50, $34, $32, $27
+	db $58, $3c, $33, $27
+	db $58, $34, $34, $27
+	db $60, $34, $33, $27
+	db $60, $2c, $34, $27
+	db $68, $34, $3b, $27
+	db $68, $2c, $3c, $27
+	db $38, $14, $3d, $07
+	db $38, $1c, $3e, $07
+	db $40, $14, $39, $07
+	db $40, $1c, $3a, $07
+	db $48, $14, $35, $07
+	db $48, $1c, $36, $07
+	db $50, $14, $31, $07
+	db $50, $1c, $32, $07
+	db $58, $14, $33, $07
+	db $58, $1c, $34, $07
+	db $60, $1c, $33, $07
+	db $60, $24, $34, $07
+	db $68, $1c, $3b, $07
+	db $68, $24, $3c, $07
+Gen2Frame_72:
+	db 120
+	db $38, $3c, $3d, $27
+	db $38, $34, $3e, $27
+	db $40, $3c, $39, $27
+	db $40, $34, $3a, $27
+	db $48, $3c, $35, $27
+	db $48, $34, $36, $27
+	db $50, $3c, $31, $27
+	db $50, $34, $32, $27
+	db $58, $3c, $33, $27
+	db $58, $34, $34, $27
+	db $60, $34, $33, $27
+	db $60, $2c, $34, $27
+	db $68, $34, $3b, $27
+	db $68, $2c, $3c, $27
+	db $38, $14, $3d, $07
+	db $38, $1c, $3e, $07
+	db $40, $14, $39, $07
+	db $40, $1c, $3a, $07
+	db $48, $14, $35, $07
+	db $48, $1c, $36, $07
+	db $50, $14, $31, $07
+	db $50, $1c, $32, $07
+	db $58, $14, $33, $07
+	db $58, $1c, $34, $07
+	db $60, $1c, $33, $07
+	db $60, $24, $34, $07
+	db $68, $1c, $3b, $07
+	db $68, $24, $3c, $07
+	db $38, $2c, $31, $27
+	db $38, $24, $32, $27
+Gen2Frame_73:
+	db 136
+	db $38, $3c, $3d, $27
+	db $38, $34, $3e, $27
+	db $40, $3c, $39, $27
+	db $40, $34, $3a, $27
+	db $48, $3c, $35, $27
+	db $48, $34, $36, $27
+	db $50, $3c, $31, $27
+	db $50, $34, $32, $27
+	db $58, $3c, $33, $27
+	db $58, $34, $34, $27
+	db $60, $34, $33, $27
+	db $60, $2c, $34, $27
+	db $68, $34, $3b, $27
+	db $68, $2c, $3c, $27
+	db $38, $14, $3d, $07
+	db $38, $1c, $3e, $07
+	db $40, $14, $39, $07
+	db $40, $1c, $3a, $07
+	db $48, $14, $35, $07
+	db $48, $1c, $36, $07
+	db $50, $14, $31, $07
+	db $50, $1c, $32, $07
+	db $58, $14, $33, $07
+	db $58, $1c, $34, $07
+	db $60, $1c, $33, $07
+	db $60, $24, $34, $07
+	db $68, $1c, $3b, $07
+	db $68, $24, $3c, $07
+	db $38, $2c, $31, $27
+	db $38, $24, $32, $27
+	db $40, $2c, $33, $27
+	db $40, $24, $34, $27
+	db $48, $2c, $35, $27
+	db $48, $24, $36, $27
+Gen2Frame_74:
+	db 152
+	db $38, $3c, $3d, $27
+	db $38, $34, $3e, $27
+	db $40, $3c, $39, $27
+	db $40, $34, $3a, $27
+	db $48, $3c, $35, $27
+	db $48, $34, $36, $27
+	db $50, $3c, $31, $27
+	db $50, $34, $32, $27
+	db $58, $3c, $33, $27
+	db $58, $34, $34, $27
+	db $60, $34, $33, $27
+	db $60, $2c, $34, $27
+	db $68, $34, $3b, $27
+	db $68, $2c, $3c, $27
+	db $38, $14, $3d, $07
+	db $38, $1c, $3e, $07
+	db $40, $14, $39, $07
+	db $40, $1c, $3a, $07
+	db $48, $14, $35, $07
+	db $48, $1c, $36, $07
+	db $50, $14, $31, $07
+	db $50, $1c, $32, $07
+	db $58, $14, $33, $07
+	db $58, $1c, $34, $07
+	db $60, $1c, $33, $07
+	db $60, $24, $34, $07
+	db $68, $1c, $3b, $07
+	db $68, $24, $3c, $07
+	db $38, $2c, $31, $27
+	db $38, $24, $32, $27
+	db $40, $2c, $33, $27
+	db $40, $24, $34, $27
+	db $48, $2c, $35, $27
+	db $48, $24, $36, $27
+	db $50, $2c, $37, $27
+	db $50, $24, $38, $27
+	db $58, $2c, $39, $27
+	db $58, $24, $3a, $27
+Gen2Frame_75:
+	db 112
+	db $38, $14, $3d, $07
+	db $38, $1c, $3e, $07
+	db $40, $14, $39, $07
+	db $40, $1c, $3a, $07
+	db $48, $14, $35, $07
+	db $48, $1c, $36, $07
+	db $50, $14, $31, $07
+	db $50, $1c, $32, $07
+	db $58, $14, $33, $07
+	db $58, $1c, $34, $07
+	db $60, $1c, $33, $07
+	db $60, $24, $34, $07
+	db $68, $1c, $3b, $07
+	db $68, $24, $3c, $07
 	db $38, $2c, $31, $27
 	db $38, $24, $32, $27
 	db $40, $2c, $33, $27
@@ -1992,7 +2064,23 @@ Gen2Frame_54:
 	db $60, $24, $3c, $27
 	db $68, $2c, $3d, $27
 	db $68, $24, $3e, $27
-Gen2Frame_55:
+Gen2Frame_76:
+	db 56
+	db $38, $2c, $31, $27
+	db $38, $24, $32, $27
+	db $40, $2c, $33, $27
+	db $40, $24, $34, $27
+	db $48, $2c, $35, $27
+	db $48, $24, $36, $27
+	db $50, $2c, $37, $27
+	db $50, $24, $38, $27
+	db $58, $2c, $39, $27
+	db $58, $24, $3a, $27
+	db $60, $2c, $3b, $27
+	db $60, $24, $3c, $27
+	db $68, $2c, $3d, $27
+	db $68, $24, $3e, $27
+Gen2Frame_77:
 	db 60
 	db $24, $88, $32, $06
 	db $24, $80, $33, $06
@@ -2009,7 +2097,7 @@ Gen2Frame_55:
 	db $1c, $80, $33, $26
 	db $24, $78, $33, $46
 	db $24, $80, $33, $66
-Gen2Frame_56:
+Gen2Frame_78:
 	db 72
 	db $24, $88, $32, $06
 	db $2a, $82, $32, $06
@@ -2029,7 +2117,7 @@ Gen2Frame_56:
 	db $22, $7a, $33, $26
 	db $2a, $72, $33, $46
 	db $2a, $7a, $33, $66
-Gen2Frame_57:
+Gen2Frame_79:
 	db 84
 	db $24, $88, $32, $06
 	db $2a, $82, $32, $06
@@ -2052,7 +2140,7 @@ Gen2Frame_57:
 	db $28, $74, $33, $26
 	db $30, $6c, $33, $46
 	db $30, $74, $33, $66
-Gen2Frame_58:
+Gen2Frame_80:
 	db 36
 	db $24, $88, $32, $06
 	db $2a, $82, $32, $06
@@ -2063,7 +2151,7 @@ Gen2Frame_58:
 	db $1c, $80, $32, $06
 	db $22, $7a, $32, $06
 	db $28, $74, $32, $06
-Gen2Frame_59:
+Gen2Frame_81:
 	db 60
 	db $4c, $20, $32, $26
 	db $4c, $28, $33, $26
@@ -2080,7 +2168,7 @@ Gen2Frame_59:
 	db $44, $28, $33, $06
 	db $4c, $30, $33, $66
 	db $4c, $28, $33, $46
-Gen2Frame_60:
+Gen2Frame_82:
 	db 72
 	db $4c, $20, $32, $26
 	db $52, $26, $32, $26
@@ -2100,7 +2188,7 @@ Gen2Frame_60:
 	db $4a, $2e, $33, $06
 	db $52, $36, $33, $66
 	db $52, $2e, $33, $46
-Gen2Frame_61:
+Gen2Frame_83:
 	db 84
 	db $4c, $20, $32, $26
 	db $52, $26, $32, $26
@@ -2123,7 +2211,7 @@ Gen2Frame_61:
 	db $50, $34, $33, $06
 	db $58, $3c, $33, $66
 	db $58, $34, $33, $46
-Gen2Frame_62:
+Gen2Frame_84:
 	db 36
 	db $4c, $20, $32, $26
 	db $52, $26, $32, $26
@@ -2134,14 +2222,14 @@ Gen2Frame_62:
 	db $44, $28, $32, $26
 	db $4a, $2e, $32, $26
 	db $50, $34, $32, $26
-Gen2Frame_63:
+Gen2Frame_85:
 	db 20
 	db $1c, $90, $32, $06
 	db $1c, $88, $33, $06
 	db $1c, $90, $33, $26
 	db $24, $88, $33, $46
 	db $24, $90, $33, $66
-Gen2Frame_64:
+Gen2Frame_86:
 	db 24
 	db $1c, $90, $32, $06
 	db $22, $8a, $32, $06
@@ -2149,7 +2237,7 @@ Gen2Frame_64:
 	db $22, $8a, $33, $26
 	db $2a, $82, $33, $46
 	db $2a, $8a, $33, $66
-Gen2Frame_65:
+Gen2Frame_87:
 	db 28
 	db $1c, $90, $32, $06
 	db $22, $8a, $32, $06
@@ -2158,7 +2246,7 @@ Gen2Frame_65:
 	db $28, $84, $33, $26
 	db $30, $7c, $33, $46
 	db $30, $84, $33, $66
-Gen2Frame_66:
+Gen2Frame_88:
 	db 32
 	db $1c, $90, $32, $06
 	db $22, $8a, $32, $06
@@ -2168,7 +2256,7 @@ Gen2Frame_66:
 	db $2e, $7e, $33, $26
 	db $36, $76, $33, $46
 	db $36, $7e, $33, $66
-Gen2Frame_67:
+Gen2Frame_89:
 	db 36
 	db $1c, $90, $32, $06
 	db $22, $8a, $32, $06
@@ -2179,7 +2267,7 @@ Gen2Frame_67:
 	db $34, $78, $33, $26
 	db $3c, $70, $33, $46
 	db $3c, $78, $33, $66
-Gen2Frame_68:
+Gen2Frame_90:
 	db 40
 	db $1c, $90, $32, $06
 	db $22, $8a, $32, $06
@@ -2191,7 +2279,7 @@ Gen2Frame_68:
 	db $3a, $72, $33, $26
 	db $42, $6a, $33, $46
 	db $42, $72, $33, $66
-Gen2Frame_69:
+Gen2Frame_91:
 	db 24
 	db $1c, $90, $32, $06
 	db $22, $8a, $32, $06
@@ -2199,14 +2287,14 @@ Gen2Frame_69:
 	db $2e, $7e, $32, $06
 	db $34, $78, $32, $06
 	db $3a, $72, $32, $06
-Gen2Frame_70:
+Gen2Frame_92:
 	db 20
 	db $44, $18, $32, $26
 	db $44, $20, $33, $26
 	db $44, $18, $33, $06
 	db $4c, $20, $33, $66
 	db $4c, $18, $33, $46
-Gen2Frame_71:
+Gen2Frame_93:
 	db 24
 	db $44, $18, $32, $26
 	db $4a, $1e, $32, $26
@@ -2214,7 +2302,7 @@ Gen2Frame_71:
 	db $4a, $1e, $33, $06
 	db $52, $26, $33, $66
 	db $52, $1e, $33, $46
-Gen2Frame_72:
+Gen2Frame_94:
 	db 28
 	db $44, $18, $32, $26
 	db $4a, $1e, $32, $26
@@ -2223,7 +2311,7 @@ Gen2Frame_72:
 	db $50, $24, $33, $06
 	db $58, $2c, $33, $66
 	db $58, $24, $33, $46
-Gen2Frame_73:
+Gen2Frame_95:
 	db 32
 	db $44, $18, $32, $26
 	db $4a, $1e, $32, $26
@@ -2233,7 +2321,7 @@ Gen2Frame_73:
 	db $56, $2a, $33, $06
 	db $5e, $32, $33, $66
 	db $5e, $2a, $33, $46
-Gen2Frame_74:
+Gen2Frame_96:
 	db 36
 	db $44, $18, $32, $26
 	db $4a, $1e, $32, $26
@@ -2244,7 +2332,7 @@ Gen2Frame_74:
 	db $5c, $30, $33, $06
 	db $64, $38, $33, $66
 	db $64, $30, $33, $46
-Gen2Frame_75:
+Gen2Frame_97:
 	db 32
 	db $44, $18, $32, $26
 	db $4a, $1e, $32, $26
@@ -2254,7 +2342,7 @@ Gen2Frame_75:
 	db $62, $36, $32, $26
 	db $62, $3e, $33, $26
 	db $62, $36, $33, $06
-Gen2Frame_76:
+Gen2Frame_98:
 	db 24
 	db $44, $18, $32, $26
 	db $4a, $1e, $32, $26
@@ -2262,7 +2350,7 @@ Gen2Frame_76:
 	db $56, $2a, $32, $26
 	db $5c, $30, $32, $26
 	db $62, $36, $32, $26
-Gen2Frame_77:
+Gen2Frame_99:
 	db 64
 	db $18, $74, $31, $06
 	db $18, $7c, $32, $06
@@ -2280,7 +2368,7 @@ Gen2Frame_77:
 	db $28, $8c, $33, $66
 	db $30, $84, $32, $66
 	db $30, $8c, $31, $66
-Gen2Frame_78:
+Gen2Frame_100:
 	db 64
 	db $48, $1c, $31, $06
 	db $48, $24, $32, $06
@@ -2298,7 +2386,7 @@ Gen2Frame_78:
 	db $58, $34, $33, $66
 	db $60, $2c, $32, $66
 	db $60, $34, $31, $66
-Gen2Frame_79:
+Gen2Frame_101:
 	db 112
 	db $4c, $11, $39, $06
 	db $54, $11, $39, $06
@@ -2328,7 +2416,7 @@ Gen2Frame_79:
 	db $4c, $37, $39, $06
 	db $54, $37, $39, $06
 	db $5c, $37, $39, $06
-Gen2Frame_80:
+Gen2Frame_102:
 	db 64
 	db $4c, $1a, $39, $06
 	db $54, $1a, $39, $06
@@ -2346,7 +2434,7 @@ Gen2Frame_80:
 	db $4c, $2e, $39, $06
 	db $54, $2e, $39, $06
 	db $5c, $2e, $39, $06
-Gen2Frame_81:
+Gen2Frame_103:
 	db 24
 	db $4c, $23, $39, $06
 	db $54, $23, $39, $06
@@ -2354,7 +2442,7 @@ Gen2Frame_81:
 	db $4c, $25, $39, $06
 	db $54, $25, $39, $06
 	db $5c, $25, $39, $06
-Gen2Frame_82:
+Gen2Frame_104:
 	db 36
 	db $24, $78, $3e, $06
 	db $24, $80, $3f, $06
@@ -2365,7 +2453,7 @@ Gen2Frame_82:
 	db $34, $78, $3e, $46
 	db $34, $80, $3f, $66
 	db $34, $88, $3e, $66
-Gen2Frame_83:
+Gen2Frame_105:
 	db 120
 	db $24, $97, $39, $06
 	db $2c, $97, $39, $06
@@ -2397,7 +2485,7 @@ Gen2Frame_83:
 	db $24, $71, $39, $06
 	db $2c, $71, $39, $06
 	db $34, $71, $39, $06
-Gen2Frame_84:
+Gen2Frame_106:
 	db 64
 	db $24, $8e, $39, $06
 	db $2c, $8e, $39, $06
@@ -2415,7 +2503,7 @@ Gen2Frame_84:
 	db $24, $7a, $39, $06
 	db $2c, $7a, $39, $06
 	db $34, $7a, $39, $06
-Gen2Frame_85:
+Gen2Frame_107:
 	db 24
 	db $24, $85, $39, $06
 	db $2c, $85, $39, $06
@@ -2423,7 +2511,7 @@ Gen2Frame_85:
 	db $24, $83, $39, $06
 	db $2c, $83, $39, $06
 	db $34, $83, $39, $06
-Gen2Frame_86:
+Gen2Frame_108:
 	db 36
 	db $54, $20, $3e, $06
 	db $54, $28, $3f, $06
@@ -2438,7 +2526,6 @@ Gen2Frame_86:
 SECTION "Gen 2 effect artwork", ROMX, BANK[$47]
 Gen2GFX_THUNDERSHOCK:
 	INCBIN "gfx/battle/gen2/lightning.2bpp"
-	INCBIN "gfx/battle/gen2/explosion.2bpp"
 Gen2GFX_THUNDERBOLT:
 	INCBIN "gfx/battle/gen2/lightning.2bpp"
 	INCBIN "gfx/battle/gen2/explosion.2bpp"

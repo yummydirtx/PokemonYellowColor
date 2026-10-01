@@ -111,9 +111,10 @@ def compile_data():
     # Position/timing adaptations are explicit here; art and framesets above are
     # unchanged Gen 2 data. Yellow retains its own sound effects and damage code.
     specs = {
-        'THUNDERSHOCK': (112, ['lightning', 'explosion'], [16], [
-            ('ThunderShockCore', 'explosion', 136, 56, 0, 112, 6),
-            ('ThunderShockSparks', 'lightning', 136, 56, 16, 96, 7)]),
+        # Yellow's electric sound lasts 92 frames. End the final burst with it
+        # so PlayApplyingAttackSound need not wait over a motionless picture.
+        'THUNDERSHOCK': (92, ['lightning'], [0], [
+            ('ThunderShockSparks', 'lightning', 136, 56, 0, 92, 7)]),
         'THUNDERBOLT': (144, ['lightning', 'explosion'], [16, 80], [
             ('ThunderBoltCore', 'explosion', 136, 56, 0, 144, 6),
             ('ThunderBoltSparks', 'lightning', 136, 56, 16, 128, 7)]),
@@ -157,6 +158,13 @@ def compile_data():
             for fs, art, x, y, start, duration, pal in objects:
                 frames = frameset(fs, duration)
                 for t, (ident, flips) in enumerate(frames):
+                    if move == 'THUNDERSHOCK':
+                        # Three expanding electrical bursts with a four-frame
+                        # clear interval. The solid explosion disk obscured the
+                        # target; use only Crystal's transparent spark artwork.
+                        pulse = t % 32
+                        if pulse >= 28:
+                            continue
                     if ident is None:
                         continue
                     # Center the effect on Yellow's 7x7 padded picture areas.
@@ -175,11 +183,23 @@ def compile_data():
                     if fs.startswith('SpeedLine'):
                         bx, by = (x-4, y) if side == 0 else (180-x, 136-y)
                         bx += (t+1) * (1 if x < 48 else -1) * (1 if side == 0 else -1)
+                    if move == 'THUNDERSHOCK':
+                        # A two-pixel orbit keeps the electric field moving.
+                        ox, oy = [(2, 0), (1, 1), (0, 2), (-1, 1),
+                                  (-2, 0), (-1, -1), (0, -2), (1, -1)][t//4 % 8]
+                        bx += ox * (1 if side == 0 else -1)
+                        by += oy
                     # Gen 2 reflects the electric/cut objects for the opponent.
                     if side and (art in ['lightning', 'explosion', 'cut']):
                         flips ^= 0x20
                     for dy, dx, tile, flags in source['oam'][ident]:
                         assert tile < lengths[art], (fs, ident, tile)
+                        if move == 'THUNDERSHOCK':
+                            # Scale tile centers, retaining the original pixels
+                            # and alternating cardinal/diagonal spark frames.
+                            radius = 10 + min(pulse, 12)
+                            dx = round((dx+4) * radius / 16) - 4
+                            dy = round((dy+4) * radius / 16) - 4
                         if flips & 0x20:
                             dx = -dx-8
                         if flips & 0x40:

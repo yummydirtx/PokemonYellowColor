@@ -97,11 +97,16 @@ for back, front in [(84, 165), (180, 14), (132, 21)]:
             p.begin_call('MoveAnimation', scratch='wSpriteStateData1')
             maximum, scanline_max, best, frames = 0, 0, None, []
             effect_palettes = set()
+            spark_positions, active_frames = set(), []
             for frame in range(500):
                 p.tick(1)
                 oam = list(p.lib.sb_memory(7)[:160])
                 sprites = [oam[i:i+4] for i in range(0, 160, 4)
                            if 0 < oam[i] < 160 and 0 < oam[i+1] < 168]
+                if move == 'THUNDERSHOCK':
+                    active_frames.append(bool(sprites))
+                    if sprites:
+                        spark_positions.add(tuple((s[0], s[1]) for s in sprites))
                 if sprites and len(sprites) >= maximum:
                     maximum = len(sprites)
                     best = image()
@@ -129,15 +134,28 @@ for back, front in [(84, 165), (180, 14), (132, 21)]:
             bad = [p.lib.sb_bad_vram_writes(), p.lib.sb_bad_palette_writes()]
             assert bad == [0, 0], (move, side, 'writes during mode 3', bad)
             assert not any(p.lib.sb_memory(7)[i] for i in range(0, 160, 4)), 'Stale OAM after animation'
+            if move == 'THUNDERSHOCK':
+                # Observable motion and separated bursts, not merely safe OAM.
+                bursts = sum(on and (i == 0 or not active_frames[i-1])
+                             for i, on in enumerate(active_frames))
+                assert bursts == 3 and len(spark_positions) >= 12, (bursts, len(spark_positions))
+                assert effect_palettes == {7} and maximum == 4, 'Opaque core returned'
             results.append({'move': move, 'side': side, 'back_species': back, 'front_species': front,
                             'frames': frame+1, 'max_sprites': maximum, 'max_per_scanline': scanline_max,
                             'effect_palettes': sorted(effect_palettes), 'blocked_writes': bad,
                             'picture_bytes_preserved': True, 'tilemap_and_palettes_restored': True})
+            if move == 'THUNDERSHOCK':
+                results[-1].update(spark_bursts=bursts, distinct_spark_positions=len(spark_positions))
             if back == 84:
                 thumbnails.append((f'{move} / {"enemy" if side else "player"}', best))
                 if move in ['THUNDERSHOCK', 'THUNDER', 'SCRATCH', 'QUICK_ATTACK']:
+                    # GIF times are multiples of 10 ms. Distribute rounding
+                    # error instead of speeding every 2-frame sample up to 30 ms.
+                    times = [round(i * 2 * 70224 / 4194304 * 100) * 10
+                             for i in range(len(frames)+1)]
                     frames[0].save(OUT / f'{move.lower()}_{side}.gif', save_all=True,
-                                   append_images=frames[1:], duration=34, loop=0)
+                                   append_images=frames[1:],
+                                   duration=[b-a for a, b in zip(times, times[1:])], loop=0)
 
 # Verify the Options switch bypasses all new effects, and an unported move
 # still uses the original engine. hOnCGB=0 checks the dispatch fallback; actual
