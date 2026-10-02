@@ -1,7 +1,7 @@
 # Pokémon Yellow Color
 
 A playable Game Boy Color enhancement of English Pokémon Yellow, with per-tile
-overworld colors and Gen 2 battle graphics. **Version 0.1.6 is a preview build:**
+overworld colors and Gen 2 battle graphics. **Version 0.1.7 is a preview build:**
 the opening, all tilesets, sprite loaders, menus, saving, and surfing minigame
 have automated checks; a complete playthrough and physical hardware testing
 are still outstanding.
@@ -33,6 +33,8 @@ checksums are in [dist/manifest.json](dist/manifest.json).
 [Watch the 43-second showcase](docs/showcase/showcase.mp4): Pallet Town,
 Route 1, Oak’s lab, Viridian Forest, and ThunderShock. Both versions are captured
 in Game Boy Color mode, with matching walking poses for the moving color reveal.
+These showcase clips were recorded with v0.1.6; the screenshots below include
+the newer trainer and Poké Ball colors.
 [Download the individual videos and GIFs](docs/showcase/README.md).
 
 ![Walking through Pallet Town: original Yellow to full color](docs/showcase/pallet.gif)
@@ -47,7 +49,11 @@ in Game Boy Color mode, with matching walking poses for the moving color reveal.
 - NPCs have skin and clothing colors. Scientists, Oak, and cooks have separate
   white uniforms; their standing and walking frames use CGB-specific tiles.
 - All 151 Pokémon have Gen 2 front and detailed 6×6 back sprites with species
-  palettes. Trainer graphics come from the same Gen 2 graphics integration.
+  palettes. Trainer graphics come from the same Gen 2 graphics integration,
+  with brighter CGB clothing colors and separate skin fills on the player, Oak,
+  and old man back pictures. White clothing and hair details remain intact.
+- Thrown Poké Balls retain red caps and white lower halves throughout the toss
+  and shake. Great, Ultra, Master and Safari Balls have distinct cap colors.
 - Eight moves use adapted Gen 2 effect artwork and frame sequences: ThunderShock,
   Thunderbolt, Thunder Wave, Thunder, Scratch, Cut, Tackle, and Quick Attack.
   Effects have their own palettes and stay above the battle text box.
@@ -64,7 +70,9 @@ in Game Boy Color mode, with matching walking poses for the moving color reveal.
   and correctly timed Pikachu voice samples. Unchanged NPC palettes are cached.
   Pokémon Centers, link rooms, and printing retain the original serial clock.
 - Scrolling updates tile graphics and palette attributes together. Full-screen
-  menus restore the entire background attribute map on return.
+  menus restore the entire background attribute map behind a uniform whiteout.
+  Scrolling waits for the new edge data before exposing it, preventing a stale
+  edge buffer from being displayed at a new screen position.
 - Yellow's story, encounters, battle rules, follower, voice samples, and surfing
   minigame remain in place. No gameplay rebalance or extra Pokémon are added.
 
@@ -72,6 +80,9 @@ in Game Boy Color mode, with matching walking poses for the moving color reveal.
 ![Oak's lab](docs/screenshots/oaks_lab.png)
 ![Gen 2 Pikachu and Eevee in battle](docs/screenshots/battle.png)
 ![Yellow Pikachu reaction portrait](docs/screenshots/portrait.png)
+
+![Brighter trainer colors and player skin tones](docs/screenshots/trainer_battle.png)
+![Colored Poké Ball during a menu-selected capture](docs/screenshots/pokeball.gif)
 
 ![Reworked ThunderShock during a battle turn](docs/screenshots/thundershock.gif)
 ![Pokémon Center healing pulse](docs/screenshots/healing_pulse.gif)
@@ -109,6 +120,7 @@ python3 -m venv .venv
 .venv/bin/python scripts/verify_text.py
 .venv/bin/python scripts/build_battle_effects.py --check
 .venv/bin/python scripts/build_terrain.py --check
+.venv/bin/python scripts/build_battle_colors.py --check
 ```
 
 Run the scripts in that order, from the repository root, after building.

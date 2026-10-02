@@ -30,6 +30,7 @@ Bank 0x46 holds text flushing and the selected Gen 2 effect timelines; bank
 0x47 holds their graphics. The effects reuse existing battle scratch RAM.
 Bank 0x48 holds the outdoor material variants and tileset loader. The three
 small CGB flower frames stay in ROM0 for bank-switch-free VBlank animation.
+Bank 0x49 holds CGB trainer-back material variants and thrown-ball palettes.
 The resulting cartridge is 2 MiB, MBC5 with 32 KiB battery RAM.
 Existing game and save data addresses remain unchanged; eleven unused bytes of
 fixed audio-page RAM hold renderer state. Additional scratch buffers use WRAM
@@ -39,7 +40,11 @@ bank 1.
 Full-screen menu exit rebuilds both VRAM attribute maps from the actual tile
 IDs, including offscreen scroll rows. The display interrupt defers graphics
 work when it arrives too late for safe VRAM/OAM access. Palette conversion
-continues to honor the original fade registers. The Joypad input polling path
+continues to honor the original fade registers; BGP=0 produces uniform white
+for every terrain palette, even when its usual background shade is green or
+cream. Scrolling has a separate prepared-buffer bit in the existing ready byte.
+VBlank retains an unprepared edge request and the prior scroll/OAM view until
+tile IDs and attributes are ready, avoiding stale edge-buffer uploads. The Joypad input polling path
 also supplies automatic background transfers when no prepared transfer is
 pending. This covers native text-delay and prompt loops that do not call
 `DelayFrame`. Late terrain animation and OAM DMA are deferred when insufficient
@@ -115,6 +120,20 @@ are clipped above the text box. OAM palettes 6/7 carry gray/electric colors;
 original palettes are restored afterward. Graphics use only the existing
 animation tile range, leaving the 7×7 padded front/back pictures intact.
 DMG/SGB and field animations retain Yellow's original effects.
+
+`scripts/build_battle_colors.py` separates exposed skin from the white
+background in CGB copies of the three existing trainer back pictures. It keeps
+black outlines and exterior pixels intact and preserves the native 6×6-to-7×7
+alignment, including the animated head. Original compressed artwork and SGB
+palettes are retained. CGB trainer accent colors are brighter; the old man
+uses the cool coat/hair palette instead of the player's red palette.
+
+Thrown-ball frames keep their original tile art and motion. Only their six
+ball tile IDs receive OBJ palette 6 during toss/shake/block animations; the
+trainer-block star and other effects keep their original palettes. The ball
+palette stays independent of either battler and the OBP0 flashes. Poké, Great,
+Ultra, Master and Safari caps use red, blue, gold, purple and green respectively,
+with white lower halves. Subsequent palette commands reclaim the slot.
 
 Original code/assets retain their original ownership and attribution. This
 repository does not assert a new license over Pokémon or upstream assets.

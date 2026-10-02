@@ -1,6 +1,6 @@
 {
   "sameboy_revision": "213a12ce93d66b105a113debd9396306066a7cfc",
-  "rom_sha256": "fde8ce1369fd08ea54ed4d6f51d8af5a69484261499f3aca45e8d79053f074f7",
+  "rom_sha256": "78e237103d786cd8efc591c701b3c58c63666fdffc247f334cc246fbcda4bd1a",
   "walking": {
     "original": {
       "sha256": "8cbaa499397e4f1a679c992ea9382a2dd7942ab398b48c19829c2d9529de47bf",
@@ -38,77 +38,75 @@
       ]
     },
     "before_optimization": {
-      "sha256": "a87f21fa97710d1a3d1e68e9e99f6f8c268b88d880324155b669f98489062ad7",
+      "sha256": "fde8ce1369fd08ea54ed4d6f51d8af5a69484261499f3aca45e8d79053f074f7",
       "scenes": [
         {
           "scene": "OaksLabCenter",
           "frames": 512,
-          "cpu_speed": 0,
-          "game_updates": 169,
-          "updates_per_second": 19.71,
+          "cpu_speed": 1,
+          "game_updates": 256,
+          "updates_per_second": 29.86,
           "walking_updates": 64,
-          "median_walking_interval_frames": 3.001,
+          "median_walking_interval_frames": 2.0,
           "oam_transfers": 512,
-          "obj_palette_uploads": 168,
+          "obj_palette_uploads": 0,
           "graphics": {
             "end_lcd_modes": {
               "1": 512
             },
             "end_scanlines": {
-              "148": 456,
-              "149": 48,
-              "153": 8
+              "146": 504,
+              "148": 7,
+              "149": 1
             }
           }
         },
         {
           "scene": "OaksLabFloor",
           "frames": 512,
-          "cpu_speed": 0,
-          "game_updates": 165,
-          "updates_per_second": 19.25,
-          "walking_updates": 152,
-          "median_walking_interval_frames": 3.006,
-          "oam_transfers": 508,
-          "obj_palette_uploads": 165,
+          "cpu_speed": 1,
+          "game_updates": 256,
+          "updates_per_second": 29.86,
+          "walking_updates": 248,
+          "median_walking_interval_frames": 2.0,
+          "oam_transfers": 512,
+          "obj_palette_uploads": 0,
           "graphics": {
             "end_lcd_modes": {
-              "1": 508
+              "1": 512
             },
             "end_scanlines": {
-              "0": 1,
-              "148": 441,
-              "149": 48,
-              "153": 18
+              "146": 481,
+              "148": 27,
+              "149": 4
             }
           }
         },
         {
           "scene": "PalletTown",
           "frames": 512,
-          "cpu_speed": 0,
-          "game_updates": 239,
-          "updates_per_second": 27.88,
-          "walking_updates": 231,
-          "median_walking_interval_frames": 2.001,
-          "oam_transfers": 511,
-          "obj_palette_uploads": 239,
+          "cpu_speed": 1,
+          "game_updates": 256,
+          "updates_per_second": 29.86,
+          "walking_updates": 248,
+          "median_walking_interval_frames": 2.0,
+          "oam_transfers": 512,
+          "obj_palette_uploads": 0,
           "graphics": {
             "end_lcd_modes": {
-              "1": 511
+              "1": 512
             },
             "end_scanlines": {
-              "0": 1,
-              "148": 436,
-              "149": 46,
-              "153": 28
+              "146": 481,
+              "148": 28,
+              "149": 3
             }
           }
         }
       ]
     },
     "optimized": {
-      "sha256": "fde8ce1369fd08ea54ed4d6f51d8af5a69484261499f3aca45e8d79053f074f7",
+      "sha256": "78e237103d786cd8efc591c701b3c58c63666fdffc247f334cc246fbcda4bd1a",
       "scenes": [
         {
           "scene": "OaksLabCenter",

@@ -1,0 +1,32 @@
+{
+  "rom_sha256": "78e237103d786cd8efc591c701b3c58c63666fdffc247f334cc246fbcda4bd1a",
+  "captures": [
+    {
+      "model": "CGB-E",
+      "frames": 1218,
+      "ball_frames": 696,
+      "party_added": 165,
+      "balls_consumed": 1,
+      "returned_to_overworld": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "model": "DMG",
+      "frames": 1218,
+      "ball_frames": 702,
+      "party_added": 165,
+      "balls_consumed": 1,
+      "returned_to_overworld": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    }
+  ],
+  "limitations": [
+    "Encounter, inventory, names, low HP and sleep set in RAM; no physical hardware test"
+  ]
+}

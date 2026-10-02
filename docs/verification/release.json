@@ -1,0 +1,12 @@
+{
+  "version": "0.1.7",
+  "rom_sha256": "78e237103d786cd8efc591c701b3c58c63666fdffc247f334cc246fbcda4bd1a",
+  "patch_sha256": "8a6352d374b773f5c3bf98d8eba9339b8f436fbf8a7a5268f8f2b8ee90733caa",
+  "clean_build_matches_tested_build": true,
+  "baseline_matches_dump": true,
+  "independent_flips_patch_matches_target": true,
+  "rom_header_and_checksums": "passed",
+  "shared_original_ram_symbols_unchanged": 3180,
+  "original_sgb_palette_bytes_unchanged": 1912,
+  "bps_unit_tests": 3
+}

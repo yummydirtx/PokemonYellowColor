@@ -1,0 +1,770 @@
+{
+  "rom_sha256": "78e237103d786cd8efc591c701b3c58c63666fdffc247f334cc246fbcda4bd1a",
+  "model": "SameBoy CGB-E",
+  "menus": [
+    {
+      "map": "pallet",
+      "menu": "party",
+      "uniform_white_frames": 8,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "map": "pallet",
+      "menu": "card",
+      "uniform_white_frames": 7,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "map": "pallet",
+      "menu": "options",
+      "uniform_white_frames": 0,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "map": "forest",
+      "menu": "party",
+      "uniform_white_frames": 8,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "map": "forest",
+      "menu": "card",
+      "uniform_white_frames": 7,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "map": "forest",
+      "menu": "options",
+      "uniform_white_frames": 0,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    }
+  ],
+  "scrolling": [
+    {
+      "map": "forest",
+      "frames": 2560,
+      "distinct_scroll_positions": 105,
+      "visible_tile_and_attribute_mismatches": 0,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "map": "pallet",
+      "frames": 2560,
+      "distinct_scroll_positions": 81,
+      "visible_tile_and_attribute_mismatches": 0,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "map": "route1",
+      "frames": 2560,
+      "distinct_scroll_positions": 232,
+      "visible_tile_and_attribute_mismatches": 0,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    }
+  ],
+  "edge_transfers": [
+    {
+      "mode": "column",
+      "row": 0,
+      "column": 0,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 0,
+      "column": 2,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 0,
+      "column": 4,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 0,
+      "column": 6,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 0,
+      "column": 8,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 0,
+      "column": 10,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 0,
+      "column": 12,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 0,
+      "column": 14,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 0,
+      "column": 16,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 0,
+      "column": 18,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 0,
+      "column": 20,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 0,
+      "column": 22,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 0,
+      "column": 24,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 0,
+      "column": 26,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 0,
+      "column": 28,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 0,
+      "column": 30,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 14,
+      "column": 0,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 14,
+      "column": 2,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 14,
+      "column": 4,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 14,
+      "column": 6,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 14,
+      "column": 8,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 14,
+      "column": 10,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 14,
+      "column": 12,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 14,
+      "column": 14,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 14,
+      "column": 16,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 14,
+      "column": 18,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 14,
+      "column": 20,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 14,
+      "column": 22,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 14,
+      "column": 24,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 14,
+      "column": 26,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 14,
+      "column": 28,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 14,
+      "column": 30,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 30,
+      "column": 0,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 30,
+      "column": 2,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 30,
+      "column": 4,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 30,
+      "column": 6,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 30,
+      "column": 8,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 30,
+      "column": 10,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 30,
+      "column": 12,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 30,
+      "column": 14,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 30,
+      "column": 16,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 30,
+      "column": 18,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 30,
+      "column": 20,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 30,
+      "column": 22,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 30,
+      "column": 24,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 30,
+      "column": 26,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 30,
+      "column": 28,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "column",
+      "row": 30,
+      "column": 30,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 0,
+      "column": 0,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 0,
+      "column": 2,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 0,
+      "column": 4,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 0,
+      "column": 6,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 0,
+      "column": 8,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 0,
+      "column": 10,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 0,
+      "column": 12,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 0,
+      "column": 14,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 0,
+      "column": 16,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 0,
+      "column": 18,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 0,
+      "column": 20,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 0,
+      "column": 22,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 0,
+      "column": 24,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 0,
+      "column": 26,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 0,
+      "column": 28,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 0,
+      "column": 30,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 14,
+      "column": 0,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 14,
+      "column": 2,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 14,
+      "column": 4,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 14,
+      "column": 6,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 14,
+      "column": 8,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 14,
+      "column": 10,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 14,
+      "column": 12,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 14,
+      "column": 14,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 14,
+      "column": 16,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 14,
+      "column": 18,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 14,
+      "column": 20,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 14,
+      "column": 22,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 14,
+      "column": 24,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 14,
+      "column": 26,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 14,
+      "column": 28,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 14,
+      "column": 30,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 30,
+      "column": 0,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 30,
+      "column": 2,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 30,
+      "column": 4,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 30,
+      "column": 6,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 30,
+      "column": 8,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 30,
+      "column": 10,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 30,
+      "column": 12,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 30,
+      "column": 14,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 30,
+      "column": 16,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 30,
+      "column": 18,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 30,
+      "column": 20,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 30,
+      "column": 22,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 30,
+      "column": 24,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 30,
+      "column": 26,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 30,
+      "column": 28,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    },
+    {
+      "mode": "row",
+      "row": 30,
+      "column": 30,
+      "unprepared_request_retained": true,
+      "prepared_tile_and_attribute_bytes_match": true
+    }
+  ],
+  "limitations": [
+    "RAM positioning and deterministic race fixtures; the reported intermittent forest scene was not reproduced naturally",
+    "No physical GBC test"
+  ]
+}

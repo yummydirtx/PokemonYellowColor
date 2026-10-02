@@ -1,0 +1,301 @@
+{
+  "rom_sha256": "78e237103d786cd8efc591c701b3c58c63666fdffc247f334cc246fbcda4bd1a",
+  "back_loaders": [
+    {
+      "model": "CGB-E",
+      "trainer": "Red",
+      "body_and_animated_head_bytes_match": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "model": "CGB-E",
+      "trainer": "Oak",
+      "body_and_animated_head_bytes_match": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "model": "CGB-E",
+      "trainer": "OldMan",
+      "body_and_animated_head_bytes_match": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "model": "DMG",
+      "trainer": "Red",
+      "body_and_animated_head_bytes_match": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "model": "DMG",
+      "trainer": "Oak",
+      "body_and_animated_head_bytes_match": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "model": "DMG",
+      "trainer": "OldMan",
+      "body_and_animated_head_bytes_match": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    }
+  ],
+  "trainers": [
+    {
+      "trainer": "Bug Catcher",
+      "actual_encounter": true,
+      "palette_matches": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "trainer": "Lass",
+      "actual_encounter": true,
+      "palette_matches": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "trainer": "Rival",
+      "actual_encounter": true,
+      "palette_matches": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "trainer": "Rocket",
+      "actual_encounter": true,
+      "palette_matches": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "trainer": "Misty",
+      "actual_encounter": true,
+      "palette_matches": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    },
+    {
+      "trainer": "Sabrina",
+      "actual_encounter": true,
+      "palette_matches": true,
+      "blocked_writes": [
+        0,
+        0
+      ]
+    }
+  ],
+  "balls": [
+    {
+      "ball": "Poke",
+      "outcome_fixture": "caught",
+      "frames": 276,
+      "colored_ball_frames": 212,
+      "distinct_positions": 44,
+      "blocked_writes": [
+        0,
+        0
+      ],
+      "palette_slot_reclaimed": true
+    },
+    {
+      "ball": "Poke",
+      "outcome_fixture": "breakout",
+      "frames": 319,
+      "colored_ball_frames": 222,
+      "distinct_positions": 44,
+      "blocked_writes": [
+        0,
+        0
+      ],
+      "palette_slot_reclaimed": true
+    },
+    {
+      "ball": "Poke",
+      "outcome_fixture": "blocked",
+      "frames": 82,
+      "colored_ball_frames": 52,
+      "distinct_positions": 48,
+      "blocked_writes": [
+        0,
+        0
+      ],
+      "palette_slot_reclaimed": true
+    },
+    {
+      "ball": "Great",
+      "outcome_fixture": "caught",
+      "frames": 276,
+      "colored_ball_frames": 212,
+      "distinct_positions": 46,
+      "blocked_writes": [
+        0,
+        0
+      ],
+      "palette_slot_reclaimed": true
+    },
+    {
+      "ball": "Great",
+      "outcome_fixture": "breakout",
+      "frames": 319,
+      "colored_ball_frames": 222,
+      "distinct_positions": 46,
+      "blocked_writes": [
+        0,
+        0
+      ],
+      "palette_slot_reclaimed": true
+    },
+    {
+      "ball": "Great",
+      "outcome_fixture": "blocked",
+      "frames": 82,
+      "colored_ball_frames": 52,
+      "distinct_positions": 48,
+      "blocked_writes": [
+        0,
+        0
+      ],
+      "palette_slot_reclaimed": true
+    },
+    {
+      "ball": "Ultra",
+      "outcome_fixture": "caught",
+      "frames": 265,
+      "colored_ball_frames": 201,
+      "distinct_positions": 44,
+      "blocked_writes": [
+        0,
+        0
+      ],
+      "palette_slot_reclaimed": true
+    },
+    {
+      "ball": "Ultra",
+      "outcome_fixture": "breakout",
+      "frames": 308,
+      "colored_ball_frames": 211,
+      "distinct_positions": 44,
+      "blocked_writes": [
+        0,
+        0
+      ],
+      "palette_slot_reclaimed": true
+    },
+    {
+      "ball": "Ultra",
+      "outcome_fixture": "blocked",
+      "frames": 82,
+      "colored_ball_frames": 52,
+      "distinct_positions": 48,
+      "blocked_writes": [
+        0,
+        0
+      ],
+      "palette_slot_reclaimed": true
+    },
+    {
+      "ball": "Master",
+      "outcome_fixture": "caught",
+      "frames": 265,
+      "colored_ball_frames": 201,
+      "distinct_positions": 44,
+      "blocked_writes": [
+        0,
+        0
+      ],
+      "palette_slot_reclaimed": true
+    },
+    {
+      "ball": "Master",
+      "outcome_fixture": "breakout",
+      "frames": 308,
+      "colored_ball_frames": 211,
+      "distinct_positions": 44,
+      "blocked_writes": [
+        0,
+        0
+      ],
+      "palette_slot_reclaimed": true
+    },
+    {
+      "ball": "Master",
+      "outcome_fixture": "blocked",
+      "frames": 82,
+      "colored_ball_frames": 52,
+      "distinct_positions": 48,
+      "blocked_writes": [
+        0,
+        0
+      ],
+      "palette_slot_reclaimed": true
+    },
+    {
+      "ball": "Safari",
+      "outcome_fixture": "caught",
+      "frames": 265,
+      "colored_ball_frames": 201,
+      "distinct_positions": 44,
+      "blocked_writes": [
+        0,
+        0
+      ],
+      "palette_slot_reclaimed": true
+    },
+    {
+      "ball": "Safari",
+      "outcome_fixture": "breakout",
+      "frames": 308,
+      "colored_ball_frames": 211,
+      "distinct_positions": 44,
+      "blocked_writes": [
+        0,
+        0
+      ],
+      "palette_slot_reclaimed": true
+    },
+    {
+      "ball": "Safari",
+      "outcome_fixture": "blocked",
+      "frames": 82,
+      "colored_ball_frames": 52,
+      "distinct_positions": 48,
+      "blocked_writes": [
+        0,
+        0
+      ],
+      "palette_slot_reclaimed": true
+    }
+  ],
+  "limitations": [
+    "Encounter and animation RAM fixtures; capture outcomes forced to test each visual path",
+    "No physical GBC test"
+  ]
+}

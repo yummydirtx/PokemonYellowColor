@@ -1,7 +1,7 @@
-# Version 0.1.6 verification
+# Version 0.1.7 verification
 
 The final clean build was tested with RGBDS 1.0.3, PyBoy 2.7.0, and SameBoy
-revision `213a12ce93d66b105a113debd9396306066a7cfc` on 2026-09-30.
+revision `213a12ce93d66b105a113debd9396306066a7cfc` on 2026-10-02.
 The exact build and patch hashes are recorded in `dist/manifest.json`.
 
 | Check | Result |
@@ -15,6 +15,12 @@ The exact build and patch hashes are recorded in `dist/manifest.json`.
 | Opening with button input | New game, naming, both house floors, Pallet, Oak's capture, lab, starter, rival battle, follower |
 | Overworld scrolling | All four directions and toroidal background-map wrapping |
 | Party/stats menu return | No visible palette attribute mismatches |
+| Menu whiteout | Frame-by-frame party/card/options exits in Pallet and forest; repaint frames uniformly white, zero blocked LCD writes; v0.1.6 fails at Pallet party-return frame 33 |
+| Scrolling edge race | 96 forced row/column requests across toroidal wrap positions; unprepared requests retain VRAM, prepared tiles and attributes match; v0.1.6 fails the first unprepared column case |
+| Moving map contents | 7,680 frames across forest, Pallet and Route 1; every visible tile ID checked against map blocks and every attribute against its tile palette; zero mismatches or blocked writes |
+| Trainer battle colors | Six actual encounter introductions; front palettes match, player back colored; all three back loaders preserve body/head alignment on CGB and the original pixels on DMG |
+| Thrown balls | Five types × catch/breakout/trainer-block sequences (15 cases); white lower halves and correct cap colors throughout, palette slot reclaimed, zero blocked LCD writes |
+| Complete capture | Menu-selected Poké Ball on CGB and DMG; engine catches Rattata, adds it to the party, consumes exactly one ball and returns to overworld colors |
 | Dialogue progression | 18 combinations: fast/medium/slow, no held button/A/B, color and original transfer branches; complete text reaches VRAM, with at least 10 partial stages and at most 3 frames display lag |
 | Text prompts and line scrolling | Blinking arrow, CONT moving the previous bottom line to the top, progressive third line, and normal dialogue close passed |
 | Healing pulse | SameBoy: one/six party members in Viridian and Fuchsia Centers; all eight phases alternate, NPC palettes restore, zero blocked VRAM/palette writes |
@@ -58,17 +64,17 @@ VRAM/palette writes as well as the end of graphics work.
 
 The walking comparison uses 512-frame button sequences in each location:
 
-| Scene | Original Yellow updates/sec | Before optimization | Version 0.1.6 |
+| Scene | Original Yellow updates/sec | Version 0.1.6 | Version 0.1.7 |
 | --- | ---: | ---: | ---: |
-| Oak's lab, center | 28.81 | 19.71 | 29.86 |
-| Oak's lab, lower floor | 28.11 | 19.25 | 29.86 |
-| Pallet Town | 28.11 | 27.88 | 29.86 |
+| Oak's lab, center | 28.81 | 29.86 | 29.86 |
+| Oak's lab, lower floor | 28.11 | 29.86 | 29.86 |
+| Pallet Town | 28.11 | 29.86 | 29.86 |
 
 These are game-loop updates, not LCD refresh rates or emulator host throughput.
-The median walking-animation interval in the lab falls from three display
-frames to the original two. The pre-optimization ROM is commit `88c172c`,
-which already contains the text fix but still has the previous CPU/palette
-behavior. Its hash and the original/optimized hashes are in `performance.json`.
+The median walking-animation interval remains two display frames. The comparison
+ROM is v0.1.6 (target hash `fde8ce1369fd08ea54ed4d6f51d8af5a69484261499f3aca45e8d79053f074f7`).
+The report retains the historical key `before_optimization` for the optional
+comparison ROM; in this run that key means v0.1.6, not the older slow renderer.
 
 The map matrix uses test-only RAM warps. The sprite matrix calls actual ROM
 routines through a test-only RAM trampoline and compares their output with
@@ -116,6 +122,24 @@ GIF delays alternate between 30 and 40 ms to preserve the Game Boy's frame rate
 when sampling every other frame. This is a visual adaptation of the Gen 2
 sparks; automated motion/safety checks alone do not establish visual quality.
 
+The rendering regression reads fixed bank-one WRAM directly, because a frame
+boundary can land during the renderer's temporary bank-two scratch work. It
+compares actual visible tile IDs against the canonical map blocks as well as
+checking attributes. The forced race test creates a request before preparation
+and checks that neither VRAM plane changes. This proves the stale-buffer bug
+and its fix; the reported exact intermittent half-tree scene was not reproduced
+through ordinary walking. A physical forest retest remains necessary. The
+[menu-return recording](screenshots/menu_return.gif) shows the corrected whiteout.
+
+The battle-color matrix uses routine fixtures to force all three animation
+outcomes for each ball type. These are visual tests, including otherwise
+impossible combinations such as a Master Ball breakout. The separate capture
+check uses menu input on CGB and DMG; only encounter, inventory, names, starting
+HP and sleep are set in RAM, and the game calculates the capture outcome and
+item/party changes. The README ball GIF comes from that capture. The trainer
+[contact sheet](screenshots/battle_colors.png) contains the encounter and animation
+fixtures; it is separate from the menu-selected capture.
+
 Machine-readable results are preserved in `docs/verification/`; screenshots
 are in `docs/screenshots/`. Re-running the scripts produces fresh results in
 `build/verification/`. Floating IPS was built from revision
@@ -136,6 +160,9 @@ make -C .cache/sameboy -j4 build/lib/libsameboy.a bootroms RGBDS=../../.cache/rg
 .venv/bin/python scripts/verify_battle_effects.py
 .venv/bin/python scripts/verify_thundershock.py
 .venv/bin/python scripts/verify_terrain.py
+.venv/bin/python scripts/verify_rendering.py
+.venv/bin/python scripts/verify_battle_colors.py
+.venv/bin/python scripts/verify_capture.py
 ```
 
 The performance comparison also expects the exact original ROM and its matching
