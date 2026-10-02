@@ -14,7 +14,7 @@ ColorFinishText::
 .portion
 	call DelayFrame
 	ld a, [wColorAutoReady]
-	and a
+	and 1
 	jr nz, .portion
 	dec c
 	jr nz, .portion

@@ -193,7 +193,7 @@ ColorPrepareAuto::
 	; Joypad's text pump may already have prepared these rows. Keep the
 	; pending buffer (and its copy kind) intact until VBlank consumes it.
 	ld a, [wColorAutoReady]
-	and a
+	and 1
 	ret nz
 	ldh a, [hVBlankCopyBGSource]
 	and a
@@ -267,16 +267,17 @@ ENDR
 ENDR
 	ld a, 1
 	ldh [rSVBK], a
-	ld [wColorAutoReady], a
+	ld hl, wColorAutoReady
+	set 0, [hl]
 	ei
 	ret
 
 ColorTransferVRAM::
 	ld a, [wColorAutoReady]
-	and a
+	and 1
 	jr z, .scroll
-	xor a
-	ld [wColorAutoReady], a
+	ld hl, wColorAutoReady
+	res 0, [hl]
 	ld a, [wColorCopyKind]
 	cp 2
 	jr nz, .advance
@@ -315,6 +316,12 @@ ENDR
 	ldh [rVBK], a
 
 .scroll
+	; The game can request an edge redraw just before VBlank interrupts it.
+	; Do not upload an older buffer to that new destination before preparation.
+	ld hl, wColorAutoReady
+	bit 1, [hl]
+	ret z
+	res 1, [hl]
 	ldh a, [hRedrawRowOrColumnMode]
 	and a
 	ret z
@@ -378,6 +385,9 @@ ENDR
 	ret
 
 ColorPrepareScroll:
+	ld hl, wColorAutoReady
+	bit 1, [hl]
+	ret nz
 	ldh a, [hRedrawRowOrColumnMode]
 	and a
 	ret z
@@ -435,6 +445,8 @@ ENDR
 .done
 	ld a, 1
 	ldh [rSVBK], a
+	ld hl, wColorAutoReady
+	set 1, [hl]
 	ei
 	ret
 
@@ -442,8 +454,7 @@ ColorVBlankAll::
 	ld a, [wColorActive]
 	and a
 	jr z, .native
-	call ColorTransferVRAM
-	jp ColorOriginalRedrawRowOrColumn
+	jp ColorTransferVRAM
 .native
 	call ColorOriginalAutoBgMapTransfer
 	call ColorOriginalVBlankCopyBgMap
@@ -475,6 +486,8 @@ ColorDMGPalToCGBPal:
 	jr nz, .notBGP
 	ldh a, [rBGP]
 	ld [wLastBGP], a
+	and a
+	jr z, .white
 	jr .convert
 .notBGP
 	dec a
@@ -504,6 +517,20 @@ ColorDMGPalToCGBPal:
 			rrca
 		ENDC
 	ENDR
+	ret
+
+.white
+	; Terrain color zero is often green/cream. A native whiteout must still
+	; hide ALL tile patterns uniformly while full-screen menus are restored.
+	ld hl, wCGBPal
+	ld c, PAL_COLORS
+.whiteLoop
+	ld a, $ff
+	ld [hli], a
+	ld a, $7f
+	ld [hli], a
+	dec c
+	jr nz, .whiteLoop
 	ret
 
 .GetColorAddress:

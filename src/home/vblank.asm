@@ -13,11 +13,6 @@ VBlank::
 	ldh a, [hLoadedROMBank]
 	ld [wVBlankSavedROMBank], a
 
-	ldh a, [hSCX]
-	ldh [rSCX], a
-	ldh a, [hSCY]
-	ldh [rSCY], a
-
 	ld a, [wDisableVBlankWYUpdate]
 	and a
 	jr nz, .ok
@@ -38,6 +33,19 @@ VBlank::
 .graphics
 
 	farcall ColorVBlankAll
+	; Expose the newly scrolled edge only once its tile IDs and attributes
+	; have both arrived. Late/unprepared transfers keep the previous view.
+	ld a, [wColorActive]
+	and a
+	jr z, .scrollReady
+	ldh a, [hRedrawRowOrColumnMode]
+	and a
+	jr nz, .afterGraphics
+.scrollReady
+	ldh a, [hSCX]
+	ldh [rSCX], a
+	ldh a, [hSCY]
+	ldh [rSCY], a
 	call VBlankCopy
 	call VBlankCopyDouble
 	call UpdateMovingBgTiles

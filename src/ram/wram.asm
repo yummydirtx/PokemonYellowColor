@@ -79,7 +79,7 @@ wUnusedAudioCounter:: dw
 wColorActive:: db
 wColorTilesHigh:: db
 wColorPaletteSet:: dw
-wColorAutoReady:: db
+wColorAutoReady:: db ; bit 0: prepared six-row copy; bit 1: prepared scrolling edge
 wColorAutoDest:: dw
 wColorSpritePal:: db
 wColorPaletteIndex:: db

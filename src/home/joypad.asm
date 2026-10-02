@@ -7,7 +7,7 @@ Joypad::
 	and a
 	jr z, .input
 	ld a, [wColorAutoReady]
-	and a
+	and 1
 	call z, ColorPrepare
 .input
 	pop af
