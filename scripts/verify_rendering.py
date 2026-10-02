@@ -76,14 +76,14 @@ for map_name, mid, width, x, y in ([('pallet',0,10,10,12), ('forest',51,17,16,18
                 # every terrain palette, even when color zero is grass/cream.
                 assert len(im.getcolors(160*144) or []) == 1 and im.getpixel((0,0))==(255,255,255), (map_name,menu,frame,'visible restoration artifact')
                 whiteout_frames+=1
-            if map_name=='pallet' and menu=='party': frames.append(im.resize((480,432),Image.Resampling.NEAREST))
+            if map_name=='pallet' and menu=='party' and frame%2==0: frames.append(im.resize((480,432),Image.Resampling.NEAREST))
         assert whiteout_frames>=3 or menu=='options', (map_name,menu,'whiteout not exercised')
         assert ram('wColorActive')==1 and p.get('hWY')==144
         bad=[p.lib.sb_bad_vram_writes(),p.lib.sb_bad_palette_writes()]
         assert bad==[0,0], (map_name,menu,bad)
         report['menus'].append({'map':map_name,'menu':menu,'uniform_white_frames':whiteout_frames,'blocked_writes':bad})
         if frames:
-            times=[round(i*70224/4194304*100)*10 for i in range(len(frames)+1)]
+            times=[round(i*2*70224/4194304*100)*10 for i in range(len(frames)+1)]
             frames[0].save(out/'menu-return.gif',save_all=True,append_images=frames[1:],duration=[b-a for a,b in zip(times,times[1:])],loop=0)
 
 

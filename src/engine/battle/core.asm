@@ -6382,6 +6382,12 @@ SwapPlayerAndEnemyLevels:
 ; also writes OAM data and loads tile patterns for the Red or Old Man back sprite's head
 ; (for use when scrolling the player sprite and enemy's silhouettes on screen)
 LoadPlayerBackPic:
+	ldh a, [hOnCGB]
+	and a
+	jr z, .native
+	farcall ColorLoadBattleBack
+	jr .graphicsReady
+.native
 	ld a, [wBattleType]
 	ld de, OldManPicBack
 	cp BATTLE_TYPE_OLD_MAN ; is it the old man tutorial?
@@ -6396,6 +6402,7 @@ LoadPlayerBackPic:
 	ASSERT BANK(RedPicBack) == BANK(ProfOakPicBack)
 	call UncompressSpriteFromDE
 	call LoadBackSpriteUnzoomed
+.graphicsReady
 	ld hl, wShadowOAM
 	xor a
 	ldh [hOAMTile], a ; initial tile number

@@ -152,6 +152,7 @@ DrawFrameBlock:
 	ld [de], a
 	inc de
 .nextTile
+	call ColorBallOAM
 	ld a, [wFBTileCounter]
 	ld c, a
 	ld a, [wNumFBTiles]
@@ -191,6 +192,10 @@ DrawFrameBlock:
 PlayAnimation:
 	farcall Gen2TryAnimation
 	ret c
+	call IsColorBallAnimation
+	jr nc, .paletteReady
+	farcall ColorLoadBallPalette
+.paletteReady
 	xor a
 	ldh [hROMBankTemp], a ; it looks like nothing reads this
 	ld [wSubAnimTransform], a
@@ -292,6 +297,64 @@ PlayAnimation:
 	jr .animationLoop
 .AnimationOver
 	vc_hook Stop_reducing_move_anim_flashing_Blizzard
+	ret
+
+; Ball caps have their own palette, independent of either Pokémon's colors
+; and the native animation's OBP0 shade-remapping/flashing commands.
+IsColorBallAnimation:
+	ldh a, [hOnCGB]
+	and a
+	ret z
+	ld a, [wIsInBattle]
+	and a
+	ret z
+	ld a, [wAnimationID]
+	cp TOSS_ANIM
+	jr c, .no
+	cp ULTRATOSS_ANIM + 1
+	jr nc, .no
+	cp POOF_ANIM
+	jr z, .no
+	scf
+	ret
+.no
+	and a
+	ret
+
+ColorBallOAM:
+	push hl
+	push bc
+	call IsColorBallAnimation
+	jr nc, .done
+	; DE is one past the flags of the tile just written. Only the six ball
+	; tiles qualify; the star used when a trainer blocks a ball stays native.
+	ld h, d
+	ld l, e
+	dec hl
+	dec hl
+	ld a, [hl]
+	sub $31
+	cp $02
+	jr z, .ball
+	cp $12
+	jr z, .ball
+	cp $06
+	jr z, .ball
+	cp $07
+	jr z, .ball
+	cp $16
+	jr z, .ball
+	cp $17
+	jr nz, .done
+.ball
+	inc hl
+	ld a, [hl]
+	and $f8
+	or 6
+	ld [hl], a
+.done
+	pop bc
+	pop hl
 	ret
 
 LoadSubanimation:

@@ -337,10 +337,19 @@ DeterminePaletteIDBack:
 	and a
 	jp nz, GetMonPalID
 	ld a, [wBattleType]
+	cp BATTLE_TYPE_OLD_MAN
+	jr nz, .checkOak
+	ldh a, [hOnCGB]
+	and a
+	jr nz, .oakBack
+	ld a, [wBattleType]
+.checkOak
 	cp BATTLE_TYPE_PIKACHU
-	ld a, PAL_OAKB
-	ret z
+	jr z, .oakBack
 	ld a, PAL_HERO
+	ret
+.oakBack
+	ld a, PAL_OAKB
 	ret
 
 
