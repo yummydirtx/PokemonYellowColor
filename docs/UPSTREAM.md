@@ -125,7 +125,9 @@ DMG/SGB and field animations retain Yellow's original effects.
 background in CGB copies of the three existing trainer back pictures. It keeps
 black outlines and exterior pixels intact and preserves the native 6×6-to-7×7
 alignment, including the animated head. Original compressed artwork and SGB
-palettes are retained. CGB trainer accent colors are brighter; the old man
+palettes are retained. CGB trainer accent colors are brighter; Bug Catcher
+retains the original Gen 2 dark blue shadow color because those pixels also
+define his face and hair. The old man
 uses the cool coat/hair palette instead of the player's red palette.
 
 Thrown-ball frames keep their original tile art and motion. Only their six

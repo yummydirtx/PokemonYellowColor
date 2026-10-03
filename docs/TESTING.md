@@ -1,4 +1,27 @@
-# Version 0.1.7 verification
+# Version 0.1.8 verification
+
+This release restores Bug Catcher's original Gen 2 palette: warm tan and dark
+blue, with white and black retained. Bright green had replaced the shared
+shadow color in v0.1.7, making his face and hair harder to read.
+
+The built ROM differs from v0.1.7 at exactly three byte offsets: the two-byte
+Bug Catcher shadow color and one global-checksum byte. Code, graphics, all other
+palettes, and the save/RAM layout are byte-for-byte unchanged. The palette also
+matches the pinned Gen 2 integration source exactly.
+
+The existing SameBoy battle-color checks were rerun: six trainer introductions,
+three trainer back pictures on both CGB and DMG, and 15 thrown-ball sequences.
+The corrected encounter screenshot was visually reviewed and the README and
+battle contact sheet refreshed. All monitored LCD writes remained valid.
+The BPS unit tests and independent Floating IPS application also passed.
+
+Current checksums and the exact ROM delta are in
+[`verification/release.json`](verification/release.json); current battle results
+are in [`verification/battle_colors.json`](verification/battle_colors.json).
+The broader reports below remain from v0.1.7 and retain that build's hashes;
+those checks were not rerun for this palette-only correction.
+
+## Version 0.1.7 broader verification
 
 The final clean build was tested with RGBDS 1.0.3, PyBoy 2.7.0, and SameBoy
 revision `213a12ce93d66b105a113debd9396306066a7cfc` on 2026-10-02.

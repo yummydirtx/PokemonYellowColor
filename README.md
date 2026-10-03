@@ -1,7 +1,7 @@
 # Pokémon Yellow Color
 
 A playable Game Boy Color enhancement of English Pokémon Yellow, with per-tile
-overworld colors and Gen 2 battle graphics. **Version 0.1.7 is a preview build:**
+overworld colors and Gen 2 battle graphics. **Version 0.1.8 is a preview build:**
 the opening, all tilesets, sprite loaders, menus, saving, and surfing minigame
 have automated checks; a complete playthrough and physical hardware testing
 are still outstanding.
@@ -52,6 +52,7 @@ the newer trainer and Poké Ball colors.
   palettes. Trainer graphics come from the same Gen 2 graphics integration,
   with brighter CGB clothing colors and separate skin fills on the player, Oak,
   and old man back pictures. White clothing and hair details remain intact.
+  Bug Catcher uses his original Gen 2 palette for clear facial shading.
 - Thrown Poké Balls retain red caps and white lower halves throughout the toss
   and shake. Great, Ultra, Master and Safari Balls have distinct cap colors.
 - Eight moves use adapted Gen 2 effect artwork and frame sequences: ThunderShock,

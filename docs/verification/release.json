@@ -1,12 +1,58 @@
 {
-  "version": "0.1.7",
-  "rom_sha256": "78e237103d786cd8efc591c701b3c58c63666fdffc247f334cc246fbcda4bd1a",
-  "patch_sha256": "8a6352d374b773f5c3bf98d8eba9339b8f436fbf8a7a5268f8f2b8ee90733caa",
-  "clean_build_matches_tested_build": true,
-  "baseline_matches_dump": true,
+  "version": "0.1.8",
+  "rom_sha256": "3386f1dd43dd11223e92221b34ff05eea26ba75ec188c3df29f48dccddfb906a",
+  "patch_sha256": "a6ed67e8cbf497bc472746a2e99bf1352f1f9ddf46f11d7327582b3cfbc94b90",
+  "prior_version": "0.1.7",
+  "prior_sha256": "78e237103d786cd8efc591c701b3c58c63666fdffc247f334cc246fbcda4bd1a",
+  "target_sha256": "3386f1dd43dd11223e92221b34ff05eea26ba75ec188c3df29f48dccddfb906a",
+  "changed_rom_bytes": [
+    {
+      "offset": 335,
+      "before": 148,
+      "after": 131
+    },
+    {
+      "offset": 1084796,
+      "before": 138,
+      "after": 70
+    },
+    {
+      "offset": 1084797,
+      "before": 22,
+      "after": 73
+    }
+  ],
+  "restored_palette_rgb5": [
+    [
+      31,
+      31,
+      31
+    ],
+    [
+      27,
+      17,
+      10
+    ],
+    [
+      6,
+      10,
+      18
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "all_symbol_addresses_unchanged": true,
+  "only_palette_and_checksum_bytes_changed": true,
+  "original_gen2_palette_restored": true,
   "independent_flips_patch_matches_target": true,
-  "rom_header_and_checksums": "passed",
-  "shared_original_ram_symbols_unchanged": 3180,
-  "original_sgb_palette_bytes_unchanged": 1912,
-  "bps_unit_tests": 3
+  "bps_unit_tests": 3,
+  "battle_color_checks_rerun": {
+    "trainer_introductions": 6,
+    "back_loaders_cgb_dmg": 6,
+    "ball_sequences": 15
+  },
+  "broader_verification": "Retained v0.1.7 reports; not rerun for this palette-only correction"
 }

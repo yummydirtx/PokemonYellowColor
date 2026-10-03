@@ -1,5 +1,5 @@
 {
-  "rom_sha256": "78e237103d786cd8efc591c701b3c58c63666fdffc247f334cc246fbcda4bd1a",
+  "rom_sha256": "3386f1dd43dd11223e92221b34ff05eea26ba75ec188c3df29f48dccddfb906a",
   "back_loaders": [
     {
       "model": "CGB-E",

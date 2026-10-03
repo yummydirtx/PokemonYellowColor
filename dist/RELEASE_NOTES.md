@@ -1,30 +1,13 @@
-# Pokémon Yellow Color 0.1.7 — preview
+# Pokémon Yellow Color 0.1.8 — preview
 
-Fixes the brief colored-block flash when returning from a full-screen menu.
-The map is now restored behind a uniform whiteout, including palettes whose
-normal background shade is green or cream.
+Restores Bug Catcher's original Gen 2 palette. His shared shadow color is dark
+blue again, bringing back the contrast around his face, hair and hat that the
+bright green in v0.1.7 had obscured. The README battle screenshot is updated.
 
-Fixes a scrolling race that could upload an old edge buffer at a new position.
-The renderer keeps the previous view until the new tile IDs and attributes are
-ready. The prior build fails a deterministic reproduction; the new build passes
-96 edge-transfer cases and 7,680 frames of map-content checks. The exact reported
-intermittent Viridian Forest half-tree scene still needs a physical retest.
-
-Battle trainers have brighter CGB clothing colors. The player, Oak and old man
-back pictures now separate exposed skin from the white background while keeping
-white clothing/hair details and the original silhouettes.
-
-Thrown Poké Balls have red caps and white lower halves throughout their toss
-and shake. Great, Ultra, Master and Safari Balls use blue, gold, purple and green
-caps. Their colors no longer depend on the battler's palette or native flashes.
-
-Checks include six trainer introductions, all three back pictures on CGB/DMG,
-15 ball-animation cases, and complete menu-selected captures on CGB and DMG.
-The existing opening, maps, text, healing, fanfare, sprite, portrait, battle-effect,
-surfing, save, walking and voice-timing checks pass. Walking remains at 29.86
-updates/sec in the three benchmark scenes. See `docs/TESTING.md` for details.
-
-Includes all prior terrain, animation, color and performance changes.
+The ROM changes only two palette bytes and one checksum byte from v0.1.7.
+All prior rendering, trainer-back, Poké Ball and performance improvements remain.
+The battle-color checks pass, and the BPS patch was independently applied with
+Floating IPS and compared byte-for-byte with the built ROM.
 
 Apply `PokemonYellowColor.bps` to unmodified English USA/Europe Yellow:
 
@@ -33,8 +16,7 @@ Apply `PokemonYellowColor.bps` to unmodified English USA/Europe Yellow:
 - Input size: 1,048,576 bytes
 
 Apply to the original ROM, not a previously patched version. The output is a
-2 MiB GBC-compatible ROM. Only the patch and checksum manifest are release assets.
-Normal battery saves retain their layout; emulator save states are build-specific.
+2 MiB GBC-compatible ROM. Normal battery saves retain their layout.
 
-This remains a playable preview. A complete playthrough and physical hardware/
-link testing remain outstanding.
+This remains a playable preview; full-playthrough and physical hardware/link
+validation remain outstanding. See `docs/TESTING.md` for the scope of this update.
